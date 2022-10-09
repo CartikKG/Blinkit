@@ -1,0 +1,28 @@
+#topProd{
+    display: grid;
+    grid-template-columns: repeat(10,1fr);
+    gap: 1rem;
+    width: 90%;
+    margin: auto;
+}
+img{
+    width: 100%;
+}
+#offer{
+    width: 90%;
+    margin: auto;
+    overflow-x: scroll;
+    gap: 2rem;
+    scrollbar-width: thin;
+}
+.offerchildImg{
+    width: 300px;
+}
+.offerchild{
+    width: 30rem;
+}
+::-webkit-scrollbar{
+    height: 4px;
+    width: 4px;
+    appearance: none;
+}
