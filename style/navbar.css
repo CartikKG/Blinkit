@@ -15,6 +15,7 @@
 
 #navbar>img {
     width: 8%;
+    cursor: pointer;
 
 }
 
@@ -64,6 +65,10 @@
 
 }
 
+#logindiv {
+    cursor: pointer;
+}
+
 .input-group>input {
 
     width: 100%;
@@ -85,6 +90,7 @@
     font-size: 16px;
     color: white;
     font-weight: 1000;
+    cursor: pointer;
 }
 
 #cartanimanttion {
@@ -97,6 +103,11 @@
 #cartanimanttion:hover {
     transform: rotatez(60deg);
 
+}
+
+#gotocartpage {
+    display: none;
+    /* visibility: hidden; */
 }
 
 @media (max-width:1090px) {
@@ -117,7 +128,13 @@
     }
 
     #cartdiv {
-        display: none;
+        /* display: none; */
+        position: absolute;
+        width: 90%;
+        margin: auto;
+        bottom: 2%;
+        display: flex;
+        justify-content: space-between;
     }
 
     #navbar input {
@@ -147,5 +164,10 @@
         position: absolute;
         top: 3%;
         right: 3%;
+
+    }
+
+    #gotocartpage {
+        display: block;
     }
 }
