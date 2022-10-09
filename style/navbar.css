@@ -16,7 +16,19 @@
 #navbar>img {
     width: 8%;
     cursor: pointer;
+    animation: navumage ease-in-out 2s infinite;
 
+
+}
+
+@keyframes navumage {
+    from {
+        transform: rotateX(0deg);
+    }
+
+    to {
+        transform: rotateY(359deg);
+    }
 }
 
 
@@ -95,15 +107,24 @@
 
 #cartanimanttion {
 
-    transition: all ease-in-out 0.5s;
+    /* transition: all ease-in-out 0.5s; */
     margin-right: 10px;
+    animation: cartdivani ease-in-out 4s infinite;
 
 }
 
-#cartanimanttion:hover {
-    transform: rotatez(60deg);
+@keyframes cartdivani {
+    from {
+        transform: rotate(360deg)
+    }
+
+    to {
+        /* transform: rotateX(60deg); */
+    }
 
 }
+
+#cartanimanttion:hover {}
 
 #gotocartpage {
     display: none;
