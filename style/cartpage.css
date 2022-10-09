@@ -25,7 +25,7 @@
     width: 25%;
     height: 100vh;
     right: 0;
-    background-color: azure;
+    background-color: #ffffff
 }
 
 #cartinhtml>div>div>h4 {
@@ -73,4 +73,50 @@
     #cartinhtml>div {
         width: 100%;
     }
+}
+
+#incarthtmldetial {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+}
+
+#incarthtmldetial>span {
+    font-size: 15px;
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    /* border: 2px solid red; */
+    /* text-align: center; */
+
+}
+
+#startshopping {
+    font-size: 20px;
+    padding: 8px 16px;
+    border-radius: 10px;
+    background-color: green;
+    color: white;
+    cursor: pointer;
+
+}
+
+#incarthtmldetial>h3 {
+    font-weight: 900;
+}
+
+#incarthtmldetial>img {
+    width: 100%;
+}
+
+#finallbill>h6 {
+    font-size: 18px;
+    font-weight: 800;
+}
+
+#incarthtmldetial>span>input {
+    width: 40%;
+    border-radius: 10px;
+    border: 0.5px solid rgb(218, 218, 218);
+    padding: 5px 9px;
 }
