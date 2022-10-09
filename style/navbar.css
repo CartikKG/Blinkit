@@ -7,7 +7,7 @@
     height: 70px;
     display: flex;
     align-items: center;
-
+    background-color: rgb(255, 255, 255);
     justify-content: space-around;
     font-family: 'Open Sans', sans-serif;
     font-size: 18px
