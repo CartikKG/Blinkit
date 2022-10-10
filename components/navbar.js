@@ -12,7 +12,7 @@ const navbar = () => {
         <div type="submit">
           <i class="glyphicon glyphicon-search"></i>
         </div>
-        <input type="text" placeholder="Search for products" />
+        <input type="search" placeholder="Search for products" />
       </div>
     </div>
 

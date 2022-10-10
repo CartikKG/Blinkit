@@ -13,7 +13,7 @@ closeit.addEventListener("click", () => {
 });
 
 const always = () => {
-  let flag = "true";
+  let flag = "false";
   if (flag == "true") {
     document.getElementById("incarthtmldetial").innerHTML = `
 
@@ -76,3 +76,5 @@ const always = () => {
 // Bill total
 // ₹128
 // Coupons are only applicable on the Blinkit app
+
+// document.getElementById

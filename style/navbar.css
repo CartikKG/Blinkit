@@ -124,7 +124,7 @@
 
 }
 
-#cartanimanttion:hover {}
+
 
 #gotocartpage {
     display: none;
@@ -134,12 +134,16 @@
 @media (max-width:1090px) {
     #foraddressdiv {
         position: absolute;
-        left: 0%;
+        left: 23%;
         top: 0%
     }
 
     #navbar>img {
-        display: none;
+        /* display: none; */
+        width: 100px;
+        position: absolute;
+        top: 2%;
+        left: 4%;
     }
 
     #navbar {
@@ -190,5 +194,26 @@
 
     #gotocartpage {
         display: block;
+    }
+}
+
+@media (max-width:470px) {
+    #navbar>img {
+        width: 80px;
+    }
+
+    #foraddressdiv {
+        left: 27%;
+    }
+
+    #foraddressdiv>h3 {
+
+        margin-top: 8%;
+        font-size: 13px;
+        font-weight: 1000;
+    }
+
+    #foraddressdiv>h5 {
+        font-size: 10px;
     }
 }
