@@ -112,8 +112,12 @@ function clickRightButton() {
   }%)`;
 }
 
-// document.getElementById("left").addEventListener("click", clickLeftButton);
-// document.getElementById("right").addEventListener("click", clickRightButton);
+document
+  .getElementById("leftforcarousel")
+  .addEventListener("click", clickLeftButton);
+document
+  .getElementById("rightforcarousel")
+  .addEventListener("click", clickRightButton);
 
 const addpluschangehtml = () => {
   console.log(event.target);

@@ -4,12 +4,12 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    position: fixed;
+    position: absolute;
     opacity: 0;
     pointer-events: none;
     top: 0;
-    left: 0;
-    width: 100vw;
+    /* left: 0; */
+    width: 100%;
     height: 100vh;
     transition: opacity 0.3s ease;
 }
@@ -23,13 +23,29 @@
     margin: auto;
     margin-top: 7%;
     background-color: #fff;
-    border-radius: 15px;
+    border-radius: 350px;
+    border: 10px solid green;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
     padding: 30px 50px;
     width: 600px;
     height: 500px;
     max-width: 100%;
     text-align: center;
+    animation: loginmodal 0.8s ease-in-out;
+}
+
+@keyframes loginmodal {
+    from {
+        margin-top: -20%;
+        transform: rotateX(360deg)
+    }
+
+    to {
+        margin-top: 7%;
+        transform: rotateY(0deg);
+
+    }
+
 }
 
 #input_container {
@@ -55,10 +71,38 @@
     display: flex;
     /* -ms-flex-align: end;
     border: 1px solid crimson; */
+    justify-content: flex-end;
 
+}
+
+#cancelmodal {
+    /* width: 60%; */
+    padding: 1px 8px;
+    border-radius: 20px;
+    font-size: 25px;
+    border: none;
+    background-color: rgb(26, 142, 16);
+    color: white;
 }
 
 #cancel {
     background-color: #fff;
     border: none;
+}
+
+#signuppp {
+    width: 59%;
+    border: none;
+    border-radius: 5px;
+    background: green;
+    color: white;
+}
+
+#loginbtn {
+
+    width: 59%;
+    border: none;
+    border-radius: 5px;
+    background: green;
+    color: white;
 }

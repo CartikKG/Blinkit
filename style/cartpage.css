@@ -129,21 +129,33 @@
 
 
 #process>div {
-    width: 200px;
-    border: 2px solid red;
+    width: 600px;
+    /* border: 2px solid red; */
     padding: 4px 10px;
     height: 310px;
 }
 
-#process>div>img {
+/* .process-items {
+    width: 12200px;
+} */
+#carsusal>div {
+    width: 100000%;
+}
+
+#process>div>div {
+    /* width: 100px; */
+    border: 2px solid red;
+}
+
+#process>div>div>img {
     width: 100%;
 }
 
-#process>div>span {
+#process>div>div>span {
     width: 100%;
 }
 
-#process>div>span {
+#process>div>div>span {
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -164,7 +176,7 @@
     cursor: pointer;
 }
 
-#process>div>span>span>h5 {
+#process>div>div>span>span>h5 {
     margin-top: 4%;
     margin-left: 1px;
     text-align: center;
@@ -172,31 +184,38 @@
     font-size: 14px;
 }
 
-#process>div>h5 {
-    font-size: 19=7px;
+#process>div>div>h5 {
+    /* font-size: 19=7px; */
     font-weight: 400;
 }
 
-#process>div>span>p {
+#process>div>div>span>p {
     font-size: 19px;
     /* font-weight: bold; */
     font-weight: 600;
 }
 
-/* 
 #process {
-    width: 270px;
+    width: 470px;
     border: 2px solid green;
     overflow: hidden;
 }
 
 #carsusal {
-    height: 480px;
+    /* height: 400px; */
     transition: all 0.3s ease-in-out;
     display: flex;
     /* overflow: hidden; */
+}
+
+#carsusal>div {
+    width: 1000px;
+}
 
 #leftforcarousel {
+    position: absolute;
+    top: 20%;
+    right: 20%;
     background-color: rgb(190, 255, 255);
     font-size: 20px;
     border-radius: 19px;
@@ -204,6 +223,9 @@
 }
 
 #rightforcarousel {
+    position: absolute;
+    top: 20%;
+    right: 0%;
     background-color: rgb(190, 255, 255);
     font-size: 20px;
     border-radius: 19px;
