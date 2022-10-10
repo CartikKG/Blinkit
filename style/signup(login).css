@@ -1,6 +1,6 @@
-#modal_container{
+#modal_container {
     /* display: none;  */
-    background-color: rgba(0,0,0,0.3);
+    background-color: rgba(0, 0, 0, 0.3);
     display: flex;
     align-items: center;
     justify-content: center;
@@ -13,44 +13,52 @@
     height: 100vh;
     transition: opacity 0.3s ease;
 }
-#modal_container.show{
+
+#modal_container.show {
     pointer-events: auto;
     opacity: 1;
 }
-#modals{
+
+#modals {
+    margin: auto;
+    margin-top: 7%;
     background-color: #fff;
     border-radius: 15px;
-    box-shadow: 0 2px 4px rgba(0,0,0,0.2);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
     padding: 30px 50px;
-    width: 500px;
+    width: 600px;
+    height: 500px;
     max-width: 100%;
     text-align: center;
 }
-#input_container{
+
+#input_container {
     width: 60%;
     margin: auto;
     display: flex;
     flex-direction: column;
 }
 
-.input{
+.input {
     margin-top: -5px;
     padding: 3% 6%;
     border-radius: 10px;
     border-width: 1px;
     border-color: rgb(243, 237, 237);
 }
-#password{
+
+#password {
     margin-bottom: 25px;
 }
 
-#cancelBox{
+#cancelBox {
     display: flex;
     /* -ms-flex-align: end;
     border: 1px solid crimson; */
 
 }
-#cancel{
+
+#cancel {
     background-color: #fff;
     border: none;
 }

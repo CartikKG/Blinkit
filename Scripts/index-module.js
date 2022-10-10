@@ -1,7 +1,19 @@
 import navbar from "../components/navbar.js";
 import { cart } from "../components/cart.js";
+import {
+  users,
+  openonclick,
+  cancel,
+  login,
+  loginPage,
+  signupPage,
+  signUp,
+} from "../components/signup_login.js";
+// console.log(user);
+
 document.getElementById("cartinhtm").innerHTML = cart();
 document.getElementById("navbar").innerHTML = navbar();
+document.getElementById("logindiv").addEventListener("click", openonclick);
 
 cartinhtm.addEventListener("click", () => {});
 cartdiv.addEventListener("click", () => {

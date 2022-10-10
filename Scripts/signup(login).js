@@ -1,8 +1,8 @@
-let users=JSON.parse(localStorage.getItem("users")) || [];
+let users = JSON.parse(localStorage.getItem("users")) || [];
 
-document.getElementById("open").addEventListener("click", ()=>{
-    let modal_container=document.getElementById("modal_container");
-    modal_container.innerHTML=`
+document.getElementById("openlogin").addEventListener("click", () => {
+  let modal_container = document.getElementById("modal_container");
+  modal_container.innerHTML = `
     <div id="modals">
             <div id="cancelBox">
             <div><button onclick="cancel()" id="cancel">&#215;</button></div>
@@ -19,41 +19,37 @@ document.getElementById("open").addEventListener("click", ()=>{
         </div>
     `;
 
-    modal_container.classList.add("show");
+  modal_container.classList.add("show");
 });
 
-function cancel(){
-    document.getElementById("modal_container").classList.remove("show");
-    console.log("cancel!")
+function cancel() {
+  document.getElementById("modal_container").classList.remove("show");
+  console.log("cancel!");
 }
 
-// document.getElementById("cancel").addEventListener("click", ()=>{
-//     document.getElementById("modal_container").classList.remove("show");
-// })
-function login(){
-    let email=document.getElementById("email").value;
-    let password=document.getElementById("password").value;
-    if(email==="" || password===""){
-        alert("Please fill all the fields!");
+function login() {
+  let email = document.getElementById("email").value;
+  let password = document.getElementById("password").value;
+  if (email === "" || password === "") {
+    alert("Please fill all the fields!");
+  } else {
+    let flag = false;
+    for (let i = 0; i < users.length; i++) {
+      if (email === users[i].email && password === users[i].password) {
+        flag = true;
+        alert("Logged In Successfully!");
+        document.getElementById("modal_container").classList.remove("show");
+        break;
+      }
     }
-    else{
-        let flag=false;
-        for(let i=0;i<users.length;i++){
-            if(email===users[i].email && password===users[i].password){
-                flag=true;
-                alert("Logged In Successfully!")
-                document.getElementById("modal_container").classList.remove("show");
-                break;
-            }
-        }
-        if(flag===false){
-            alert("Wrong credentials entered!");
-        }
+    if (flag === false) {
+      alert("Wrong credentials entered!");
     }
+  }
 }
 
-function loginPage(){
-    document.getElementById("modal_container").innerHTML=`
+function loginPage() {
+  document.getElementById("modal_container").innerHTML = `
     <div id="modals">
     <div id="cancelBox">
         <div><button onclick="cancel()" id="cancel">&#215;</button></div>
@@ -71,8 +67,8 @@ function loginPage(){
     `;
 }
 
-function signupPage(){
-    document.getElementById("modal_container").innerHTML=`
+function signupPage() {
+  document.getElementById("modal_container").innerHTML = `
     <div id="modals">
         <div id="cancelBox">
         <div><button onclick="cancel()" id="cancel">&#215;</button></div>
@@ -90,37 +86,35 @@ function signupPage(){
         <p>Already have an account? <button onclick="loginPage()" id="loginPage">Login</button></p>
     </div>
     `;
-    console.log("SignUp Clicked!");
+  console.log("SignUp Clicked!");
 }
 
-function signUp(){
-    let name=document.getElementById("name").value;
-    let email=document.getElementById("email").value;
-    let password=document.getElementById("password").value;
-    if(name==="" || email==="" || password===""){
-        alert("Please fill all the fields!")
+function signUp() {
+  let name = document.getElementById("name").value;
+  let email = document.getElementById("email").value;
+  let password = document.getElementById("password").value;
+  if (name === "" || email === "" || password === "") {
+    alert("Please fill all the fields!");
+  } else {
+    let userObj = {
+      name: document.getElementById("name").value,
+      email: document.getElementById("email").value,
+      password: document.getElementById("password").value,
+    };
+    let flag = false;
+    for (let i = 0; i < users.length; i++) {
+      if (users[i].email === userObj.email) {
+        flag = true;
+        break;
+      }
     }
-    else{
-        let userObj={
-        name:document.getElementById("name").value,
-        email:document.getElementById("email").value,
-        password:document.getElementById("password").value
-        }
-        let flag=false;
-        for(let i=0;i<users.length;i++){
-            if(users[i].email===userObj.email){
-                flag=true;
-                break;
-            }
-        }
-        if(flag===true){
-            alert("This email is already exist!");
-        }
-        else{
-            users.push(userObj);
-            localStorage.setItem("users", JSON.stringify(users));
-            alert("Signed Up Successfully!");
-            document.getElementById("modal_container").innerHTML=`
+    if (flag === true) {
+      alert("This email is already exist!");
+    } else {
+      users.push(userObj);
+      localStorage.setItem("users", JSON.stringify(users));
+      alert("Signed Up Successfully!");
+      document.getElementById("modal_container").innerHTML = `
             <div id="modals">
                 <div id="cancelBox">
                 <div><button onclick="cancel()" id="cancel">&#215;</button></div>
@@ -136,6 +130,6 @@ function signUp(){
                 <p>Don't have an account? <button onclick="signupPage()" id="signupPage">Sign Up</button></p>
             </div>
             `;
-        }   
     }
+  }
 }
