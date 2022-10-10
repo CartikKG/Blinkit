@@ -1,7 +1,8 @@
 import data from "./products.json" assert {type: 'json'};
+import chemistData from "./layout.json" assert {type: 'json'};
   let url = "https://blinkit-clone.surge.sh/categories/"
-  console.log(data);
   showTopData()
+  showChemist()
   function showTopData(){
     let topProd = document.getElementById('topProd')
     let offer = document.getElementById('offer')
@@ -20,3 +21,12 @@ import data from "./products.json" assert {type: 'json'};
     offer.innerHTML += b;
     })
   }
+
+function showChemist(){
+ let a = chemistData.filter((ele,i)=>{
+    if(i==6){
+      return ele
+    }
+  });
+  console.log(a.objects);
+}
