@@ -1,13 +1,13 @@
 #result {
   display: grid;
   box-shadow: 0 2px 2px 0 rgb(0 0 0 / 22%);
-
+z-index: -10;
 
   grid-template-columns: repeat(auto-fill, minmax(180px,1fr));
 }
 .a-box {
   display: flex;
-z-index: -10;
+/* z-index: -10; */
   border-bottom: 1px solid rgb(233, 232, 232);
   border-left: 1px solid rgb(232, 232, 232);
   width: 100%;

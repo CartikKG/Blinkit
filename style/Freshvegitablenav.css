@@ -186,6 +186,7 @@
 
 .a-main-box> div:last-child{
     width: 60%;
+    z-index: 0;
    
 }
 #allProductNav>nav{
@@ -326,7 +327,7 @@ width: 15%;
     gap: 75px;
     left: 11%;
     box-shadow: 0 2px 2px 0 rgb(0 0 0 / 22%);
-   
+   z-index: -10;
       display: flex;
       width: 72.2%;
       /* margin: 5px 0px 10px; */
