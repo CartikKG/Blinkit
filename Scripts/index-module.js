@@ -29,7 +29,22 @@ const always = () => {
   if (flag == "true") {
     document.getElementById("incarthtmldetial").innerHTML = `
   
-    <div ></div> <h2 id="Beforecheckout" >Before you checkout</h2>
+    <div id="allitemincart" > <div >
+    <img
+      src="https://cdn.grofers.com/cdn-cgi/image/f=auto,fit=scale-down,q=85,metadata=none,w=250,h=250/app/images/products/sliding_image/391805a.jpg"
+      alt=""
+    />
+    <span>
+    <h5>Vim Lemon Dishwash Bar - Pack of 1</h5>
+    <p>3 x 200 g</p>
+    <span
+      ><p>₹32</p>
+      <span class="addonchangeclick"
+        ><h5 onclick="clickonaddbtn()">ADD</h5></span
+      ></span
+    >
+    </span>
+  </div></div> <h2 id="Beforecheckout" >Before you checkout</h2>
     <div id="cartinUpCara" >
    
     <span id="leftforcarousel"><i class="fa-solid fa-angle-left"></i></span>
