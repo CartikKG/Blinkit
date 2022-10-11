@@ -29,8 +29,9 @@ const always = () => {
   if (flag == "true") {
     document.getElementById("incarthtmldetial").innerHTML = `
   
-    <div style="background-color: red; height: 500px;width:100%"></div>
-    <div style="display:flex; align-items: center;">
+    <div ></div> <h2 id="Beforecheckout" >Before you checkout</h2>
+    <div id="cartinUpCara" >
+   
     <span id="leftforcarousel"><i class="fa-solid fa-angle-left"></i></span>
     <div id="process">
   

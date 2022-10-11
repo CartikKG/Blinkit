@@ -94,11 +94,6 @@
     cursor: pointer;
 }
 
-@media (max-width:1090px) {
-    #cartinhtml>div {
-        width: 100%;
-    }
-}
 
 #incarthtmldetial {
     /* text-align: center; */
@@ -127,7 +122,9 @@
     font-weight: 900;
     width: 90%;
     margin: auto;
+    font-size: 20px;
     margin-bottom: 10px;
+
 }
 
 #incarthtmldetial>img {
@@ -135,6 +132,7 @@
 }
 
 #finallbill>h6 {
+    font-family: 'Open Sans', sans-serif;
     font-size: 18px;
     font-weight: 800;
 }
@@ -159,11 +157,28 @@
 
 }
 
+#Beforecheckout {
+    border-top: 16px solid rgb(246, 246, 246);
+    padding-top: 10px;
+    padding-left: 13px;
+    border-bottom: 16px solid rgb(255, 255, 255);
+    font-size: 22px;
+    font-weight: 700;
+}
+
+#cartinUpCara {
+    display: flex;
+    align-items: center;
+    margin-bottom: 13px;
+    /* border-top: 16px solid rgb(246, 246, 246); */
+    border-bottom: 16px solid rgb(246, 246, 246);
+}
+
 #process {
     display: flex;
     width: 310px;
     /* height: 1500px; */
-    border: 2px solid green;
+    /* border: 1px solid rgb(210, 210, 210); */
     overflow: hidden;
     margin-top: 14px;
     margin-bottom: 14px;
@@ -264,23 +279,29 @@
 
 #leftforcarousel {
     /* position: absolute; */
-    top: 20%;
-    right: 20%;
-    background-color: rgb(190, 255, 255);
+    text-align: center;
+    align-self: center;
+    height: 36px;
+    width: 36px;
+    background-color: rgb(239, 239, 239);
     font-size: 20px;
-    border-radius: 19px;
-    padding: 7px;
+    border-radius: 50%;
+    padding: 3px 5px;
+
     cursor: pointer;
 }
 
 #rightforcarousel {
     /* position: absolute; */
-    top: 20%;
-    right: 0%;
-    background-color: rgb(190, 255, 255);
+    text-align: center;
+    align-self: center;
+    height: 36px;
+    width: 36px;
+    background-color: rgb(239, 239, 239);
     font-size: 20px;
-    border-radius: 19px;
-    padding: 7px;
+    border-radius: 50%;
+    padding: 3px 5px;
+
     cursor: pointer;
 }
 
@@ -308,4 +329,22 @@
 .addqtybuttons>span {
     margin-left: 5px;
     margin-right: 5px;
+}
+
+@media (max-width:1090px) {
+    #cartinhtml>div {
+        width: 100%;
+    }
+
+    #showitemdetial {
+        width: 90%;
+        right: 5%;
+    }
+
+    #process {
+        /* display: flex; */
+        margin: auto;
+        width: 90%;
+
+    }
 }
