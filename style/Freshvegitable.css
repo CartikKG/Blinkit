@@ -7,7 +7,7 @@ z-index: -10;
 }
 .a-box {
   display: flex;
-z-index: -10;
+/* z-index: -10; */
   border-bottom: 1px solid rgb(233, 232, 232);
   border-left: 1px solid rgb(232, 232, 232);
   width: 100%;
