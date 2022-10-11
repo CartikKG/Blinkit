@@ -12,14 +12,15 @@
     font-family: 'Open Sans', sans-serif;
     font-size: 18px;
     position: sticky;
-    top: 0%
+    top: 0%;
+    z-index: 10;
 }
 
 #navbar>img {
     width: 8%;
     cursor: pointer;
     animation: navumage ease-in-out 2s infinite;
-
+    z-index: 10;
 
 }
 
@@ -105,6 +106,7 @@
     color: white;
     font-weight: 1000;
     cursor: pointer;
+    z-index: 10;
 }
 
 #cartanimanttion {
@@ -144,7 +146,7 @@
         /* display: none; */
         width: 100px;
         position: absolute;
-        top: 2%;
+        top: 6%;
         left: 4%;
     }
 
@@ -159,7 +161,8 @@
         position: absolute;
         width: 90%;
         margin: auto;
-        bottom: 2%;
+        /* bottom: 2%; */
+        top: 600%;
         display: flex;
         justify-content: space-between;
     }
@@ -181,7 +184,7 @@
         position: absolute;
 
         left: -1%;
-        top: 8%;
+        top: 50%;
         width: 100%;
 
 
@@ -189,13 +192,14 @@
 
     #logindiv {
         position: absolute;
-        top: 3%;
+        top: 20%;
         right: 3%;
 
     }
 
     #gotocartpage {
         display: block;
+
     }
 }
 
