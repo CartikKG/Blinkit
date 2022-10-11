@@ -173,6 +173,7 @@ const currentupdate = () => {
     });
   } else if (flag == "false") {
     document.getElementById("logoutdiv").style.display = "none";
+    document.getElementById("logindiv").style.right = "0%";
     document.getElementById("logindiv").innerHTML = `
     LOGIN
    `;

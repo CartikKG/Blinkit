@@ -213,7 +213,7 @@
         width: 90%;
         margin: auto;
         /* bottom: 2%; */
-        top: 600%;
+        top: 440%;
         display: flex;
         justify-content: space-between;
     }
@@ -243,8 +243,10 @@
 
     #logindiv {
         position: absolute;
-        top: 20%;
-        right: 3%;
+        width: 77px;
+        top: 7%;
+        right: 4%;
+
 
     }
 
@@ -272,5 +274,15 @@
 
     #foraddressdiv>h5 {
         font-size: 10px;
+    }
+
+    #logindiv {
+        font-size: 13px;
+    }
+
+    #logoutdiv {
+        width: 25%;
+        right: 2%;
+        font-size: 13px;
     }
 }

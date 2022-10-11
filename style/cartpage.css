@@ -56,10 +56,13 @@
 #allitemincart>div {
     /* border: 2px solid green; */
     display: flex;
-    /* justify-content: space-around; */
+    justify-content: space-between;
     height: 120px;
-    width: 95%;
+    width: 100%;
     margin: auto;
+    padding-left: 6px;
+    padding-right: 6px;
+    border-bottom: 1.4px solid rgb(220, 220, 220);
 }
 
 #allitemincart>div>span {
@@ -67,7 +70,9 @@
     flex-direction: column;
     justify-content: space-around;
     /* margin: auto; */
+    width: 300px;
     margin-right: 13px;
+
 }
 
 
@@ -162,7 +167,7 @@
     /* height: 100vh; */
 }
 
-#incarthtmldetial>span {
+#billdetailsamount>span {
     /* width: 90%; */
     font-size: 15px;
     display: flex;
@@ -176,7 +181,7 @@
 
 
 
-#incarthtmldetial>h3 {
+#incarthtmldetial>div>h3 {
     font-family: 'Open Sans', sans-serif;
     font-weight: 900;
     width: 90%;
@@ -196,7 +201,7 @@
     font-weight: 800;
 }
 
-#incarthtmldetial>span>input {
+#incarthtmldetial>div>span>input {
     width: 40%;
     border-radius: 10px;
     border: 0.5px solid rgb(218, 218, 218);
