@@ -1,4 +1,4 @@
-function check() {
+function clickonaddbtn() {
   let parent = event.target.parentNode;
   console.log("1" + parent);
 
@@ -19,7 +19,7 @@ const subtractqty = () => {
     target.parentNode.className = "addonchangeclick";
     target.parentNode.style.background = "#ecffec";
     target.parentNode.style.color = "green";
-    target.parentNode.innerHTML = ` <h5 onclick="check()">ADD</h5>`;
+    target.parentNode.innerHTML = ` <h5 onclick="clickonaddbtn()">ADD</h5>`;
   }
 };
 const increaseqty = () => {

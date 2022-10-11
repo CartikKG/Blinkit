@@ -25,10 +25,135 @@ closeit.addEventListener("click", () => {
 });
 
 const always = () => {
-  let flag = "false";
+  let flag = "true";
   if (flag == "true") {
     document.getElementById("incarthtmldetial").innerHTML = `
+  
+    <div style="background-color: red; height: 500px;width:100%"></div>
+    <div style="display:flex; align-items: center;">
+    <span id="leftforcarousel"><i class="fa-solid fa-angle-left"></i></span>
+    <div id="process">
+  
+    <div id="carsusal">
+      <div class="process-items">
+        <img
+          src="https://cdn.grofers.com/cdn-cgi/image/f=auto,fit=scale-down,q=85,metadata=none,w=250,h=250/app/images/products/sliding_image/391805a.jpg"
+          alt=""
+        />
+        <h5>Vim Lemon Dishwash Bar - Pack of 1</h5>
+        <p>3 x 200 g</p>
+        <span
+          ><p>₹32</p>
+          <span class="addonchangeclick"
+            ><h5 onclick="clickonaddbtn()">ADD</h5></span
+          ></span
+        >
+      </div>
+      <div class="process-items">
+        <img
+          src="https://cdn.grofers.com/cdn-cgi/image/f=auto,fit=scale-down,q=85,metadata=none,w=250,h=250/app/images/products/sliding_image/3889a.jpg"
+          alt=""
+        />
+        <h5>Coriander Bunch</h5>
+        <p>3 x 200 g</p>
+        <span
+          ><p>₹27</p>
+          <span class="addonchangeclick"
+            ><h5 onclick="clickonaddbtn()">ADD</h5></span
+          ></span
+        >
+      </div>
+      <div class="process-items">
+        <img
+          src="https://cdn.grofers.com/cdn-cgi/image/f=auto,fit=scale-down,q=85,metadata=none,w=250,h=250/app/images/products/sliding_image/391306a.jpg"
+          alt=""
+        />
+        <h5>Onion 1 kg</h5>
+        <p>1000 g</p>
+        <span
+          ><p>₹39</p>
+          <span class="addonchangeclick"
+            ><h5 onclick="clickonaddbtn()">ADD</h5></span
+          ></span
+        >
+      </div>
+      <div class="process-items">
+        <img
+          src="https://cdn.grofers.com/cdn-cgi/image/f=auto,fit=scale-down,q=85,metadata=none,w=250,h=250/app/images/products/sliding_image/43a.jpg"
+          alt=""
+        />
+        <h5>Fortune sunlight refine oil</h5>
+        <p>1 Ltr.</p>
+        <span
+          ><p>₹125</p>
+          <span class="addonchangeclick">
+            <h5 onclick="clickonaddbtn()">ADD</h5></span
+          ></span
+        >
+      </div>
+      <div class="process-items">
+        <img
+          src="https://cdn.grofers.com/cdn-cgi/image/f=auto,fit=scale-down,q=85,metadata=none,w=250,h=250/app/images/products/sliding_image/470636a.jpg"
+          alt=""
+        />
+        <h5>Banana</h5>
+        <p>3 Unit</p>
+        <span
+          ><p>₹67</p>
+          <span class="addonchangeclick"
+            ><h5 onclick="clickonaddbtn()">ADD</h5></span
+          ></span
+        >
+      </div>
+      <div class="process-items">
+        <img
+          src="https://cdn.grofers.com/cdn-cgi/image/f=auto,fit=scale-down,q=85,metadata=none,w=250,h=250/app/images/products/sliding_image/15286a.jpg"
+          alt=""
+        />
+        <h5>coca cola zero</h5>
+        <p>1 Unit</p>
+        <span
+          ><p>₹25</p>
+          <span class="addonchangeclick"
+            ><h5 onclick="clickonaddbtn()">ADD</h5></span
+          ></span
+        >
+      </div>
+      <div class="process-items">
+        <img
+          src="https://cdn.grofers.com/cdn-cgi/image/f=auto,fit=scale-down,q=85,metadata=none,w=250,h=250/app/images/products/sliding_image/445396a.jpg"
+          alt=""
+        />
+        <h5>Cauliflower ( Gobhi ) - Fresh</h5>
+        <p>1kg</p>
+        <span
+          ><p>₹22</p>
+          <span class="addonchangeclick"
+            ><h5 onclick="clickonaddbtn()">ADD</h5></span
+          ></span
+        >
+      </div>
+      <div class="process-items">
+        <img
+          src="https://cdn.grofers.com/cdn-cgi/image/f=auto,fit=scale-down,q=85,metadata=none,w=250,h=250/app/images/products/sliding_image/300635a.jpg"
+          alt=""
+        />
+        <h5>Red & Yellow Capsicum</h5>
+        <p>2 Unit</p>
+        <span
+          ><p>₹102</p>
+          <span class="addonchangeclick"
+            ><h5 onclick="clickonaddbtn()">ADD</h5></span
+          ></span
+        >
+      </div>
+    </div>
+   
 
+   
+  </div>
+ <span id="rightforcarousel"><i class="fa-solid fa-angle-right"></i></span>
+ </div>
     <h3>Bill details</h3>
     <span><p> MRP</p> <p>₹165 </p> </span> 
     <span><p> Product discount </p> <p> - ₹37</p> </span> 
@@ -37,8 +162,17 @@ const always = () => {
     <span><p>Coupoun</p> <input type="text" id=coupunencer placeholder="Enter Coupon.."> </span> 
     
     <span id="finallbill"><h6> Bill total </h6> <h6> ₹128</h6> </span> 
+    <div style="background-color: white; height: 50px;width:100%" ></div>
       `;
+    document
+      .getElementById("leftforcarousel")
+      .addEventListener("click", clickLeftButton);
+    document
+      .getElementById("rightforcarousel")
+      .addEventListener("click", clickRightButton);
 
+    // document.getElementById("").addEventListener("click");
+    // document.getElementById("").addEventListener("click");
     document.getElementById(
       "showitemdetial"
     ).innerHTML = ` <h5><span>4</span> items</h5>
@@ -95,29 +229,22 @@ let x = 0;
 function clickLeftButton() {
   x++;
   if (x > 0) {
-    x = -18;
+    x = -3;
   }
   document.getElementById("carsusal").style.transform = `translateX(${
-    x * 29
+    x * 25
   }%)`;
 }
 
 function clickRightButton() {
   x--;
-  if (x < -18) {
+  if (x < -3) {
     x = 0;
   }
   document.getElementById("carsusal").style.transform = `translateX(${
-    x * 29
+    x * 25
   }%)`;
 }
-
-document
-  .getElementById("leftforcarousel")
-  .addEventListener("click", clickLeftButton);
-document
-  .getElementById("rightforcarousel")
-  .addEventListener("click", clickRightButton);
 
 const addpluschangehtml = () => {
   console.log(event.target);
@@ -125,6 +252,27 @@ const addpluschangehtml = () => {
   // document.querySelector("addonchangeclick").innerHTML = `<i class="fa-solid fa-minus"></i> <span>1  </span><i class="fa-solid fa-plus"></i>`;
 };
 
-document
-  .querySelector(".addonchangeclick")
-  .addEventListener("click", addpluschangehtml);
+// document
+//   .querySelector(".addonchangeclick")
+//   .addEventListener("click", addpluschangehtml);
+
+function dataforinnercartcara() {
+  dataforcarou.map((el, ind) => {
+    let div = document.createElement("div");
+    div.className = "process-items";
+    div.innerHTML = `
+        <img
+          src="https://cdn.grofers.com/cdn-cgi/image/f=auto,fit=scale-down,q=85,metadata=none,w=250,h=250/app/images/products/sliding_image/43a.jpg"
+          alt=""
+        />
+        <h5>Fortune sunlight refine oil</h5>
+        <p>1 Ltr.</p>
+        <span
+          ><p>₹125</p>
+          <span class="addonchangeclick">
+            <h5 onclick="clickonaddbtn()">ADD</h5></span
+          ></span
+        >
+      `;
+  });
+}

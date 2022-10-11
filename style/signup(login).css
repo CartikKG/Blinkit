@@ -34,6 +34,17 @@
     animation: loginmodal 0.8s ease-in-out;
 }
 
+#modals>h2 {
+    margin-top: -16px;
+    color: rgb(233 184 2);
+}
+
+#modals>p {
+    margin-top: 20px;
+    font-size: 16px;
+    color: rgb(233, 152, 2);
+}
+
 @keyframes loginmodal {
     from {
         margin-top: -20%;
@@ -60,7 +71,18 @@
     padding: 3% 6%;
     border-radius: 10px;
     border-width: 1px;
+
     border-color: rgb(243, 237, 237);
+}
+
+input[type="text"] {
+    border: 0%;
+    border: 3px solid green;
+}
+
+input[type="password"] {
+    border: 0%;
+    border: 3px solid green;
 }
 
 #password {
@@ -96,6 +118,7 @@
     border-radius: 5px;
     background: green;
     color: white;
+    height: 30px;
 }
 
 #loginbtn {
@@ -105,4 +128,31 @@
     border-radius: 5px;
     background: green;
     color: white;
+    height: 30px;
+}
+
+#signupPage {
+    position: relative;
+    bottom: 0%;
+    /* margin-top: 10px; */
+    margin-top: 80px;
+    width: 25%;
+    border: none;
+    border-radius: 5px;
+    background: green;
+    color: white;
+
+    margin-bottom: 10%;
+}
+
+#loginPage {
+    position: relative;
+    bottom: 0%;
+    margin-top: 8px;
+    width: 25%;
+    border: none;
+    border-radius: 5px;
+    background: green;
+    color: white;
+    /* margin-bottom: 10%; */
 }

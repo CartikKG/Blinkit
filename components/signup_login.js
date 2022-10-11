@@ -7,7 +7,7 @@ const openonclick = () => {
             <div id="cancelBox">
             <div><button  id="cancelmodal">&#215;</button></div>
             </div>
-            <h2>SIGN IN</h2>
+            <h2>LOGIN</h2>
             <div id="input_container">
                 <p>Email</p>
                 <input type="text" placeholder="Enter email" id="email" class="input">
@@ -15,7 +15,7 @@ const openonclick = () => {
                 <input type="password" placeholder="Enter password" id="password" class="input">
             </div>
             <button  id="loginbtn">Login</button>
-            <p>Don't have an account? <button  id="signupPage">Sign Up</button></p>
+            <p>Don't have an account? </p><button  id="signupPage">Sign Up</button>
         </div>
     `;
 
@@ -58,7 +58,7 @@ function loginPage() {
     <div id="cancelBox">
         <div><button  id="cancelmodal">&#215;</button></div>
         </div>
-        <h2>SIGN IN</h2>
+        <h2>LOGIN</h2>
         <div id="input_container">
             <p>Email</p>
             <input type="text" placeholder="Enter email" id="email" class="input">
@@ -66,7 +66,7 @@ function loginPage() {
             <input type="password" placeholder="Enter password" id="password" class="input">
         </div>
         <button  id="loginbtn">Login</button>
-        <p>Don't have an account? <button id="signupPage">Sign Up</button></p>
+        <p>Don't have an account? </p><button id="signupPage">Sign Up</button>
     </div>
     `;
   document.getElementById("cancelmodal").addEventListener("click", cancel);
@@ -90,7 +90,7 @@ function signupPage() {
             <input type="password" placeholder="Enter password" id="password" class="input">
         </div>
         <button  id="signuppp">Sign Up</button>
-        <p>Already have an account? <button  id="loginPage">Login</button></p>
+        <p>Already have an account? </p><button  id="loginPage">Login</button>
     </div>
     `;
   console.log("SignUp Clicked!");
@@ -129,7 +129,7 @@ function signUp() {
                 <div id="cancelBox">
                 <div><button id="cancelmodal">&#215;</button></div>
                 </div>
-                <h2>Sign In</h2>
+                <h2>LOGIN</h2>
                 <div id="input_container">
                     <p>Email</p>
                     <input type="text" placeholder="Enter email" id="email" class="input">
@@ -137,7 +137,7 @@ function signUp() {
                     <input type="password" placeholder="Enter password" id="password" class="input">
                 </div>
                 <button  id="loginbtn">Login</button>
-                <p>Don't have an account? <button id="signupPage">Sign Up</button></p>
+                <p>Don't have an account? </p><button id="signupPage">Sign Up</button>
             </div>
             `;
       document.getElementById("cancelmodal").addEventListener("click", cancel);

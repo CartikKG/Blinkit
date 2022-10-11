@@ -16,7 +16,29 @@
     top: 0%;
     position: absolute;
     height: 100vh;
-    display: flex;
+    /* display: flex; */
+
+}
+
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+    box-shadow: inset 0 0 5px grey;
+    border-radius: 10px;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+    background: green;
+    border-radius: 10px;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+    background: green
 }
 
 #cartinhtml>div {
@@ -25,7 +47,8 @@
     width: 25%;
     height: 100vh;
     right: 0;
-    background-color: #ffffff
+    background-color: #ffffff;
+    overflow: scroll;
 }
 
 #cartinhtml>div>div>h4 {
@@ -33,31 +56,33 @@
     font-weight: 1000;
 }
 
-#cartinhtml>div>div {
+#mycartheading {
+    background-color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-family: 'Open Sans', sans-serif;
     padding-left: 20px;
     padding-right: 20px;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    font-family: 'Open Sans', sans-serif;
-    font-size: 29px;
-    overflow: hidden;
+    position: sticky;
+    top: 0%;
 }
 
-/* #showitemdetiabefor {
-    display: none;
-} */
-
 #showitemdetial {
-    width: 95%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 23%;
     margin: auto;
     background-color: green;
     border-radius: 4px;
     color: white;
-    position: absolute;
+    position: fixed;
     bottom: 3%;
-    left: 3%;
+    right: 1%;
 }
+
+
 
 #showitemdetial>h5 {
 
@@ -76,15 +101,19 @@
 }
 
 #incarthtmldetial {
-    text-align: center;
+    /* text-align: center; */
     display: flex;
     flex-direction: column;
+    /* overflow: scroll; */
+    /* height: 100vh; */
 }
 
 #incarthtmldetial>span {
+    /* width: 90%; */
     font-size: 15px;
     display: flex;
-    width: 100%;
+    width: 90%;
+    margin: auto;
     justify-content: space-between;
     /* border: 2px solid red; */
     /* text-align: center; */
@@ -94,7 +123,11 @@
 
 
 #incarthtmldetial>h3 {
+    font-family: 'Open Sans', sans-serif;
     font-weight: 900;
+    width: 90%;
+    margin: auto;
+    margin-bottom: 10px;
 }
 
 #incarthtmldetial>img {
@@ -126,10 +159,26 @@
 
 }
 
+#process {
+    display: flex;
+    width: 310px;
+    /* height: 1500px; */
+    border: 2px solid green;
+    overflow: hidden;
+    margin-top: 14px;
+    margin-bottom: 14px;
+}
+
+#carsusal {
+    /* height: 400px; */
+    transition: all 0.3s ease-in-out;
+    display: flex;
+    /* overflow: hidden; */
+}
 
 
 #process>div {
-    width: 600px;
+    /* width: 1px; */
     /* border: 2px solid red; */
     padding: 4px 10px;
     height: 310px;
@@ -138,13 +187,19 @@
 /* .process-items {
     width: 12200px;
 } */
-#carsusal>div {
-    width: 100000%;
-}
+
 
 #process>div>div {
-    /* width: 100px; */
-    border: 2px solid red;
+    overflow: hidden;
+    padding: 3px 10px;
+    width: 200px;
+    margin-right: 10px;
+    border: 1px solid rgb(146, 146, 146);
+    border-radius: 10px;
+}
+
+#process>div>div:hover {
+    border: 1.4px solid green;
 }
 
 #process>div>div>img {
@@ -157,8 +212,13 @@
 
 #process>div>div>span {
     display: flex;
+    /* width: 16.7%; */
     justify-content: space-between;
     align-items: center;
+    /* position: relative;
+    bottom: 4%; */
+    /* border: 2px solid red; */
+
 }
 
 .addonchangeclick {
@@ -174,7 +234,9 @@
     border-radius: 10px;
     color: green;
     cursor: pointer;
+
 }
+
 
 #process>div>div>span>span>h5 {
     margin-top: 4%;
@@ -195,41 +257,31 @@
     font-weight: 600;
 }
 
-#process {
-    width: 470px;
-    border: 2px solid green;
-    overflow: hidden;
-}
 
-#carsusal {
-    /* height: 400px; */
-    transition: all 0.3s ease-in-out;
-    display: flex;
-    /* overflow: hidden; */
-}
-
-#carsusal>div {
+/* #carsusal>div {
     width: 1000px;
-}
+} */
 
 #leftforcarousel {
-    position: absolute;
+    /* position: absolute; */
     top: 20%;
     right: 20%;
     background-color: rgb(190, 255, 255);
     font-size: 20px;
     border-radius: 19px;
     padding: 7px;
+    cursor: pointer;
 }
 
 #rightforcarousel {
-    position: absolute;
+    /* position: absolute; */
     top: 20%;
     right: 0%;
     background-color: rgb(190, 255, 255);
     font-size: 20px;
     border-radius: 19px;
     padding: 7px;
+    cursor: pointer;
 }
 
 .addqtybuttons {
