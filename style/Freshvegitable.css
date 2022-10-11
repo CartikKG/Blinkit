@@ -1,7 +1,7 @@
 #result {
   display: grid;
   box-shadow: 0 2px 2px 0 rgb(0 0 0 / 22%);
-
+z-index: -10;
 
   grid-template-columns: repeat(auto-fill, minmax(180px,1fr));
 }
