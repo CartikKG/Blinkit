@@ -16,7 +16,7 @@ const navbar = () => {
       </div>
     </div>
 
-    <div id="logindiv">Login</div>
+    <div id="logindiv"   >Login</div>
     <div id="cartdiv">
      <span> <i class="fa-solid fa-cart-shopping" id="cartanimanttion"></i>My Cart</span>
       <i class="fa-solid fa-right-to-bracket" id="gotocartpage"></i>

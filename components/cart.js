@@ -1,7 +1,7 @@
 const cart = () => {
   return ` 
   <div>
-    <div>
+    <div id="mycartheading">
       <h4>My Cart</h4>
       <i class="fa-sharp fa-solid fa-xmark" id="closeit"></i>
     </div>

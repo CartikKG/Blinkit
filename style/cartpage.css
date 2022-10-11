@@ -9,15 +9,80 @@
 }
 
 #cartinhtml {
-
     display: block;
+    position: fixed;
+    top: 0%;
+
     width: 100%;
     background-color: rgba(0, 0, 0, 0.6);
     top: 0%;
-    position: absolute;
+    /* position: absolute; */
     height: 100vh;
-    display: flex;
+    /* display: flex; */
+
 }
+
+::-webkit-scrollbar {
+    width: 13px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+    box-shadow: inset 0 0 5px grey;
+    border-radius: 10px;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+    background: rgb(255, 217, 0);
+    border-radius: 10px;
+}
+
+/* Handle on hover */
+/* ::-webkit-scrollbar-thumb:hover {
+    background: green
+} */
+#allitemincart {
+    width: 100%;
+
+    /* border: 2px solid red;
+     */
+    /* border-top: 1px solid rgb(220, 220, 220); */
+    border-bottom: 1px solid rgb(220, 220, 220);
+
+}
+
+#allitemincart>div {
+    /* border: 2px solid green; */
+    display: flex;
+    /* justify-content: space-around; */
+    height: 120px;
+    width: 95%;
+    margin: auto;
+}
+
+#allitemincart>div>span {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    /* margin: auto; */
+    margin-right: 13px;
+}
+
+
+#allitemincart>div>span>span>span>h5 {
+    margin-top: 2%;
+    font-weight: bold;
+}
+
+#allitemincart>div>span>span {
+    display: flex;
+    /* flex-direction: column; */
+    align-items: center;
+    justify-content: space-between;
+}
+
+
 
 #cartinhtml>div {
     position: absolute;
@@ -25,7 +90,18 @@
     width: 25%;
     height: 100vh;
     right: 0;
-    background-color: #ffffff
+    background-color: #ffffff;
+    overflow: scroll;
+}
+
+#cartinhtml>div::-webkit-scrollbar {
+    color: green;
+    width: 10px;
+}
+
+#cartinhtml>div::-webkit-scrollbar-thumb {
+    background: green;
+    /* width: 10px; */
 }
 
 #cartinhtml>div>div>h4 {
@@ -33,31 +109,38 @@
     font-weight: 1000;
 }
 
-#cartinhtml>div>div {
+#mycartheading {
+    background-color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-family: 'Open Sans', sans-serif;
     padding-left: 20px;
     padding-right: 20px;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    font-family: 'Open Sans', sans-serif;
-    font-size: 29px;
-    overflow: hidden;
+    position: sticky;
+    top: 0%;
 }
 
-/* #showitemdetiabefor {
-    display: none;
-} */
+#mycartheading>i {
+    font-size: 24px;
+    /* background-color: red; */
+}
 
 #showitemdetial {
-    width: 95%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 23%;
     margin: auto;
     background-color: green;
     border-radius: 4px;
     color: white;
-    position: absolute;
+    position: fixed;
     bottom: 3%;
-    left: 3%;
+    right: 1%;
 }
+
+
 
 #showitemdetial>h5 {
 
@@ -69,22 +152,21 @@
     cursor: pointer;
 }
 
-@media (max-width:1090px) {
-    #cartinhtml>div {
-        width: 100%;
-    }
-}
 
 #incarthtmldetial {
-    text-align: center;
+    /* text-align: center; */
     display: flex;
     flex-direction: column;
+    /* overflow: scroll; */
+    /* height: 100vh; */
 }
 
 #incarthtmldetial>span {
+    /* width: 90%; */
     font-size: 15px;
     display: flex;
-    width: 100%;
+    width: 90%;
+    margin: auto;
     justify-content: space-between;
     /* border: 2px solid red; */
     /* text-align: center; */
@@ -94,7 +176,13 @@
 
 
 #incarthtmldetial>h3 {
+    font-family: 'Open Sans', sans-serif;
     font-weight: 900;
+    width: 90%;
+    margin: auto;
+    font-size: 20px;
+    margin-bottom: 10px;
+
 }
 
 #incarthtmldetial>img {
@@ -102,6 +190,7 @@
 }
 
 #finallbill>h6 {
+    font-family: 'Open Sans', sans-serif;
     font-size: 18px;
     font-weight: 800;
 }
@@ -114,6 +203,8 @@
 }
 
 #startshopping {
+    text-align: center;
+    justify-content: center;
     font-size: 20px;
     padding: 8px 16px;
     border-radius: 10px;
@@ -124,45 +215,194 @@
 
 }
 
+#Beforecheckout {
+    border-top: 16px solid rgb(246, 246, 246);
+    padding-top: 10px;
+    padding-left: 13px;
+    border-bottom: 16px solid rgb(255, 255, 255);
+    font-size: 22px;
+    font-weight: 700;
+}
+
+#cartinUpCara {
+    display: flex;
+    align-items: center;
+    margin-bottom: 13px;
+    /* border-top: 16px solid rgb(246, 246, 246); */
+    border-bottom: 16px solid rgb(246, 246, 246);
+}
+
+#process {
+    display: flex;
+    width: 310px;
+    /* height: 1500px; */
+    /* border: 1px solid rgb(210, 210, 210); */
+    overflow: hidden;
+    margin-top: 14px;
+    margin-bottom: 14px;
+}
+
+#carsusal {
+    /* height: 400px; */
+    transition: all 0.3s ease-in-out;
+    display: flex;
+    /* overflow: hidden; */
+}
+
+
 #process>div {
-    width: 200px;
-    border: 2px solid red;
+    /* width: 1px; */
+    /* border: 2px solid red; */
     padding: 4px 10px;
     height: 310px;
 }
 
-#process>div>img {
+/* .process-items {
+    width: 12200px;
+} */
+
+
+#process>div>div {
+    overflow: hidden;
+    padding: 3px 10px;
+    width: 200px;
+    margin-right: 10px;
+    border: 1px solid rgb(146, 146, 146);
+    border-radius: 10px;
+}
+
+#process>div>div:hover {
+    border: 1.4px solid green;
+}
+
+#process>div>div>img {
     width: 100%;
 }
 
-#process>div>span {
+#process>div>div>span {
     width: 100%;
 }
 
-#process>div>span {
+#process>div>div>span {
     display: flex;
+    /* width: 16.7%; */
     justify-content: space-between;
     align-items: center;
+    /* position: relative;
+    bottom: 4%; */
+    /* border: 2px solid red; */
+
 }
 
-#process>div>span>span {
+.addonchangeclick {
     background-color: rgb(236, 255, 236);
-    padding: 8px 30px;
+    /* padding: 8px 30px; */
+    padding-top: 5px;
+    width: 80px;
+    height: 30px;
+    text-align: center;
+    align-content: center;
     border: 1px solid green;
     margin-top: -5px;
     border-radius: 10px;
     color: green;
-    font-weight: bold;
     cursor: pointer;
+
 }
 
-#process>div>h5 {
-    font-size: 19=7px;
+
+#process>div>div>span>span>h5 {
+    margin-top: 4%;
+    margin-left: 1px;
+    text-align: center;
+    font-weight: bold;
+    font-size: 14px;
+}
+
+#process>div>div>h5 {
+    /* font-size: 19=7px; */
     font-weight: 400;
 }
 
-#process>div>span>p {
+#process>div>div>span>p {
     font-size: 19px;
     /* font-weight: bold; */
     font-weight: 600;
+}
+
+
+/* #carsusal>div {
+    width: 1000px;
+} */
+
+#leftforcarousel {
+    /* position: absolute; */
+    text-align: center;
+    align-self: center;
+    height: 36px;
+    width: 36px;
+    background-color: rgb(239, 239, 239);
+    font-size: 20px;
+    border-radius: 50%;
+    padding: 3px 5px;
+
+    cursor: pointer;
+}
+
+#rightforcarousel {
+    /* position: absolute; */
+    text-align: center;
+    align-self: center;
+    height: 36px;
+    width: 36px;
+    background-color: rgb(239, 239, 239);
+    font-size: 20px;
+    border-radius: 50%;
+    padding: 3px 5px;
+
+    cursor: pointer;
+}
+
+.addqtybuttons {
+    /* width: 100%; */
+    padding-top: 5px;
+    width: 80px;
+    height: 30px;
+    text-align: center;
+    align-content: center;
+    border: 1px solid green;
+    margin-top: -5px;
+    border-radius: 10px;
+    color: green;
+    cursor: pointer;
+    color: white;
+    padding: 2px 12px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-size: 18px;
+    background-color: green;
+}
+
+.addqtybuttons>span {
+    margin-left: 5px;
+    margin-right: 5px;
+}
+
+@media (max-width:1090px) {
+    #cartinhtml>div {
+        width: 100%;
+    }
+
+    #showitemdetial {
+        width: 90%;
+        right: 5%;
+    }
+
+    #process {
+        /* display: flex; */
+        margin: auto;
+        width: 90%;
+
+    }
 }
