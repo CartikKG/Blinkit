@@ -16,12 +16,16 @@
     z-index: 10;
 }
 
-#navbar>img {
+#navbar>a {
     width: 8%;
     cursor: pointer;
     animation: navumage ease-in-out 2s infinite;
     z-index: 10;
 
+}
+
+#navbar>a>img {
+    width: 100%;
 }
 
 @keyframes navumage {
@@ -130,6 +134,53 @@
 
 
 
+#logoutdiv {
+    display: block;
+    position: fixed;
+    top: 9%;
+    background-color: white;
+    z-index: 10;
+    right: 12%;
+    display: flex;
+    /* text-align: ; */
+    flex-direction: column;
+    justify-content: space-between;
+    /* align-items: center; */
+    width: 15%;
+    /* border-radius: 50p%; */
+    border: dashed 4px green;
+    border-top: none;
+    /* padding: 0px 11px;  */
+    animation: logoutdiv ease-in-out 0.5s;
+    /* z-index: -111; */
+}
+
+@keyframes logoutdiv {
+    from {
+        color: rgb(255, 238, 0);
+        background-color: rgb(255, 238, 0);
+        top: -10%;
+    }
+
+    to {
+        /* z-index: -1; */
+        background-color: rgb(255, 238, 0);
+        color: rgb(255, 238, 0);
+        top: 9%;
+    }
+}
+
+#logoutdiv>span {
+    padding: 10px;
+    border-bottom: 1px solid rgb(128, 128, 128);
+    /* padding-bottom: 10px; */
+    cursor: pointer;
+}
+
+#logoutdiv>span:hover {
+    background-color: rgb(238, 238, 238);
+}
+
 #gotocartpage {
     display: none;
     /* visibility: hidden; */
@@ -142,7 +193,7 @@
         top: 0%
     }
 
-    #navbar>img {
+    #navbar>a {
         /* display: none; */
         width: 100px;
         position: absolute;
@@ -204,7 +255,7 @@
 }
 
 @media (max-width:470px) {
-    #navbar>img {
+    #navbar>a {
         width: 80px;
     }
 

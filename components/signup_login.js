@@ -41,8 +41,11 @@ function login() {
     for (let i = 0; i < users.length; i++) {
       if (email === users[i].email && password === users[i].password) {
         flag = true;
+        localStorage.setItem("Loginflag", "true");
+        localStorage.setItem("username", users[i].name);
         alert("Logged In Successfully!");
         document.getElementById("modal_container").classList.remove("show");
+        location.reload();
         break;
       }
     }
@@ -123,6 +126,7 @@ function signUp() {
     } else {
       users.push(userObj);
       localStorage.setItem("users", JSON.stringify(users));
+
       alert("Signed Up Successfully!");
       document.getElementById("modal_container").innerHTML = `
             <div id="modals">
@@ -149,5 +153,90 @@ function signUp() {
   }
 }
 
-export { users, openonclick, cancel, login, loginPage, signupPage, signUp };
+const currentupdate = () => {
+  let flag = localStorage.getItem("Loginflag") || "false";
+  let name = localStorage.getItem("username") || "";
+  if (flag == "true") {
+    document.getElementById("logoutdiv").style.display = "none";
+    document.getElementById("logindiv").innerHTML = `
+     Hello, ${name}  <i class="fa-solid fa-caret-down"></i>
+    `;
+    let flag = true;
+    document.getElementById("logindiv").addEventListener("click", () => {
+      if (flag) {
+        document.getElementById("logoutdiv").style.display = "flex";
+        flag = false;
+      } else {
+        document.getElementById("logoutdiv").style.display = "none";
+        flag = true;
+      }
+    });
+  } else if (flag == "false") {
+    document.getElementById("logoutdiv").style.display = "none";
+    document.getElementById("logindiv").innerHTML = `
+    LOGIN
+   `;
+    document.getElementById("logindiv").addEventListener("click", openonclick);
+  }
+};
+const logoutcur = () => {
+  localStorage.setItem("username", "");
+  localStorage.setItem("Loginflag", "false");
+  // currentupdate();
+  location.reload();
+};
+
+function mylocation() {
+  const options = {
+    enableHighAccuracy: true,
+    timeout: 5000,
+    maximumAge: 0,
+  };
+
+  function success(pos) {
+    const crd = pos.coords;
+
+    console.log("Your current position is:");
+    console.log(`Latitude : ${crd.latitude}`);
+    console.log(`Longitude: ${crd.longitude}`);
+    console.log(`More or less ${crd.accuracy} meters.`);
+
+    // getdatabycurrent();
+    // getReverseGeocodingData(crd.latitude, crd.longitude);
+  }
+
+  function error(err) {
+    console.warn(`ERROR(${err.code}): ${err.message}`);
+  }
+
+  navigator.geolocation.getCurrentPosition(success, error, options);
+}
+function getReverseGeocodingData(lat, lng) {
+  var latlng = new google.maps.LatLng(lat, lng);
+  // This is making the Geocode request
+  var geocoder = new google.maps.Geocoder();
+  geocoder.geocode({ latLng: latlng }, (results, status) => {
+    if (status !== google.maps.GeocoderStatus.OK) {
+      alert(status);
+    }
+    // This is checking to see if the Geoeode Status is OK before proceeding
+    if (status == google.maps.GeocoderStatus.OK) {
+      console.log(results);
+      var address = results[0].formatted_address;
+    }
+  });
+}
 // export { openonclick };
+export {
+  users,
+  openonclick,
+  cancel,
+  login,
+  loginPage,
+  signupPage,
+  signUp,
+  currentupdate,
+  logoutcur,
+  mylocation,
+  getReverseGeocodingData,
+};

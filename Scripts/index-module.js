@@ -8,13 +8,17 @@ import {
   loginPage,
   signupPage,
   signUp,
+  currentupdate,
+  logoutcur,
+  mylocation,
+  getReverseGeocodingData,
 } from "../components/signup_login.js";
-// console.log(user);
 
 document.getElementById("cartinhtm").innerHTML = cart();
 document.getElementById("navbar").innerHTML = navbar();
-document.getElementById("logindiv").addEventListener("click", openonclick);
-
+currentupdate();
+mylocation();
+document.getElementById("logoutcurrent").addEventListener("click", logoutcur);
 cartinhtm.addEventListener("click", () => {});
 cartdiv.addEventListener("click", () => {
   cartinhtm.id = "cartinhtml";

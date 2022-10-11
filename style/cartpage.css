@@ -9,6 +9,7 @@
 }
 
 #cartinhtml {
+    z-index: 11;
     display: block;
     position: fixed;
     top: 0%;

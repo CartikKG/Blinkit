@@ -1,5 +1,5 @@
 const navbar = () => {
-  return `     <img src="../img/Untitled-1.jpg" alt="logo" />
+  return ` <a href="../index.html">   <img src="./img/Untitled-1.jpg" alt="logo" /></a> 
     <div id="foraddressdiv">
       <h3>Delivery in Sometimes</h3>
       <h5>
@@ -20,6 +20,11 @@ const navbar = () => {
     <div id="cartdiv">
      <span> <i class="fa-solid fa-cart-shopping" id="cartanimanttion"></i>My Cart</span>
       <i class="fa-solid fa-right-to-bracket" id="gotocartpage"></i>
+    </div>
+    <div id="logoutdiv">
+      <span>My Account</span>
+      <span>Location</span>
+      <span id="logoutcurrent">Logout</span>
     </div>`;
 };
 export default navbar;
