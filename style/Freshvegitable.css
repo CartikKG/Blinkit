@@ -1,15 +1,13 @@
 #result {
-  /* width: 200px; */
-/* display: flex; */
   display: grid;
   box-shadow: 0 2px 2px 0 rgb(0 0 0 / 22%);
 
 
-  grid-template-columns: repeat(auto-fill, minmax(200px,1fr));
+  grid-template-columns: repeat(auto-fill, minmax(180px,1fr));
 }
 .a-box {
   display: flex;
-
+z-index: -10;
   border-bottom: 1px solid rgb(233, 232, 232);
   border-left: 1px solid rgb(232, 232, 232);
   width: 100%;
@@ -29,6 +27,7 @@
   left: 15%;
   width: 70%;
   height: 120px;
+  z-index: -2;
 }
 .name-a {
   color: rgb(78, 78, 78);
@@ -55,21 +54,7 @@
   color: #666666;
   font-size: 12px;
 }
-/* .pricediv > div button {
-  font-family: Arial, Helvetica, sans-serif;
-  position: relative;
-  top: 10%;
-  font-style: normal;
-  font-weight: 600;
-  font-size: 15px;
-  color: rgb(12, 131, 31);
-  width: 90px;
-  height: 36px;
-  background-color: rgb(247, 255, 249);
-  border: 0.6px solid rgb(12, 131, 31);
-  border-radius: 8px;
-  cursor: pointer;
-} */
+
 
 .adjustpara > span {
   color: #666666;
@@ -137,4 +122,11 @@
   .addqtybuttons>span {
     margin-left: 5px;
     margin-right: 5px;
+  }
+
+
+  @media (max-width:470px){
+    .inDiv img{
+      width: 50%;
+    }
   }

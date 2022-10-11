@@ -1,5 +1,5 @@
 const navbar = () => {
-  return `     <img src="./img/Untitled-1.jpg" alt="logo" />
+  return `     <img src="../img/Untitled-1.jpg" alt="logo" />
     <div id="foraddressdiv">
       <h3>Delivery in Sometimes</h3>
       <h5>
