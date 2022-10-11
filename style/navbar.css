@@ -12,14 +12,15 @@
     font-family: 'Open Sans', sans-serif;
     font-size: 18px;
     position: sticky;
-    top: 0%
+    top: 0%;
+    z-index: 10;
 }
 
 #navbar>img {
     width: 8%;
     cursor: pointer;
     animation: navumage ease-in-out 2s infinite;
-
+    z-index: 10;
 
 }
 
@@ -105,6 +106,7 @@
     color: white;
     font-weight: 1000;
     cursor: pointer;
+    z-index: 10;
 }
 
 #cartanimanttion {
