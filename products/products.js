@@ -32,12 +32,37 @@ function showChemist() {
   var cor1 = document.getElementById('cor_one')
   var cor2 = document.getElementById('cor_two')
   var cor3 = document.getElementById('cor_three')
+  var cor_s1 = document.getElementById('couroSlider')
   let a = chemistData.filter((ele, i) => {
     if (i == 6) {
       return ele
     }
   });
   let b = a[0].objects[0].data.products
+  b.map((ele)=>{
+    let name = ''
+    name =ele[0].name
+    if(name.length<=30){
+      name = name
+    }else{
+      name = name.slice(0,30)+'...'
+      console.log(name);
+    }
+    let img = `<div class="s_child">
+                    <img src="${ele[0].image_url}" class="" alt="...">
+                    <p>${name}</p>
+                    <small>${ele[0].unit}</small>
+                    <div class="d-flex justify-content-between align-items-center">
+                        <div><p> ${ele[0].price}</p><p> <s> ${ele[0].mrp}</s></p></div>
+                            <span class="addonchangeclick">
+                            <h5 onclick="clickonaddbtn()">ADD</h5>
+                            </span>
+                    </div>
+                </div>
+                `
+                cor_s1.innerHTML += img;
+  })
+
   let c1 = b.filter((ele, i) => {
     if (i < 6) {
       return ele
@@ -52,7 +77,7 @@ function showChemist() {
       name = name.slice(0,30)+'...'
       console.log(name);
     }
-    let img = `<div class="w-20">
+    let img = `<div class="w-20_per">
                     <img src="${ele[0].image_url}" class="" alt="...">
                     <p>${name}</p>
                     <small>${ele[0].unit}</small>
@@ -79,7 +104,7 @@ function showChemist() {
     }else{
       name = name.slice(0,30)+'...'
     }
-    let img = ` <div class="w-20">
+    let img = ` <div class="w-20_per">
     <img src="${ele[0].image_url}" class="" alt="...">
     <p>${name}</p>
     <small>${ele[0].unit}</small>
@@ -106,7 +131,7 @@ function showChemist() {
     }else{
       name = name.slice(0,30)+'...'
     }
-    let img = `  <div class="w-20">
+    let img = `  <div class="w-20_per">
     <img src="${ele[0].image_url}" class="" alt="...">
     <p>${name}</p>
     <small>${ele[0].unit}</small>
@@ -125,12 +150,36 @@ function dairy_products() {
   var cor1 = document.getElementById('d_cor_one')
   var cor2 = document.getElementById('d_cor_two')
   var cor3 = document.getElementById('d_cor_three')
+  var cor_s2 = document.getElementById('couroSlider1')
   let a = chemistData.filter((ele, i) => {
     if (i == 7) {
       return ele
     }
   });
   let b = a[0].objects[0].data.products
+  b.map((ele)=>{
+    let name = ''
+    name =ele[0].name
+    if(name.length<=30){
+      name = name
+    }else{
+      name = name.slice(0,30)+'...'
+      console.log(name);
+    }
+    let img = `<div class="s_child">
+                    <img src="${ele[0].image_url}" class="" alt="...">
+                    <p>${name}</p>
+                    <small>${ele[0].unit}</small>
+                    <div class="d-flex justify-content-between align-items-center">
+                        <div><p> ${ele[0].price}</p><p> <s> ${ele[0].mrp}</s></p></div>
+                            <span class="addonchangeclick">
+                            <h5 onclick="clickonaddbtn()">ADD</h5>
+                            </span>
+                    </div>
+                </div>
+                `
+                cor_s2.innerHTML += img;
+  })
   let c1 = b.filter((ele, i) => {
     if (i < 6) {
       return ele
@@ -144,7 +193,7 @@ function dairy_products() {
     }else{
       name = name.slice(0,30)+'...'
     }
-    let img = `  <div class="w-20">
+    let img = `  <div class="w-20_per">
     <img src="${ele[0].image_url}" class="" alt="...">
     <p>${name}</p>
     <small>${ele[0].unit}</small>
@@ -171,7 +220,7 @@ function dairy_products() {
     }else{
       name = name.slice(0,30)+'...'
     }
-    let img = ` <div class="w-20">
+    let img = ` <div class="w-20_per">
     <img src="${ele[0].image_url}" class="" alt="...">
     <p>${name}</p>
     <small>${ele[0].unit}</small>
@@ -197,7 +246,7 @@ function dairy_products() {
     }else{
       name = name.slice(0,30)+'...'
     }
-    let img = `  <div class="w-20">
+    let img = `  <div class="w-20_per">
     <img src="${ele[0].image_url}" class="" alt="...">
     <p>${name}</p>
     <small>${ele[0].unit}</small>
@@ -216,13 +265,36 @@ function biscuits() {
   var cor1 = document.getElementById('b_cor_one')
   var cor2 = document.getElementById('b_cor_two')
   var cor3 = document.getElementById('b_cor_three')
+  var cor_s3 = document.getElementById('couroSlider2')
   let a = chemistData.filter((ele, i) => {
     if (i == 8) {
       return ele
     }
   });
   let b = a[0].objects[0].data.products
-  console.log(b);
+  b.map((ele)=>{
+    let name = ''
+    name =ele[0].name
+    if(name.length<=30){
+      name = name
+    }else{
+      name = name.slice(0,30)+'...'
+      console.log(name);
+    }
+    let img = `<div class="s_child">
+                    <img src="${ele[0].image_url}" class="" alt="...">
+                    <p>${name}</p>
+                    <small>${ele[0].unit}</small>
+                    <div class="d-flex justify-content-between align-items-center">
+                        <div><p> ${ele[0].price}</p><p> <s> ${ele[0].mrp}</s></p></div>
+                            <span class="addonchangeclick">
+                            <h5 onclick="clickonaddbtn()">ADD</h5>
+                            </span>
+                    </div>
+                </div>
+                `
+                cor_s3.innerHTML += img;
+  })
   let c1 = b.filter((ele, i) => {
     if (i < 6) {
       return ele
@@ -236,7 +308,7 @@ function biscuits() {
     }else{
       name = name.slice(0,30)+'...'
     }
-    let img = `  <div class="w-20">
+    let img = `  <div class="w-20_per">
     <img src="${ele[0].image_url}" class="" alt="...">
     <p>${name}</p>
     <small>${ele[0].unit}</small>
@@ -263,7 +335,7 @@ function biscuits() {
     }else{
       name = name.slice(0,30)+'...'
     }
-    let img = ` <div class="w-20">
+    let img = ` <div class="w-20_per">
     <img src="${ele[0].image_url}" class="" alt="...">
     <p>${name}</p>
     <small>${ele[0].unit}</small>
@@ -289,7 +361,7 @@ function biscuits() {
     }else{
       name = name.slice(0,30)+'...'
     }
-    let img = `  <div class="w-20">
+    let img = `  <div class="w-20_per">
     <img src="${ele[0].image_url}" class="" alt="...">
     <p>${name}</p>
     <small>${ele[0].unit}</small>
