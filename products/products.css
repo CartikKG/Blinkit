@@ -30,6 +30,20 @@ img{
     width: 4px;
     appearance: none;
 }
+.w-20_per{
+    position: relative;
+}
+button>span{
+    width: 30px;
+    height: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    box-shadow: rgb(0 0 0 / 35%) 0px 5px 15px;
+}
+
+
 
 @media (max-width:699px){
     #topProd{
@@ -39,13 +53,19 @@ img{
         width: 90%;
         margin: auto;
     }
+    .br10px{
+        border-radius: 10px;
+    }
     .w-20_per{
         width: 15%;
         display: inline-block;
         margin: auto 0.5rem;
-        border: 1px solid rgb(146, 146, 146);;
+        border: 1px solid rgb(221, 221, 221);;
         border-radius: 10px;
         padding: 5px;
+    }
+    .w-20_per:hover{
+        border: 0.5px solid green;
     }
     #couroSlider,#couroSlider1,#couroSlider2{
         display: flex;
@@ -82,11 +102,39 @@ img{
         width: 15%;
         display: inline-block;
         margin: auto 0.5rem;
-        border: 1px solid rgb(146, 146, 146);;
+        border: 1px solid rgb(221, 221, 221);
         border-radius: 10px;
-        padding: 5px;
+        padding: 0 10px;
+    }
+    .w-20_per:hover{
+        border: 0.5px solid green;
     }
     #couroSlider,#couroSlider1,#couroSlider2{display: none;}
+}
+.w-20_per>img{
+height: 130px;
+width: 130px;
+margin: auto 18px;
+}
+.w-20_per>p{
+font-size: 14px;
+color: black;
+text-align: justify;
+}
+small{
+    font-size: 12px;
+}
+.bVEkMr {
+    position: absolute;
+    top: 16px;
+    left: 0px;
+    padding: 1px 8px;
+    background-color: rgb(37, 111, 239);
+    color: rgb(255, 255, 255);
+    z-index: 1;
+    border-top-right-radius: 8px;
+    border-bottom-right-radius: 8px;
+    font-size: 12px;
 }
 .carousel-inner{
     width: 90%;
@@ -188,7 +236,7 @@ span>h5 {
 
 /* code footer  */
 .footer{
-    width: 80%;
+    width: 90%;
     margin: auto;
 }
 .h-500{
@@ -217,14 +265,101 @@ span>h5 {
     background-color:rgb(226 249 226);
 }
 .w-40{
-    width: 40%;
+    width: 35%;
 }
 .pay_part{
-    width: 80%;
+    width: 90%;
     margin: auto;
-    text-align: center;
+    display: grid;
+    grid-template-columns: repeat(9,1fr);
+    gap: 50px;
 }
-.pay_part img{
-width: 60px;
-margin: auto 25px;
+.pay_part div{
+width: 90px;
+border: 1px solid rgb(221, 221, 221);
+border-radius: 6px;
+}
+
+.down_app>img{
+width: 25%;
+height: 35px;
+}
+.down_app{
+    display: flex;
+align-items: center;
+justify-content: center;
+}
+.social i{
+    font-size: 32px;
+}
+.s_span{
+    color: white;
+    height: 44px;
+    width: 44px;
+    border: 1px solid;
+    border-radius: 50%;
+    padding: 5px 8px;
+    background-color: black;
+}
+.child_footer{
+    width: 88%;
+    margin: 40px auto;
+}
+.child_footer>div>div{
+    border: 1px solid rgb(221, 221, 221);
+    padding: 15px;
+    width: 275px;
+    height: 275px;
+    border-radius: 13px;
+    padding-top: 35px;
+}
+.child_footer h5{
+font-size: 14px;
+}
+.child_footer>div>div>div{
+font-size: 13px;
+color:  rgb(102, 102, 102);;
+}
+section{
+    border-radius: 15px;
+    background-color: rgb(236, 255, 236);
+}
+.last-foot{
+    width: 90%;
+    margin: auto;
+    
+}
+.bg{
+    background-color: rgb(252, 252, 252);
+    max-width: 100%;
+}
+.da{
+    font-family: sans-serif;
+    font-weight: 600;
+    font-size: 14px;
+    vertical-align: middle;
+}
+.iaioDw {
+    width: 90%;
+    font-weight: 600;
+    color: rgb(0, 0, 0);
+    font-size: 18px;
+    margin: 24px auto;
+}
+
+@media (max-width:699px){
+    .pay_part{
+        width: 90%;
+        margin: auto;
+        display: grid;
+        grid-template-columns: repeat(3,1fr);
+        gap: 50px;
+    }
+}
+.h-360 {
+    animation: animation ease-in-out 3s infinite;
+  }
+@keyframes animation{
+    from{margin-right: 100px;}
+    to{margin-left: 100px;}
 }
