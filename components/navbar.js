@@ -1,5 +1,5 @@
-const navbar = () => {
-  return ` <a href="../index.html">   <img src="./img/Untitled-1.jpg" alt="logo" /></a> 
+const navbar = (src) => {
+  return ` <a href="../index.html">   <img src=${src} alt="logo" /></a> 
     <div id="foraddressdiv">
       <h3>Delivery in Sometimes</h3>
       <h5>

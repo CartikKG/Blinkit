@@ -23,7 +23,7 @@ import {
 } from "../components/signup_login.js";
 
 document.getElementById("cartinhtm").innerHTML = cart();
-document.getElementById("navbar").innerHTML = navbar();
+document.getElementById("navbar").innerHTML = navbar("./img/Untitled-1.jpg");
 currentupdate();
 mylocation();
 document.getElementById("logoutcurrent").addEventListener("click", logoutcur);

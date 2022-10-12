@@ -21,7 +21,7 @@ let caraosual = [
     image:
       "https://cdn.grofers.com/cdn-cgi/image/f=auto,fit=scale-down,q=85,metadata=none,w=250,h=250/app/images/products/full_screen/pro_487721.jpg",
     title: "Mixed Capsicum Combo",
-    weidth: "Combo of 3",
+    weight: "Combo of 3",
     price: "₹144",
     markprice: "₹182",
     "AddToCart__AddButtonText-sc-17ig0e3-4": "ADD",
@@ -38,7 +38,7 @@ let caraosual = [
       "https://cdn.grofers.com/cdn-cgi/image/f=auto,fit=scale-down,q=85,metadata=none,w=250,h=250/app/images/products/sliding_image/333427a.jpg",
     "etaTag-text 2": "8 mins",
     title: "Potato - Organically Grown",
-    weidth: "1 kg",
+    weight: "1 kg",
     price: "₹64",
     markprice: "₹77",
     "AddToCart__AddButtonText-sc-17ig0e3-4": "ADD",
@@ -50,7 +50,7 @@ let caraosual = [
     image:
       "https://cdn.grofers.com/cdn-cgi/image/f=auto,fit=scale-down,q=85,metadata=none,w=250,h=250/app/images/products/sliding_image/3881a.jpg",
     title: "Hybrid Tomato (Tamatar)",
-    weidth: "500g",
+    weight: "500g",
     price: "₹30",
     markprice: "₹35",
   },
@@ -64,7 +64,7 @@ let caraosual = [
       "https://cdn.grofers.com/cdn-cgi/image/f=auto,fit=scale-down,q=85,metadata=none,w=250,h=250/app/images/products/sliding_image/369742a.jpg",
     "etaTag-text 2": "8 mins",
     title: "Broccoli",
-    weidth: "1 piece (300 g - 400 g)",
+    weight: "1 piece (300 g - 400 g)",
     price: "₹205",
     markprice: "₹237",
   },
@@ -78,7 +78,7 @@ let caraosual = [
       "https://cdn.grofers.com/cdn-cgi/image/f=auto,fit=scale-down,q=85,metadata=none,w=250,h=250/app/images/products/sliding_image/39394a.jpg",
     "etaTag-text 2": "8 mins",
     title: "Red Capsicum",
-    weidth: "1 piece (125 g - 175 g)",
+    weight: "1 piece (125 g - 175 g)",
     price: "₹46",
     markprice: "₹57",
   },
@@ -89,7 +89,7 @@ let caraosual = [
     image:
       "https://cdn.grofers.com/cdn-cgi/image/f=auto,fit=scale-down,q=85,metadata=none,w=250,h=250/app/images/products/full_screen/pro_487715.jpg",
     title: "Yellow + Red Capsicum Combo",
-    weidth: "Combo of 2",
+    weight: "Combo of 2",
     price: "₹100",
     markprice: "₹127",
     "AddToCart__AddButtonText-sc-17ig0e3-4": "ADD",
@@ -106,7 +106,7 @@ let caraosual = [
       "https://cdn.grofers.com/cdn-cgi/image/f=auto,fit=scale-down,q=85,metadata=none,w=250,h=250/app/images/products/sliding_image/467649a.jpg",
     "etaTag-text 2": "8 mins",
     title: "Green Cucumber - Organically grown (Kheera)",
-    weidth: "500 g",
+    weight: "500 g",
     price: "₹65",
     markprice: "₹77",
     "AddToCart__AddButtonText-sc-17ig0e3-4": "ADD",
@@ -119,7 +119,7 @@ let caraosual = [
     image:
       "https://cdn.grofers.com/cdn-cgi/image/f=auto,fit=scale-down,q=85,metadata=none,w=250,h=250/app/images/products/sliding_image/488116a.jpg",
     title: "Green Capsicum - Pack of 2",
-    weidth: "2 x 250 g - 280 g",
+    weight: "2 x 250 g - 280 g",
     price: "₹87",
     markprice: "₹110",
     "AddToCart__AddButtonText-sc-17ig0e3-4": "ADD",
@@ -138,7 +138,7 @@ function dataforinnercartcara(dataforcarou) {
     />
    
     <h5>${el.title}</h5>
-    <p>${el.weidth}</p>
+    <p>${el.weight}</p>
     <span
       ><p>${el.price}</p>
       <span class="addonchangeclick"
@@ -162,7 +162,7 @@ const DispalyAlliteminCart = (data) => {
     />
     <span>
     <h5>${el.title}</h5>
-    <p>${el.weidth}</p>
+    <p>${el.weight}</p>
     <span
       ><p>${el.price}</p>
       <span class="addonchangeclick"
