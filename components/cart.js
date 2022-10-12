@@ -2039,10 +2039,11 @@ function clickonaddbtn(unq) {
   parent.className = "addqtybuttons";
   // console.log("2" + parent);
   parent.innerHTML = `<i class="fa-solid fa-minus" onclick="subtractqty('${unq}')"></i> <span id="showpresentqty">1  </span><i class="fa-solid fa-plus"  onclick="increaseqty('${unq}')"></i>`;
-  always();
-  // DispalyAlliteminCart(localStoragebuylist);
+  // always();
+  DispalyAlliteminCart(localStoragebuylist);
 }
 const subtractqty = (unq) => {
+  console.log("MIN");
   let target = event.target.parentNode.childNodes[2];
   let amount = Number(event.target.parentNode.childNodes[2].innerHTML);
   let localStoragebuylist =
@@ -2090,6 +2091,7 @@ const subtractqty = (unq) => {
   }
 };
 const increaseqty = (unq) => {
+  console.log("ADD");
   let target = event.target.parentNode.childNodes[2];
   let amount = Number(event.target.parentNode.childNodes[2].innerHTML);
   // let mrp = Number(JSON.parse(localStorage.getItem("mrp")) || 0);

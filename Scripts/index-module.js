@@ -30,7 +30,10 @@ window.clickonaddbtn = clickonaddbtn;
 window.subtractqty = subtractqty;
 window.increaseqty = increaseqty;
 document.getElementById("cartinhtm").innerHTML = cart();
-document.getElementById("navbar").innerHTML = navbar("./img/Untitled-1.jpg");
+document.getElementById("navbar").innerHTML = navbar(
+  "./img/Untitled-1.jpg",
+  "./index.html"
+);
 currentupdate();
 mylocation();
 document.getElementById("logoutcurrent").addEventListener("click", logoutcur);
