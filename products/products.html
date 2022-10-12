@@ -16,50 +16,143 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js"
         integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF" crossorigin="anonymous">
     </script>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400&display=swap" rel="stylesheet" />
+    <script src="https://kit.fontawesome.com/60b736368c.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="./products.css">
     <title>Document</title>
 </head>
 
 <body>
-    <div id="offer" class="d-flex px-3"></div>
-
-    <div id="topProd">
-        <h2>Chemist</h2>
+    <div id="pan" class="my-3">
+        <img src="https://cdn.grofers.com/cdn-cgi/image/f=auto,fit=scale-down,q=50,metadata=none,w=1440/layout-engine/2022-05/Group-33704.jpg"
+            alt="" srcset="">
     </div>
-    <div id="carouselExampleControls" class="carousel slide" data-bs-interval="false" data-bs-touch="true">
+    <div id="offer" class="d-flex px-3"></div>
+    <div id="topProd"></div>
+    <div id="carouselExampleControls" class="carousel slide mb-4" data-bs-interval="false" data-bs-touch="true">
         <div class="carousel-inner">
+            <h4 class="mb-2">Chemist store</h4>
             <div class="carousel-item active" id="cor_one">
-              
-                </div>
+
+            </div>
             <div class="carousel-item" id="cor_two"></div>
             <div class="carousel-item" id="cor_three"></div>
         </div>
-        <button class="carousel-control-prev lign-items-center" type="button" data-bs-target="#carouselExampleControls"
-            data-bs-slide="prev">
+        <button class="carousel-control-prev lign-items-center ms-3" type="button"
+            data-bs-target="#carouselExampleControls" data-bs-slide="prev">
             <span class="carousel-control-prev-icon text-dark" aria-hidden="true"></span>
         </button>
-        <button class="carousel-control-next align-items-center" type="button" data-bs-target="#carouselExampleControls"
-            data-bs-slide="next">
+        <button class="carousel-control-next align-items-center me-3" type="button"
+            data-bs-target="#carouselExampleControls" data-bs-slide="next">
             <span class="carousel-control-next-icon text-dark" aria-hidden="true"></span>
         </button>
     </div>
-    <h2>Dairy</h2>
-    <div id="dairyCarousal" class="carousel slide" data-bs-interval="false" data-bs-touch="true">
+
+    <div id="dairyCarousal" class="carousel slide mb-4" data-bs-interval="false" data-bs-touch="true">
         <div class="carousel-inner">
-            <div class="carousel-item active" id="d_cor_one"> </div>
+            <h4 class="mb-2">Breakfast & dairy</h4>
+            <div class="carousel-item active" id="d_cor_one">
+            </div>
             <div class="carousel-item" id="d_cor_two"></div>
             <div class="carousel-item" id="d_cor_three"></div>
         </div>
-        <button class="carousel-control-prev lign-items-center" type="button" data-bs-target="#dairyCarousal"
+        <button class="carousel-control-prev lign-items-center ms-3" type="button" data-bs-target="#dairyCarousal"
             data-bs-slide="prev">
             <span class="carousel-control-prev-icon text-dark" aria-hidden="true"></span>
         </button>
-        <button class="carousel-control-next align-items-center" type="button" data-bs-target="#dairyCarousal"
+        <button class="carousel-control-next align-items-center me-3" type="button" data-bs-target="#dairyCarousal"
             data-bs-slide="next">
             <span class="carousel-control-next-icon text-dark" aria-hidden="true"></span>
         </button>
     </div>
+    <div id="dairyCarousal1" class="carousel slide mb-4" data-bs-interval="false" data-bs-touch="true">
+        <div class="carousel-inner">
+            <h4 class="mb-2">Biscuits, snacks & chocolates</h4>
+            <div class="carousel-item active" id="b_cor_one">
+            </div>
+            <div class="carousel-item" id="b_cor_two"></div>
+            <div class="carousel-item" id="b_cor_three"></div>
+        </div>
+        <button class="carousel-control-prev lign-items-center ms-3" type="button" data-bs-target="#dairyCarousal1"
+            data-bs-slide="prev">
+            <span class="carousel-control-prev-icon text-dark" aria-hidden="true"></span>
+        </button>
+        <button class="carousel-control-next align-items-center me-3" type="button" data-bs-target="#dairyCarousal1"
+            data-bs-slide="next">
+            <span class="carousel-control-next-icon text-dark" aria-hidden="true"></span>
+        </button>
+    </div>
+    <section class=" pan px-5 mt-5">
+        <div class="_container">
+            <div class="flex flex-col gap-8 lg:border-t _border-muted lg:pt-20">
+                <div class="d-flex row">
+                        <div class="col-8">
+                                <img src="https://blinkit.com/b4cc7e700e2784e954a4.png" alt="" class="h-500 w-30" />
+                                <img src="https://blinkit.com/2012a91467aff38d9f8d.png" alt="" class="h-360 w-30" />
+                            </div>
+                        <div class="col-4">
+                            <h2 class="text-4xl font-extrabold tracking-wide mb-6">
+                                Get the bringit app
+                            </h2>
+                            <div class="text-lg space-y-2">
+                                <div class="flex items-center">
+                                    <IoCheckmarkCircle size={24} class="text-green-600 mr-3" />{' '}
+                                    <span>Miss live order tracking</span>
+                                </div>
+                                <div class="flex items-center">
+                                    <IoCheckmarkCircle size={24} class="text-green-600 mr-3" />{' '}
+                                    <span>Miss latest feature updates</span>
+                                </div>
+                            </div>
+                            <div class="hidden lg:flex items-center _bg-shade-2 p-3 mt-6 gap-3 rounded-xl">
+                                <div>
+                                    <img src="/qrcode.png" alt="" width={105} height={105} />
+                                </div>
+                                <div class="flex flex-col justify-center">
+                                    <p class="font-extrabold text-lg max-w-[300px] _text-default">
+                                        Simple way to download the BringIt app
+                                    </p>
+                                    <span class="text-sm _text-default">
+                                        Scan QR code and download now
+                                    </span>
+                                </div>
+                            </div>
+                            <div class="block lg:hidden mt-6">
+                                <h4 class="font-semibold text-md leading-none mb-4">
+                                    Download the BringIt App Now
+                                </h4>
+                                <div class="flex flex-col xs:flex-row gap-2">
+                                    <div class="xs:flex-1 h-12 rounded cursor-pointer overflow-hidden bg-[#213b50]">
+                                        <img src={AppStoreLogo} alt="App store" class="h-full w-full object-contain" />
+                                    </div>
+                                    <div class="xs:flex-1 h-12 rounded cursor-pointer overflow-hidden bg-[#213b50]">
+                                        <img src={PlayStoreLogo} alt="Play store"
+                                            class="h-full w-full object-contain" />
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="grid grid-cols-1 xs:grid-cols-2 lg:grid-cols-4 items-start gap-2 sm:gap-4 xl:gap-10 mt-6">
+                    {allFeatures.map((feat, i) => (
+                    <PromoFeature key={i} {...feat} />
+                    ))}
+                </div>
+                <div class="border-b _border-light pt-2 pb-10">
+                    <p class="text-sm _text-default">
+                        "BringIt" is owned & managed by "Bring Commerce Private Limited"
+                        (formerly known as Loafers Inc Private Limited) and is not
+                        related, linked or interconnected in whatsoever manner or nature,
+                        to "LOAFER.COM" which is a real estate services business operated
+                        by "Blackstone Consultancy Services Fake Limited".
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
 </body>
 
 </html>
 <script type="module" src="./products.js"></script>
+<script src="./nproduct.js"></script>

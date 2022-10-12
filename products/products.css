@@ -1,3 +1,7 @@
+*{
+    margin: 0;
+    padding: 0;
+}
 #topProd{
     display: grid;
     grid-template-columns: repeat(10,1fr);
@@ -29,21 +33,21 @@ img{
 
 .w-20{
     width: 15%;
-    height: 400px;
     display: inline-block;
     margin: auto 0.5rem;
-    border: 1px solid black;
+    border: 1px solid rgb(146, 146, 146);;
     border-radius: 10px;
     padding: 5px;
 }
-#carouselExampleControls{
+.carousel-inner{
     width: 90%;
     margin: auto;
 }
 #carouselExampleControls>button{
     width: auto !important;
 }
-#carouselExampleControls span{
+
+.carousel-control-next-icon,.carousel-control-prev-icon{
     background-color: rgb(48, 54, 54);
     border-radius: 50%;
    padding: 1rem;
@@ -62,14 +66,87 @@ color: white !important;
     font-weight: 600;
 }
 #dairyCarousal{
-    width: 90%;
-    margin: auto;
+    width: 100%;
 }
 #dairyCarousal>button{
     width: auto !important;
 }
-#dairyCarousal span{
-    background-color: rgb(48, 54, 54);
+#dairyCarousal>span{
+    background-color: rgb(146, 146, 146);;
     border-radius: 50%;
    padding: 1rem;
+}
+#dairyCarousal1{
+    width: 100%;
+}
+#dairyCarousal1>button{
+    width: auto !important;
+}
+#dairyCarousal1>span{
+    background-color: rgb(146, 146, 146);;
+    border-radius: 50%;
+   padding: 1rem;
+}
+.addonchangeclick {
+    background-color: rgb(236, 255, 236);
+    /* padding: 8px 30px; */
+    padding-top: 5px;
+    width: 80px;
+    height: 30px;
+    text-align: center;
+    align-content: center;
+    border: 1px solid green;
+    margin-top: -5px;
+    border-radius: 10px;
+    color: green;
+    cursor: pointer;
+
+}
+span>h5 {
+    margin-top: 2%;
+    font-weight: bold;
+    font-size: 14px;
+}
+.addqtybuttons {
+    /* width: 100%; */
+    padding-top: 5px;
+    width: 80px;
+    height: 30px;
+    text-align: center;
+    align-content: center;
+    border: 1px solid green;
+    margin-top: -5px;
+    border-radius: 10px;
+    color: green;
+    cursor: pointer;
+    color: white;
+    padding: 2px 12px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-size: 18px;
+    background-color: green;
+}
+
+.addqtybuttons>span {
+    margin-left: 5px;
+    margin-right: 5px;
+}
+
+/* code footer  */
+#pan{
+    width: 90%;
+    margin: auto;
+}
+.h-500{
+    height: 500px;
+}
+.h-500{
+    height: 500px;
+}
+.h-360{
+    height: 360px;
+}
+.w-30{
+    width: 30%;
 }
