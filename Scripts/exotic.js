@@ -7,7 +7,7 @@ const veg = [
       "sc-iBkjds src": "https://cdn.grofers.com/cdn-cgi/image/f=auto,fit=scale-down,q=85,metadata=none,w=250,h=250/app/images/products/sliding_image/369742a.jpg",
       "etaTag-text 2": "8 mins",
       "title": "Broccoli",
-      "weidth": "1 piece (300 g - 400 g)",
+      "weight": "1 piece (300 g - 400 g)",
       "price": "₹205",
       "markprice": "₹237"
     },
@@ -19,7 +19,7 @@ const veg = [
       "sc-iBkjds src": "https://cdn.grofers.com/cdn-cgi/image/f=auto,fit=scale-down,q=85,metadata=none,w=250,h=250/app/images/products/sliding_image/39394a.jpg",
       "etaTag-text 2": "8 mins",
       "title": "Red Capsicum",
-      "weidth": "1 piece (125 g - 175 g)",
+      "weight": "1 piece (125 g - 175 g)",
       "price": "₹46",
       "markprice": "₹57"
     },
@@ -31,7 +31,7 @@ const veg = [
       "sc-iBkjds src": "https://cdn.grofers.com/cdn-cgi/image/f=auto,fit=scale-down,q=85,metadata=none,w=250,h=250/app/images/products/sliding_image/39395a.jpg",
       "etaTag-text 2": "8 mins",
       "title": "Yellow Capsicum",
-      "weidth": "1 piece (125 g - 175 g)",
+      "weight": "1 piece (125 g - 175 g)",
       "price": "₹46",
       "markprice": "₹58"
     },
@@ -43,7 +43,7 @@ const veg = [
       "sc-iBkjds src": "https://cdn.grofers.com/cdn-cgi/image/f=auto,fit=scale-down,q=85,metadata=none,w=250,h=250/app/images/products/sliding_image/257199a.jpg",
       "etaTag-text 2": "8 mins",
       "title": "Green Zucchini",
-      "weidth": "1 piece (200 g - 250 g)",
+      "weight": "1 piece (200 g - 250 g)",
       "price": "₹73",
       "markprice": "₹92"
     },
@@ -55,7 +55,7 @@ const veg = [
       "sc-iBkjds src": "https://cdn.grofers.com/cdn-cgi/image/f=auto,fit=scale-down,q=85,metadata=none,w=250,h=250/app/images/products/sliding_image/242283a.jpg",
       "etaTag-text 2": "8 mins",
       "title": "Valencia Orange",
-      "weidth": "3 pieces (550 g - 650 g)",
+      "weight": "3 pieces (550 g - 650 g)",
       "price": "₹100",
       "markprice": "₹121"
     },
@@ -67,7 +67,7 @@ const veg = [
       "sc-iBkjds src": "https://cdn.grofers.com/cdn-cgi/image/f=auto,fit=scale-down,q=85,metadata=none,w=250,h=250/app/images/products/sliding_image/462106a.jpg",
       "etaTag-text 2": "8 mins",
       "title": "Red Delicious Apple",
-      "weidth": "4 pieces (450 g - 650 g)",
+      "weight": "4 pieces (450 g - 650 g)",
       "price": "₹248",
       "markprice": "₹319"
     },
@@ -79,7 +79,7 @@ const veg = [
       "sc-iBkjds src": "https://cdn.grofers.com/cdn-cgi/image/f=auto,fit=scale-down,q=85,metadata=none,w=250,h=250/app/images/products/sliding_image/362127a.jpg",
       "etaTag-text 2": "8 mins",
       "title": "Blueberry",
-      "weidth": "125 g",
+      "weight": "125 g",
       "price": "₹300",
       "markprice": "₹351"
     },
@@ -91,7 +91,7 @@ const veg = [
       "sc-iBkjds src": "https://cdn.grofers.com/cdn-cgi/image/f=auto,fit=scale-down,q=85,metadata=none,w=250,h=250/app/images/products/sliding_image/440229a.jpg",
       "etaTag-text 2": "8 mins",
       "title": "Cherry Tomato",
-      "weidth": "200 g",
+      "weight": "200 g",
       "price": "₹93",
       "markprice": "₹113"
     },
@@ -103,7 +103,7 @@ const veg = [
       "sc-iBkjds src": "https://blinkit.com/cn/exotics/cid/1487/278",
       "etaTag-text 2": "8 mins",
       "title": "Baby Corn - Packet",
-      "weidth": "200 g",
+      "weight": "200 g",
       "price": "₹40",
       "markprice": "₹49"
     },
@@ -115,7 +115,7 @@ const veg = [
       "sc-iBkjds src": "https://blinkit.com/cn/exotics/cid/1487/278",
       "etaTag-text 2": "8 mins",
       "title": "Royal Gala Apple",
-      "weidth": "4 pieces (450 g - 650 g)",
+      "weight": "4 pieces (450 g - 650 g)",
       "price": "₹224",
       "markprice": "₹259"
     },
@@ -127,7 +127,7 @@ const veg = [
       "sc-iBkjds src": "https://blinkit.com/cn/exotics/cid/1487/278",
       "etaTag-text 2": "8 mins",
       "title": "Basil Leaves",
-      "weidth": "50 g",
+      "weight": "50 g",
       "price": "₹15",
       "markprice": "₹19"
     },
@@ -139,7 +139,7 @@ const veg = [
       "sc-iBkjds src": "https://blinkit.com/cn/exotics/cid/1487/278",
       "etaTag-text 2": "8 mins",
       "title": "Avocado",
-      "weidth": "1 piece (200 g - 300 g)",
+      "weight": "1 piece (200 g - 300 g)",
       "price": "₹195",
       "markprice": "₹234"
     },
@@ -151,7 +151,7 @@ const veg = [
       "sc-iBkjds src": "https://blinkit.com/cn/exotics/cid/1487/278",
       "etaTag-text 2": "8 mins",
       "title": "Bartlett Pear",
-      "weidth": "4 pieces (500 g - 600 g)",
+      "weight": "4 pieces (500 g - 600 g)",
       "price": "₹111",
       "markprice": "₹136"
     },
@@ -163,7 +163,7 @@ const veg = [
       "sc-iBkjds src": "https://blinkit.com/cn/exotics/cid/1487/278",
       "etaTag-text 2": "30 mins",
       "title": "Dry Gucchi Jumbo Mushroom",
-      "weidth": "25 g",
+      "weight": "25 g",
       "price": "₹900",
       "markprice": "₹1199"
     },
@@ -175,7 +175,7 @@ const veg = [
       "sc-iBkjds src": "https://blinkit.com/cn/exotics/cid/1487/278",
       "etaTag-text 2": "8 mins",
       "title": "Parsley",
-      "weidth": "50 g",
+      "weight": "50 g",
       "price": "₹28",
       "markprice": "₹36"
     },
@@ -187,7 +187,7 @@ const veg = [
       "sc-iBkjds src": "https://blinkit.com/cn/exotics/cid/1487/278",
       "etaTag-text 2": "8 mins",
       "title": "Mini Orange",
-      "weidth": "500 g",
+      "weight": "500 g",
       "price": "₹135",
       "markprice": "₹164"
     },
@@ -199,7 +199,7 @@ const veg = [
       "sc-iBkjds src": "https://blinkit.com/cn/exotics/cid/1487/278",
       "etaTag-text 2": "30 mins",
       "title": "Dry Chanterelle Sliced Mushroom",
-      "weidth": "25 g",
+      "weight": "25 g",
       "price": "₹750",
       "markprice": "₹899"
     },
@@ -211,7 +211,7 @@ const veg = [
       "sc-iBkjds src": "https://blinkit.com/cn/exotics/cid/1487/278",
       "etaTag-text 2": "30 mins",
       "title": "Dry Gucchi Mushroom",
-      "weidth": "25 g",
+      "weight": "25 g",
       "price": "₹750",
       "markprice": "₹899"
     },
@@ -223,7 +223,7 @@ const veg = [
       "sc-iBkjds src": "https://blinkit.com/cn/exotics/cid/1487/278",
       "etaTag-text 2": "30 mins",
       "title": "Dry Porcini Sliced Mushroom",
-      "weidth": "25 g",
+      "weight": "25 g",
       "price": "₹750",
       "markprice": "₹899"
     },
@@ -235,7 +235,7 @@ const veg = [
       "sc-iBkjds src": "https://blinkit.com/cn/exotics/cid/1487/278",
       "etaTag-text 2": "8 mins",
       "title": "Green Apple",
-      "weidth": "4 pieces (500 g - 700 g)",
+      "weight": "4 pieces (500 g - 700 g)",
       "price": "₹266",
       "markprice": "₹332"
     }
