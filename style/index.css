@@ -1,0 +1,48 @@
+#mainconten {
+    display: none;
+    /* animation: fullbody 1s ease-in-out; */
+
+}
+
+#maincontent {
+    /* display: in; */
+    transition: all 2s;
+    position: relative;
+    animation: fullbody 1s ease-in-out;
+
+
+}
+
+#beforemain {
+    /* display: none; */
+    position: fixed;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+}
+
+#beforemain>img {
+    margin: auto;
+    width: 47%;
+    height: 570px;
+}
+
+@keyframes fullbody {
+    from {
+        /* translate:  ; */
+        right: -150%;
+        transform: skew(69deg);
+        /* IE 9 */
+        /* transform: skewY(20deg); */
+
+        /* cubic-bezier(0.77, 0, 0.175, 1); */
+    }
+
+    to {
+        transform: skew(0deg);
+        /* r: 0px; */
+        right: 0%;
+    }
+}
