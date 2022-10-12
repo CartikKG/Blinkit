@@ -1814,3 +1814,143 @@ const products = [
     "AddToCart__OutOfStockTag-sc-17ig0e3-2": "Out of Stock",
   },
 ];
+
+
+let SearchArray;
+const filterBySearch=()=>{
+  // const string = "hello world";
+   const substring = "Orange";  
+  SearchArray= products.filter((el,indx)=>{
+
+     if (el.title.includes(substring)) {
+      // console.log(string);
+      return el;
+     }
+   })
+  
+}
+filterBySearch();
+console.log(SearchArray)
+
+
+function display(veg){
+  document.getElementById("result").innerHTML= "";
+  veg.map(function(ele){
+     
+
+let temp = `<div class="inDiv">
+<p class="a-tag">${ele.tag}</p>
+<img src="${ele.image}">
+
+<div class="adjustpara">
+<div class="name-a">${ele.title}</div>
+<span>${ele.weight}</span>
+<div class="pricediv">
+<div>
+<p>${ele.price}</p>
+<p>${ele.markprice}</p>
+</div>
+
+
+<span class="addonchangeclick"><h5 onclick="clickonaddbtn('${ele.title}')">
+ADD</h5></span>
+
+
+</div>
+</div>
+
+</div>
+`
+let div = document.createElement("div");
+div.setAttribute("class","a-box");
+div.innerHTML=temp;
+let result = document.getElementById("result");
+result.append(div) ;
+})
+}
+
+display(SearchArray);
+
+function sorting(){
+  var selected = document.getElementById("sort").value;
+ 
+  console.log(selected);
+  if(selected === "Relevance"){
+    display(SearchArray);
+  }
+  if(selected === "Price (Low to high)"){
+    SearchArray.sort(function (a,b){
+          if(a.price>b.price) return 1;
+          if(a.price<b.price) return -1;
+          return 0;
+
+      });
+      display(SearchArray);
+  }
+  if(selected === "Price (High to low)"){
+    SearchArray.sort(function (a,b){
+          if(a.price>b.price) return -1;
+          if(a.price<b.price) return 1;
+          return 0;
+          
+
+      });
+      display(SearchArray);
+  }
+  if(selected === "Discount (High to low)"){
+    SearchArray.sort(function (a,b){
+          if(a.tag>b.tag) return -1;
+          if(a.tag<b.tag) return 1;
+          return 0;
+          
+
+      });
+      display(SearchArray);
+  }
+  if(selected === "Name (A to Z)"){
+    SearchArray.sort(function (a,b){
+          if(a.title<b.title) return -1;
+          if(a.title>b.title) return 1;
+          return 0;
+          
+
+      });
+      display(SearchArray);
+  }
+}
+
+
+function clickonaddbtn(unq) {
+  console.log(unq);
+  let parent = event.target.parentNode;
+  // console.log("1" + parent);
+
+  parent.style.background = "green";
+  parent.style.color = "white";
+  parent.className = "addqtybuttons";
+  // console.log("2" + parent);
+  parent.innerHTML = `<i class="fa-solid fa-minus" onclick="subtractqty('${unq}')"></i> <span id="showpresentqty">1  </span><i class="fa-solid fa-plus"  onclick="increaseqty('${unq}')"></i>`;
+  // console.log(event.target);
+}
+const subtractqty = (unq) => {
+  let target = event.target.parentNode.childNodes[2];
+  let amount = Number(event.target.parentNode.childNodes[2].innerHTML);
+  if (amount > 1) {
+    let finalamount = amount - 1;
+    target.innerHTML = finalamount;
+  } else {
+    target.parentNode.className = "addonchangeclick";
+    target.parentNode.style.background = "#ecffec";
+    target.parentNode.style.color = "green";
+    target.parentNode.innerHTML = ` <h5 onclick="clickonaddbtn('${unq}')">ADD</h5>`;
+  }
+};
+const increaseqty = (unq) => {
+  let target = event.target.parentNode.childNodes[2];
+  let amount = Number(event.target.parentNode.childNodes[2].innerHTML);
+  let finalamount = amount + 1;
+  target.innerHTML = finalamount;
+  //   console.log(amount);
+};
+
+// sorting();
