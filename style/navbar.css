@@ -173,7 +173,7 @@
 #logoutdiv>span {
     padding: 10px;
     border-bottom: 1px solid rgb(128, 128, 128);
-    /* padding-bottom: 10px; */
+    /*   /*  /* padding-bottom: 10px; */
     cursor: pointer;
 }
 
@@ -213,7 +213,7 @@
         width: 90%;
         margin: auto;
         /* bottom: 2%; */
-        top: 440%;
+        top: 520%;
         display: flex;
         justify-content: space-between;
     }
