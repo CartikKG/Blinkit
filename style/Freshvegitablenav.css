@@ -199,11 +199,12 @@
     box-shadow: 0 2px 3px 0 rgb(0 0 0 / 15%);
    gap: 2%;
 }
-#allProductNav>nav p{
+#allProductNav>nav p a{
     color: #666666;
+    text-decoration: none;
     font-size: 14px;
     font-weight: 100;
-}
+  }
 .a-side-nav{
     /* display: flex; */
     flex-direction: column;
