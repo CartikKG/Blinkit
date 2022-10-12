@@ -1,14 +1,20 @@
-
-
-
-
-import data from "./products.json" assert { type: 'json'};
-import chemistData from "./layout.json" assert { type: 'json'};
+import data from "./products.json"assert {
+  type: 'json'
+};
+import chemistData from "./layout.json"assert {
+  type: 'json'
+};
+import navbar from "../components/navbar.js";
 let url = "https://blinkit-clone.surge.sh/categories/"
+// document.getElementById("navbar").innerHTML = navbar(
+//   "../img/Untitled-1.jpg",
+//   "../index.html"
+// );
 showTopData()
 showChemist()
 dairy_products()
 biscuits()
+
 function showTopData() {
   let topProd = document.getElementById('topProd')
   let offer = document.getElementById('offer')
@@ -39,28 +45,31 @@ function showChemist() {
     }
   });
   let b = a[0].objects[0].data.products
-  b.map((ele)=>{
+  b.map((ele) => {
     let name = ''
-    name =ele[0].name
-    if(name.length<=30){
+    name = ele[0].name
+    if (name.length <= 20) {
       name = name
-    }else{
-      name = name.slice(0,30)+'...'
+    } else {
+      name = name.slice(0, 20) + '...'
       console.log(name);
     }
+    let x = 0
+    x = Math.floor((Math.random() * 30) + 11);
     let img = `<div class="s_child">
                     <img src="${ele[0].image_url}" class="" alt="...">
                     <p>${name}</p>
                     <small>${ele[0].unit}</small>
                     <div class="d-flex justify-content-between align-items-center">
-                        <div><p> ${ele[0].price}</p><p> <s> ${ele[0].mrp}</s></p></div>
-                            <span class="addonchangeclick">
-                            <h5 onclick="clickonaddbtn()">ADD</h5>
-                            </span>
+                        <div>
+                        <p> ${ele[0].price}</p><p> <s> ${ele[0].mrp}</s></p>
+                        </div>
+                        <span class="addonchangeclick">
+                          <h5 onclick="clickonaddbtn()">ADD</h5>
+                        </span>
                     </div>
-                </div>
-                `
-                cor_s1.innerHTML += img;
+                  </div>`
+    cor_s1.innerHTML += img;
   })
 
   let c1 = b.filter((ele, i) => {
@@ -70,25 +79,25 @@ function showChemist() {
   })
   c1.map((ele) => {
     let name = ''
-    name =ele[0].name
-    if(name.length<=30){
+    name = ele[0].name
+    if (name.length <= 20) {
       name = name
-    }else{
-      name = name.slice(0,30)+'...'
+    } else {
+      name = name.slice(0, 20) + '...'
       console.log(name);
     }
+    let x = 0
+    x = Math.floor((Math.random() * 30) + 11);
     let img = `<div class="w-20_per">
-                    <img src="${ele[0].image_url}" class="" alt="...">
-                    <p>${name}</p>
-                    <small>${ele[0].unit}</small>
-                    <div class="d-flex justify-content-between align-items-center">
-                        <div><p> ${ele[0].price}</p><p> <s> ${ele[0].mrp}</s></p></div>
-                            <span class="addonchangeclick">
-                            <h5 onclick="clickonaddbtn()">ADD</h5>
-                            </span>
+                <img src="${ele[0].image_url}" class="" alt="...">
+                    <div class="bVEkMr">${x}% OFF</div>
+                      <p>${name}</p>
+                      <small>${ele[0].unit}</small>
+                      <div class="d-flex justify-content-between align-items-center">
+                      <div><p> ₹${ele[0].price}</p><small> <s> ₹${ele[0].mrp}</s></small></div>
+                       <span class="addonchangeclick"><h5 onclick="clickonaddbtn()">ADD</h5> </span>
                     </div>
-                </div>
-                `
+                </div> `
     cor1.innerHTML += img;
   })
   let c2 = b.filter((ele, i) => {
@@ -98,24 +107,24 @@ function showChemist() {
   })
   c2.map((ele) => {
     let name = ''
-    name =ele[0].name
-    if(name.length<=30){
+    name = ele[0].name
+    if (name.length <= 20) {
       name = name
-    }else{
-      name = name.slice(0,30)+'...'
+    } else {
+      name = name.slice(0, 20) + '...'
     }
-    let img = ` <div class="w-20_per">
-    <img src="${ele[0].image_url}" class="" alt="...">
-    <p>${name}</p>
-    <small>${ele[0].unit}</small>
-    <div class="d-flex justify-content-between align-items-center">
-        <div><p> ${ele[0].price}</p><p> <s> ${ele[0].mrp}</s></p></div>
-        <span class="addonchangeclick">
-        <h5 onclick="clickonaddbtn()">ADD</h5>
-        </span>
-    </div>
-</div>
-                `
+    let x = 0
+    x = Math.floor((Math.random() * 30) + 11);
+    let img = `<div class="w-20_per">
+                <img src="${ele[0].image_url}" class="" alt="...">
+                    <div class="bVEkMr">${x}% OFF</div>
+                      <p>${name}</p>
+                      <small>${ele[0].unit}</small>
+                      <div class="d-flex justify-content-between align-items-center">
+                      <div><p> ₹${ele[0].price}</p><small> <s> ₹${ele[0].mrp}</s></small></div>
+                       <span class="addonchangeclick"><h5 onclick="clickonaddbtn()">ADD</h5> </span>
+                    </div>
+                </div> `
     cor2.innerHTML += img
   })
   let c3 = b.filter((ele, i) => {
@@ -125,23 +134,24 @@ function showChemist() {
   })
   c3.map((ele) => {
     let name = ''
-    name =ele[0].name
-    if(name.length<=30){
+    name = ele[0].name
+    if (name.length <= 20) {
       name = name
-    }else{
-      name = name.slice(0,30)+'...'
+    } else {
+      name = name.slice(0, 20) + '...'
     }
-    let img = `  <div class="w-20_per">
-    <img src="${ele[0].image_url}" class="" alt="...">
-    <p>${name}</p>
-    <small>${ele[0].unit}</small>
-    <div class="d-flex justify-content-between align-items-center">
-        <div><p> ${ele[0].price}</p><p> <s> ${ele[0].mrp}</s></p></div>
-        <span class="addonchangeclick">
-        <h5 onclick="clickonaddbtn()">ADD</h5>
-        </span>
-    </div>
-</div>`
+    let x = 0
+    x = Math.floor((Math.random() * 30) + 11);
+    let img = `<div class="w-20_per">
+                <img src="${ele[0].image_url}" class="" alt="...">
+                    <div class="bVEkMr">${x}% OFF</div>
+                      <p>${name}</p>
+                      <small>${ele[0].unit}</small>
+                      <div class="d-flex justify-content-between align-items-center">
+                      <div><p> ₹${ele[0].price}</p><small> <s> ₹${ele[0].mrp}</s></small></div>
+                       <span class="addonchangeclick"><h5 onclick="clickonaddbtn()">ADD</h5> </span>
+                    </div>
+                </div> `
     cor3.innerHTML += img
   })
 }
@@ -157,28 +167,31 @@ function dairy_products() {
     }
   });
   let b = a[0].objects[0].data.products
-  b.map((ele)=>{
+  b.map((ele) => {
     let name = ''
-    name =ele[0].name
-    if(name.length<=30){
+    name = ele[0].name
+    if (name.length <= 20) {
       name = name
-    }else{
-      name = name.slice(0,30)+'...'
+    } else {
+      name = name.slice(0, 20) + '...'
       console.log(name);
     }
+    let x = 0
+    x = Math.floor((Math.random() * 30) + 11);
     let img = `<div class="s_child">
                     <img src="${ele[0].image_url}" class="" alt="...">
                     <p>${name}</p>
                     <small>${ele[0].unit}</small>
                     <div class="d-flex justify-content-between align-items-center">
-                        <div><p> ${ele[0].price}</p><p> <s> ${ele[0].mrp}</s></p></div>
-                            <span class="addonchangeclick">
-                            <h5 onclick="clickonaddbtn()">ADD</h5>
-                            </span>
+                        <div>
+                        <p> ${ele[0].price}</p><p> <s> ${ele[0].mrp}</s></p>
+                        </div>
+                        <span class="addonchangeclick">
+                          <h5 onclick="clickonaddbtn()">ADD</h5>
+                        </span>
                     </div>
-                </div>
-                `
-                cor_s2.innerHTML += img;
+                  </div>`
+    cor_s2.innerHTML += img;
   })
   let c1 = b.filter((ele, i) => {
     if (i < 6) {
@@ -187,23 +200,24 @@ function dairy_products() {
   })
   c1.map((ele) => {
     let name = ''
-    name =ele[0].name
-    if(name.length<=30){
+    name = ele[0].name
+    if (name.length <= 20) {
       name = name
-    }else{
-      name = name.slice(0,30)+'...'
+    } else {
+      name = name.slice(0, 20) + '...'
     }
-    let img = `  <div class="w-20_per">
-    <img src="${ele[0].image_url}" class="" alt="...">
-    <p>${name}</p>
-    <small>${ele[0].unit}</small>
-    <div class="d-flex justify-content-between align-items-center">
-        <div><p> ${ele[0].price}</p><p> <s> ${ele[0].mrp}</s></p></div>
-        <span class="addonchangeclick">
-        <h5 onclick="clickonaddbtn()">ADD</h5>
-        </span>
-    </div>
-</div>`
+    let x = 0
+    x = Math.floor((Math.random() * 30) + 11);
+    let img = `<div class="w-20_per">
+                <img src="${ele[0].image_url}" class="" alt="...">
+                    <div class="bVEkMr">${x}% OFF</div>
+                      <p>${name}</p>
+                      <small>${ele[0].unit}</small>
+                      <div class="d-flex justify-content-between align-items-center">
+                      <div><p> ₹${ele[0].price}</p><small> <s> ₹${ele[0].mrp}</s></small></div>
+                       <span class="addonchangeclick"><h5 onclick="clickonaddbtn()">ADD</h5> </span>
+                    </div>
+                </div> `
     cor1.innerHTML += img;
     console.log("c", cor1);
   })
@@ -214,23 +228,24 @@ function dairy_products() {
   })
   c2.map((ele) => {
     let name = ''
-    name =ele[0].name
-    if(name.length<=30){
+    name = ele[0].name
+    if (name.length <= 20) {
       name = name
-    }else{
-      name = name.slice(0,30)+'...'
+    } else {
+      name = name.slice(0, 20) + '...'
     }
-    let img = ` <div class="w-20_per">
-    <img src="${ele[0].image_url}" class="" alt="...">
-    <p>${name}</p>
-    <small>${ele[0].unit}</small>
-    <div class="d-flex justify-content-between align-items-center">
-        <div><p> ${ele[0].price}</p><p> <s> ${ele[0].mrp}</s></p></div>
-        <span class="addonchangeclick">
-        <h5 onclick="clickonaddbtn()">ADD</h5>
-        </span>
-    </div>
-</div>`
+    let x = 0
+    x = Math.floor((Math.random() * 30) + 11);
+    let img = `<div class="w-20_per">
+                <img src="${ele[0].image_url}" class="" alt="...">
+                    <div class="bVEkMr">${x}% OFF</div>
+                      <p>${name}</p>
+                      <small>${ele[0].unit}</small>
+                      <div class="d-flex justify-content-between align-items-center">
+                      <div><p> ₹${ele[0].price}</p><small> <s> ₹${ele[0].mrp}</s></small></div>
+                       <span class="addonchangeclick"><h5 onclick="clickonaddbtn()">ADD</h5> </span>
+                    </div>
+                </div> `
     cor2.innerHTML += img
   })
   let c3 = b.filter((ele, i) => {
@@ -240,23 +255,24 @@ function dairy_products() {
   })
   c3.map((ele) => {
     let name = ''
-    name =ele[0].name
-    if(name.length<=30){
+    name = ele[0].name
+    if (name.length <= 20) {
       name = name
-    }else{
-      name = name.slice(0,30)+'...'
+    } else {
+      name = name.slice(0, 20) + '...'
     }
-    let img = `  <div class="w-20_per">
-    <img src="${ele[0].image_url}" class="" alt="...">
-    <p>${name}</p>
-    <small>${ele[0].unit}</small>
-    <div class="d-flex justify-content-between align-items-center">
-        <div><p> ${ele[0].price}</p><p> <s> ${ele[0].mrp}</s></p></div>
-        <span class="addonchangeclick">
-        <h5 onclick="clickonaddbtn()">ADD</h5>
-        </span>
-    </div>
-</div>`
+    let x = 0
+    x = Math.floor((Math.random() * 30) + 11);
+    let img = `<div class="w-20_per">
+                <img src="${ele[0].image_url}" class="" alt="...">
+                    <div class="bVEkMr">${x}% OFF</div>
+                      <p>${name}</p>
+                      <small>${ele[0].unit}</small>
+                      <div class="d-flex justify-content-between align-items-center">
+                      <div><p> ₹${ele[0].price}</p><small> <s> ₹${ele[0].mrp}</s></small></div>
+                       <span class="addonchangeclick"><h5 onclick="clickonaddbtn()">ADD</h5> </span>
+                    </div>
+                </div> `
     cor3.innerHTML += img
   })
 }
@@ -272,28 +288,31 @@ function biscuits() {
     }
   });
   let b = a[0].objects[0].data.products
-  b.map((ele)=>{
+  b.map((ele) => {
     let name = ''
-    name =ele[0].name
-    if(name.length<=30){
+    name = ele[0].name
+    if (name.length <= 20) {
       name = name
-    }else{
-      name = name.slice(0,30)+'...'
+    } else {
+      name = name.slice(0, 20) + '...'
       console.log(name);
     }
+    let x = 0
+    x = Math.floor((Math.random() * 30) + 11);
     let img = `<div class="s_child">
                     <img src="${ele[0].image_url}" class="" alt="...">
                     <p>${name}</p>
                     <small>${ele[0].unit}</small>
                     <div class="d-flex justify-content-between align-items-center">
-                        <div><p> ${ele[0].price}</p><p> <s> ${ele[0].mrp}</s></p></div>
-                            <span class="addonchangeclick">
-                            <h5 onclick="clickonaddbtn()">ADD</h5>
-                            </span>
+                        <div>
+                        <p> ${ele[0].price}</p><p> <s> ${ele[0].mrp}</s></p>
+                        </div>
+                        <span class="addonchangeclick">
+                          <h5 onclick="clickonaddbtn()">ADD</h5>
+                        </span>
                     </div>
-                </div>
-                `
-                cor_s3.innerHTML += img;
+                  </div>`
+    cor_s3.innerHTML += img;
   })
   let c1 = b.filter((ele, i) => {
     if (i < 6) {
@@ -302,23 +321,24 @@ function biscuits() {
   })
   c1.map((ele) => {
     let name = ''
-    name =ele[0].name
-    if(name.length<=30){
+    name = ele[0].name
+    if (name.length <= 20) {
       name = name
-    }else{
-      name = name.slice(0,30)+'...'
+    } else {
+      name = name.slice(0, 20) + '...'
     }
-    let img = `  <div class="w-20_per">
-    <img src="${ele[0].image_url}" class="" alt="...">
-    <p>${name}</p>
-    <small>${ele[0].unit}</small>
-    <div class="d-flex justify-content-between align-items-center">
-        <div><p> ${ele[0].price}</p><p> <s> ${ele[0].mrp}</s></p></div>
-        <span class="addonchangeclick">
-        <h5 onclick="clickonaddbtn()">ADD</h5>
-        </span>
-    </div>
-</div>`
+    let x = 0
+    x = Math.floor((Math.random() * 30) + 11);
+    let img = `<div class="w-20_per">
+                <img src="${ele[0].image_url}" class="" alt="...">
+                    <div class="bVEkMr">${x}% OFF</div>
+                      <p>${name}</p>
+                      <small>${ele[0].unit}</small>
+                      <div class="d-flex justify-content-between align-items-center">
+                      <div><p> ₹${ele[0].price}</p><small> <s> ₹${ele[0].mrp}</s></small></div>
+                       <span class="addonchangeclick"><h5 onclick="clickonaddbtn()">ADD</h5> </span>
+                    </div>
+                </div> `
     cor1.innerHTML += img;
     console.log("c", cor1);
   })
@@ -329,23 +349,24 @@ function biscuits() {
   })
   c2.map((ele) => {
     let name = ''
-    name =ele[0].name
-    if(name.length<=30){
+    name = ele[0].name
+    if (name.length <= 20) {
       name = name
-    }else{
-      name = name.slice(0,30)+'...'
+    } else {
+      name = name.slice(0, 20) + '...'
     }
-    let img = ` <div class="w-20_per">
-    <img src="${ele[0].image_url}" class="" alt="...">
-    <p>${name}</p>
-    <small>${ele[0].unit}</small>
-    <div class="d-flex justify-content-between align-items-center">
-        <div><p> ${ele[0].price}</p><p> <s> ${ele[0].mrp}</s></p></div>
-        <span class="addonchangeclick">
-        <h5 onclick="clickonaddbtn()">ADD</h5>
-        </span>
-    </div>
-</div>`
+    let x = 0
+    x = Math.floor((Math.random() * 30) + 11);
+    let img = `<div class="w-20_per">
+                <img src="${ele[0].image_url}" class="" alt="...">
+                    <div class="bVEkMr">${x}% OFF</div>
+                      <p>${name}</p>
+                      <small>${ele[0].unit}</small>
+                      <div class="d-flex justify-content-between align-items-center">
+                      <div><p> ₹${ele[0].price}</p><small> <s> ₹${ele[0].mrp}</s></small></div>
+                       <span class="addonchangeclick"><h5 onclick="clickonaddbtn()">ADD</h5> </span>
+                    </div>
+                </div> `
     cor2.innerHTML += img
   })
   let c3 = b.filter((ele, i) => {
@@ -355,24 +376,23 @@ function biscuits() {
   })
   c3.map((ele) => {
     let name = ''
-    name =ele[0].name
-    if(name.length<=30){
+    name = ele[0].name
+    if (name.length <= 20) {
       name = name
-    }else{
-      name = name.slice(0,30)+'...'
-    }
-    let img = `  <div class="w-20_per">
-    <img src="${ele[0].image_url}" class="" alt="...">
-    <p>${name}</p>
-    <small>${ele[0].unit}</small>
-    <div class="d-flex justify-content-between align-items-center">
-        <div><p> ${ele[0].price}</p><p> <s> ${ele[0].mrp}</s></p></div>
-        <span class="addonchangeclick">
-        <h5 onclick="clickonaddbtn()">ADD</h5>
-        </span>
-    </div>
-</div>`
+    } else {
+      name = name.slice(0, 20) + '...'
+    }let x = 0
+    x = Math.floor((Math.random() * 30) + 11);
+    let img = `<div class="w-20_per">
+                <img src="${ele[0].image_url}" class="" alt="...">
+                    <div class="bVEkMr">${x}% OFF</div>
+                      <p>${name}</p>
+                      <small>${ele[0].unit}</small>
+                      <div class="d-flex justify-content-between align-items-center">
+                      <div><p> ₹${ele[0].price}</p><small> <s> ₹${ele[0].mrp}</s></small></div>
+                       <span class="addonchangeclick"><h5 onclick="clickonaddbtn()">ADD</h5> </span>
+                    </div>
+                </div> `
     cor3.innerHTML += img
   })
 }
-
