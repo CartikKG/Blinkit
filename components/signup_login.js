@@ -28,7 +28,7 @@ const openonclick = () => {
 
 function cancel() {
   document.getElementById("modal_container").classList.remove("show");
-  console.log("cancel!");
+  // console.log("cancel!");
 }
 
 function login() {
@@ -96,7 +96,7 @@ function signupPage() {
         <p>Already have an account? </p><button  id="loginPage">Login</button>
     </div>
     `;
-  console.log("SignUp Clicked!");
+  // console.log("SignUp Clicked!");
   document.getElementById("cancelmodal").addEventListener("click", cancel);
   document.getElementById("signuppp").addEventListener("click", signUp);
   document.getElementById("loginPage").addEventListener("click", loginPage);
@@ -197,13 +197,13 @@ function mylocation() {
   function success(pos) {
     const crd = pos.coords;
 
-    console.log("Your current position is:");
-    console.log(`Latitude : ${crd.latitude}`);
-    console.log(`Longitude: ${crd.longitude}`);
-    console.log(`More or less ${crd.accuracy} meters.`);
+    // console.log("Your current position is:");
+    // console.log(`Latitude : ${crd.latitude}`);
+    // console.log(`Longitude: ${crd.longitude}`);
+    // console.log(`More or less ${crd.accuracy} meters.`);
 
     // getdatabycurrent();
-    // getReverseGeocodingData(crd.latitude, crd.longitude);
+    getReverseGeocodingData(crd.latitude, crd.longitude);
   }
 
   function error(err) {
@@ -213,22 +213,22 @@ function mylocation() {
 
   navigator.geolocation.getCurrentPosition(success, error, options);
 }
-function getReverseGeocodingData(lat, lng) {
-  // var latlng = new google.maps.LatLng(lat, lng);
-  // // This is making the Geocode request
-  // var geocoder = new google.maps.Geocoder();
-  // geocoder.geocode({ latLng: latlng }, (results, status) => {
-  //   if (status !== google.maps.GeocoderStatus.OK) {
-  //     alert(status);
-  //   }
-  //   // This is checking to see if the Geoeode Status is OK before proceeding
-  //   if (status == google.maps.GeocoderStatus.OK) {
-  //     console.log(results);
-  //     var address = results[0].formatted_address;
-  //   }
-  // });
+function getReverseGeocodingData(lat, lon) {
+  let url = `https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}&appid=0e13cf00fef1bfec8244a88bd982e5c6&units=metric`;
+  async function promisee(res, rej) {
+    try {
+      let ans = await fetch(url);
+      let ans1 = await ans.json();
+      // console.log(ans1);
+      // console.log();
+      document.getElementById(
+        "currentcity"
+      ).innerHTML = ` Your Current City <b> ${ans1.name} </b> <i class="fa-solid fa-caret-down">`;
+    } catch (error) {}
+  }
+  promisee();
 }
-// export { openonclick };
+
 export {
   users,
   openonclick,

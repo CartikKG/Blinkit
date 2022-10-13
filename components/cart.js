@@ -23,10 +23,10 @@ async function promise() {
     let ans2 = await fetch("https://blinkit-clone.herokuapp.com/caraosual");
     let ans3 = await ans2.json();
     caraosual = ans3;
-    console.log(ans3);
+    // console.log(ans3);
     productsAllwithDetails = ans1;
   } catch (error) {
-    console.log(error);
+    // console.log(error);
   }
 }
 promise();
@@ -132,7 +132,7 @@ function clickonaddbtn(unq) {
   DispalyAlliteminCart(localStoragebuylist);
 }
 const subtractqty = (unq) => {
-  console.log("MIN");
+  // console.log("MIN");
   let target = event.target.parentNode.childNodes[2];
   let amount = Number(event.target.parentNode.childNodes[2].innerHTML);
   let localStoragebuylist =
@@ -180,7 +180,7 @@ const subtractqty = (unq) => {
   }
 };
 const increaseqty = (unq) => {
-  console.log("ADD");
+  // console.log("ADD");
   let target = event.target.parentNode.childNodes[2];
   let amount = Number(event.target.parentNode.childNodes[2].innerHTML);
   // let mrp = Number(JSON.parse(localStorage.getItem("mrp")) || 0);
@@ -263,7 +263,7 @@ const always = () => {
             let amount = Number(mrp) - 37;
             let percent = (amount / 100) * 10;
             // console.log(percent);
-            console.log(amount - percent);
+            // console.log(amount - percent);
             document.getElementById("showtextmsgcpn").style.display = "block";
             document.getElementById(
               "showherefinamount"
@@ -280,7 +280,7 @@ const always = () => {
             let amount = Number(mrp) - 37;
             let percent = (amount / 100) * 50;
             // console.log(percent);
-            console.log(amount - percent);
+            // console.log(amount - percent);
             document.getElementById("showtextmsgcpn").style.display = "block";
             document.getElementById(
               "showherefinamount"
