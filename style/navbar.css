@@ -186,6 +186,68 @@
     /* visibility: hidden; */
 }
 
+
+#pngnavanimation {
+    position: absolute;
+    left: 0%;
+    top: 520px;
+    /* bottom: 0%; */
+    width: 13%;
+    cursor: pointer;
+    /* border: 1px solid red; */
+    z-index: 1;
+    overflow: hidden;
+}
+
+#animationmen {
+    display: none;
+}
+
+#animationmenu {
+    position: absolute;
+    left: 110px;
+    top: 656px;
+    background: yellow;
+    height: 36px;
+    /* width: 38.5%; */
+    animation: animationmenu 0.5s ease-in-out;
+}
+
+@keyframes animationmenu {
+    from {
+        left: -500px;
+    }
+
+    to {
+        left: 110px;
+    }
+}
+
+#animationmenu>ul {
+    position: absolute;
+    display: flex;
+
+}
+
+#animationmenu a {
+    text-decoration: none;
+    color: black;
+}
+
+#animationmenu>ul>a>li {
+    padding: 5px;
+    cursor: pointer;
+    text-decoration: none;
+    list-style: none;
+    background-color: rgb(255, 230, 0);
+    font-weight: 600;
+}
+
+#animationmenu>ul>a>li:hover {
+    background-color: green;
+    color: white
+}
+
 @media (max-width:1090px) {
     #foraddressdiv {
         position: absolute;
@@ -254,7 +316,13 @@
         display: block;
 
     }
+
+    #pngnavanimation {
+        width: 18%;
+    }
 }
+
+
 
 @media (max-width:470px) {
     #navbar>a {
@@ -284,5 +352,45 @@
         width: 25%;
         right: 2%;
         font-size: 13px;
+    }
+
+    #pngnavanimation {
+        width: 33%;
+    }
+
+    #animationmenu {
+
+        left: 10px;
+        top: 606px;
+
+        /* width: 38.5%; */
+
+    }
+
+    #animationmenu>ul>a>li {
+        /* margin-left: 0%; */
+        /* left: 10px; */
+        top: 616px;
+
+        padding: 2px;
+        /* font-size: 2%; */
+    }
+}
+
+@media (max-width:700px) {
+    #animationmenu {
+
+        left: 60px;
+        top: 606px;
+
+        /* width: 38.5%; */
+
+    }
+
+    #animationmenu>ul>a>li {
+        /* margin-left: 0%; */
+        /* left: 10px; */
+        top: 616px;
+        font-size: 8px;
     }
 }

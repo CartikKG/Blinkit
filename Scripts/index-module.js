@@ -30,10 +30,7 @@ window.clickonaddbtn = clickonaddbtn;
 window.subtractqty = subtractqty;
 window.increaseqty = increaseqty;
 document.getElementById("cartinhtm").innerHTML = cart();
-document.getElementById("navbar").innerHTML = navbar(
-  "./img/Untitled-1.jpg",
-  "./index.html"
-);
+document.getElementById("navbar").innerHTML = navbar(".");
 currentupdate();
 mylocation();
 document.getElementById("logoutcurrent").addEventListener("click", logoutcur);
@@ -47,4 +44,14 @@ cartdiv.addEventListener("click", () => {
 });
 document.getElementById("closeit").addEventListener("click", () => {
   document.getElementById("cartinhtml").id = "cartinhtm";
+});
+let flaarg = true;
+document.getElementById("pngnavanimation").addEventListener("click", () => {
+  if (flaarg) {
+    document.getElementById("animationmen").id = "animationmenu";
+    flaarg = false;
+  } else {
+    document.getElementById("animationmenu").id = "animationmen";
+    flaarg = true;
+  }
 });

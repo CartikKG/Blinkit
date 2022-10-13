@@ -1,5 +1,5 @@
-const navbar = (src, src1) => {
-  return ` <a href=${src1}>   <img src=${src} alt="logo" /></a> 
+const navbar = (src) => {
+  return ` <a href="${src}/index.html">   <img src="${src}/img/Untitled-1.jpg" alt="logo" /></a> 
     <div id="foraddressdiv">
       <h3>Delivery in Sometimes</h3>
       <h5>
@@ -25,6 +25,24 @@ const navbar = (src, src1) => {
       <span>My Account</span>
       <span>Location</span>
       <span id="logoutcurrent">Logout</span>
-    </div>`;
+    </div>
+    <img
+    id="pngnavanimation"
+    src="https://i.pinimg.com/originals/54/de/91/54de91c58df367974665ce46b95ad6d8.gif"
+    alt=""
+  />
+  <div id="animationmen">
+  <ul>
+    <a href="${src}/pages/Freshvegitable.html"><li>Vegetables</li></a>
+    <a href="${src}/pages/combo.html"> <li>Combo</li></a>
+    <a href="${src}/pages/exotic.html"><li>Exotic</li></a>
+    <a href="${src}/pages/flower.html"> <li>Flower</li></a>
+    <a href="${src}/pages/fresh.html"><li>Fresh</li></a>
+    <a href="${src}/pages/frozen.html"><li>Frozen</li></a>
+    <a href="${src}/pages/fruits.html"><li>Fruits</li></a>
+    <a href="${src}/pages/leaf.html"><li>Leaf</li></a>
+    <a href="${src}/pages/organic.html"><li>Organic</li></a>
+  </ul>
+</div>`;
 };
 export default navbar;
