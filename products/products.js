@@ -1,12 +1,7 @@
 import data from "./products.json"assert {
   type: 'json'
 };
-import navbar from "../components/navbar.js";
 let url = "https://blinkit-clone.surge.sh/categories/"
-// document.getElementById("navbar").innerHTML = navbar(
-//   "../img/Untitled-1.jpg",
-//   "../index.html"
-// );
 showTopData()
 showChemist()
 dairy_products()
@@ -29,6 +24,33 @@ function showTopData() {
     </div>`
     offer.innerHTML += b;
   })
+}
+function coureturn(ele,x,name){
+  return  `<div class="w-20_per">
+  <img src="${ele.image}" class="" alt="...">
+      <div class="bVEkMr">${x}% OFF</div>
+        <p>${name}</p>
+        <small>${ele.weight}</small>
+        <div class="d-flex justify-content-between align-items-center">
+        <div><p> ${ele.price}</p><small> <s> ${ele.markprice}</s></small></div>
+         <span class="addonchangeclick"><h5 onclick="clickonaddbtn('${ele.title}')">ADD</h5> </span>
+      </div>
+  </div> `
+}
+function slidercou(ele,x,name){
+  return `<div class="s_child">
+  <img src="${ele.image}" class="" alt="...">
+  <p>${name}</p>
+  <small>${ele.weight}</small>
+  <div class="d-flex justify-content-between align-items-center">
+      <div>
+      <p> ${ele.price}</p><p> <s> ${ele.markprice}</s></p>
+      </div>
+      <span class="addonchangeclick">
+        <h5 onclick="clickonaddbtn('${ele.title}')">ADD</h5>
+      </span>
+  </div>
+</div>`
 }
 
 function showChemist() {
@@ -57,19 +79,7 @@ function showChemist() {
     }
     let x = 0
     x = Math.floor((Math.random() * 30) + 11);
-    let img = `<div class="s_child">
-                    <img src="${ele.image}" class="" alt="...">
-                    <p>${name}</p>
-                    <small>${ele.weight}</small>
-                    <div class="d-flex justify-content-between align-items-center">
-                        <div>
-                        <p> ${ele.price}</p><p> <s> ${ele.markprice}</s></p>
-                        </div>
-                        <span class="addonchangeclick">
-                          <h5 onclick="clickonaddbtn('${ele.title}')">ADD</h5>
-                        </span>
-                    </div>
-                  </div>`
+    let img = slidercou(ele,x,name)
     cor_s1.innerHTML += img;
   })
 
@@ -88,16 +98,7 @@ function showChemist() {
     }
     let x = 0
     x = Math.floor((Math.random() * 30) + 11);
-    let img = `<div class="w-20_per">
-                <img src="${ele.image}" class="" alt="...">
-                    <div class="bVEkMr">${x}% OFF</div>
-                      <p>${name}</p>
-                      <small>${ele.weight}</small>
-                      <div class="d-flex justify-content-between align-items-center">
-                      <div><p> ${ele.price}</p><small> <s> ${ele.markprice}</s></small></div>
-                       <span class="addonchangeclick"><h5 onclick="clickonaddbtn('${ele.title}')">ADD</h5> </span>
-                    </div>
-                </div> `
+    let img = coureturn(ele,x,name)
     cor1.innerHTML += img;
   })
   let c2 = chemistData.filter((ele, i) => {
@@ -115,16 +116,7 @@ function showChemist() {
     }
     let x = 0
     x = Math.floor((Math.random() * 30) + 11);
-    let img = `<div class="w-20_per">
-                <img src="${ele.image}" class="" alt="...">
-                    <div class="bVEkMr">${x}% OFF</div>
-                      <p>${name}</p>
-                      <small>${ele.weight}</small>
-                      <div class="d-flex justify-content-between align-items-center">
-                      <div><p> ${ele.price}</p><small> <s> ${ele.markprice}</s></small></div>
-                       <span class="addonchangeclick"><h5 onclick="clickonaddbtn('${ele.title}')">ADD</h5> </span>
-                    </div>
-                </div> `
+    let img = coureturn(ele,x,name)
     cor2.innerHTML += img
   })
   let c3 = chemistData.filter((ele, i) => {
@@ -142,16 +134,7 @@ function showChemist() {
     }
     let x = 0
     x = Math.floor((Math.random() * 30) + 11);
-    let img = `<div class="w-20_per">
-                <img src="${ele.image}" class="" alt="...">
-                    <div class="bVEkMr">${x}% OFF</div>
-                      <p>${name}</p>
-                      <small>${ele.weight}</small>
-                      <div class="d-flex justify-content-between align-items-center">
-                      <div><p> ${ele.price}</p><small> <s> ${ele.markprice}</s></small></div>
-                       <span class="addonchangeclick"><h5 onclick="clickonaddbtn('${ele.title}')">ADD</h5> </span>
-                    </div>
-                </div> `
+    let img = coureturn(ele,x,name)
     cor3.innerHTML += img
   })
 })
@@ -183,19 +166,7 @@ function dairy_products() {
         }
         let x = 0
         x = Math.floor((Math.random() * 30) + 11);
-        let img = `<div class="s_child">
-                        <img src="${ele.image}" class="" alt="...">
-                        <p>${name}</p>
-                        <small>${ele.weight}</small>
-                        <div class="d-flex justify-content-between align-items-center">
-                            <div>
-                            <p> ${ele.price}</p><p> <s> ${ele.markprice}</s></p>
-                            </div>
-                            <span class="addonchangeclick">
-                              <h5 onclick="clickonaddbtn('${ele.title}')">ADD</h5>
-                            </span>
-                        </div>
-                      </div>`
+       let img = slidercou(ele,x,name)
     cor_s2.innerHTML += img;
   })
   let c1 = fruitData.filter((ele, i) => {
@@ -213,16 +184,7 @@ function dairy_products() {
       }
       let x = 0
       x = Math.floor((Math.random() * 30) + 11);
-      let img = `<div class="w-20_per">
-                  <img src="${ele.image}" class="" alt="...">
-                      <div class="bVEkMr">${x}% OFF</div>
-                        <p>${name}</p>
-                        <small>${ele.weight}</small>
-                        <div class="d-flex justify-content-between align-items-center">
-                        <div><p> ${ele.price}</p><small> <s> ${ele.markprice}</s></small></div>
-                         <span class="addonchangeclick"><h5 onclick="clickonaddbtn('${ele.title}')">ADD</h5> </span>
-                      </div>
-                  </div> `
+      let img = coureturn(ele,x,name)
     cor1.innerHTML += img;
   })
   let c2 = fruitData.filter((ele, i) => {
@@ -240,16 +202,7 @@ function dairy_products() {
     }
     let x = 0
     x = Math.floor((Math.random() * 30) + 11);
-    let img = `<div class="w-20_per">
-                <img src="${ele.image}" class="" alt="...">
-                    <div class="bVEkMr">${x}% OFF</div>
-                      <p>${name}</p>
-                      <small>${ele.weight}</small>
-                      <div class="d-flex justify-content-between align-items-center">
-                      <div><p> ${ele.price}</p><small> <s> ${ele.markprice}</s></small></div>
-                       <span class="addonchangeclick"><h5 onclick="clickonaddbtn('${ele.title}')">ADD</h5> </span>
-                    </div>
-                </div> `
+    let img = coureturn(ele,x,name)
     cor2.innerHTML += img
   })
   let c3 = fruitData.filter((ele, i) => {
@@ -267,16 +220,7 @@ function dairy_products() {
     }
     let x = 0
     x = Math.floor((Math.random() * 30) + 11);
-    let img = `<div class="w-20_per">
-                <img src="${ele.image}" class="" alt="...">
-                    <div class="bVEkMr">${x}% OFF</div>
-                      <p>${name}</p>
-                      <small>${ele.weight}</small>
-                      <div class="d-flex justify-content-between align-items-center">
-                      <div><p> ${ele.price}</p><small> <s> ${ele.markprice}</s></small></div>
-                       <span class="addonchangeclick"><h5 onclick="clickonaddbtn('${ele.title}')">ADD</h5> </span>
-                    </div>
-                </div> `
+    let img = coureturn(ele,x,name)
     cor3.innerHTML += img
   })
   })
@@ -310,19 +254,7 @@ function biscuits() {
         }
         let x = 0
         x = Math.floor((Math.random() * 30) + 11);
-        let img = `<div class="s_child">
-                        <img src="${ele.image}" class="" alt="...">
-                        <p>${name}</p>
-                        <small>${ele.weight}</small>
-                        <div class="d-flex justify-content-between align-items-center">
-                            <div>
-                            <p> ${ele.price}</p><p> <s> ${ele.markprice}</s></p>
-                            </div>
-                            <span class="addonchangeclick">
-                              <h5 onclick="clickonaddbtn('${ele.title}')">ADD</h5>
-                            </span>
-                        </div>
-                      </div>`
+        let img = slidercou(ele,x,name)
                       cor_s3.innerHTML += img;
   })
   let c1 = fruitData.filter((ele, i) => {
@@ -367,16 +299,7 @@ function biscuits() {
     }
     let x = 0
     x = Math.floor((Math.random() * 30) + 11);
-    let img = `<div class="w-20_per">
-                <img src="${ele.image}" class="" alt="...">
-                    <div class="bVEkMr">${x}% OFF</div>
-                      <p>${name}</p>
-                      <small>${ele.weight}</small>
-                      <div class="d-flex justify-content-between align-items-center">
-                      <div><p> ${ele.price}</p><small> <s> ${ele.markprice}</s></small></div>
-                       <span class="addonchangeclick"><h5 onclick="clickonaddbtn('${ele.title}')">ADD</h5> </span>
-                    </div>
-                </div> `
+    let img = coureturn(ele,x,name)
     cor2.innerHTML += img
   })
   let c3 = fruitData.filter((ele, i) => {
@@ -394,16 +317,7 @@ function biscuits() {
     }
     let x = 0
     x = Math.floor((Math.random() * 30) + 11);
-    let img = `<div class="w-20_per">
-                <img src="${ele.image}" class="" alt="...">
-                    <div class="bVEkMr">${x}% OFF</div>
-                      <p>${name}</p>
-                      <small>${ele.weight}</small>
-                      <div class="d-flex justify-content-between align-items-center">
-                      <div><p> ${ele.price}</p><small> <s> ${ele.markprice}</s></small></div>
-                       <span class="addonchangeclick"><h5 onclick="clickonaddbtn('${ele.title}')">ADD</h5> </span>
-                    </div>
-                </div> `
+    let img = coureturn(ele,x,name)
     cor3.innerHTML += img
   })
   })

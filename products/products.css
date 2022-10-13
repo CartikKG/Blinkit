@@ -28,11 +28,11 @@
 .offerchild{
     width: 30rem;
 }
-::-webkit-scrollbar{
+/* ::-webkit-scrollbar{
     height: 4px;
     width: 4px;
     appearance: none;
-}
+} */
 .w-20_per{
     position: relative;
 }
@@ -48,49 +48,33 @@ button>span{
 
 
 
-@media (max-width:699px){
-    .imgdiv{display: none;}
-    #topProd{
-        display: grid;
-        grid-template-columns: repeat(3,1fr);
-        gap: 1rem;
-        width: 90%;
-        margin: auto;
-    }
-    .br10px{
-        border-radius: 10px;
+
+@media (min-width:1200px){
+    #carouselExampleControls,#dairyCarousal1,#dairyCarousal{
+        display: block
     }
     .w-20_per{
         width: 15%;
         display: inline-block;
         margin: auto 0.5rem;
-        border: 1px solid rgb(221, 221, 221);;
+        border: 1px solid rgb(221, 221, 221);
         border-radius: 10px;
-        padding: 5px;
+        padding: 0 10px;
     }
     .w-20_per:hover{
         border: 0.5px solid green;
     }
-    #couroSlider,#couroSlider1,#couroSlider2{
-        display: flex;
+    #couroSlider,#couroSlider1,#couroSlider2{display: none;}
+    .pay_part{
         width: 90%;
         margin: auto;
-        overflow-x: scroll;
-        gap: 2rem;
-        scrollbar-width: thin
-    }
-    .s_child{
-        width: 15rem;
-    }
-    .s_child >img{
-        width: 150px;
-    }
-    #carouselExampleControls,#dairyCarousal1,#dairyCarousal{
-        display: none
-    }
-}
+        display: grid;
+        grid-template-columns: repeat(9,1fr);
+        gap: 50px;
+    }  
 
-@media (min-width:700px) and (max-width:900px){
+}
+@media (min-width:900px) and (max-width:1200px){
     #topProd{
         display: grid;
         grid-template-columns: repeat(6,1fr);
@@ -129,14 +113,33 @@ button>span{
     }
     .s_child{
         width: 15rem;
+        display: inline-block;
+        margin: auto 0.5rem;
+        border: 1px solid rgb(221, 221, 221);
+        border-radius: 10px;
+        padding: 0 10px;
     }
     .s_child >img{
         width: 150px;
     }
 }
-@media (min-width:900px){
+@media (min-width:700px) and (max-width:900px){
+    #topProd{
+        display: grid;
+        grid-template-columns: repeat(6,1fr);
+        gap: 1rem;
+        width: 90%;
+        margin: auto;
+    }
+    .pay_part{
+        width: 90%;
+        margin: auto;
+        display: grid;
+        grid-template-columns: repeat(5,1fr);
+        gap: 50px;
+    }
     #carouselExampleControls,#dairyCarousal1,#dairyCarousal{
-        display: block
+        display: none
     }
     .w-20_per{
         width: 15%;
@@ -149,15 +152,131 @@ button>span{
     .w-20_per:hover{
         border: 0.5px solid green;
     }
-    #couroSlider,#couroSlider1,#couroSlider2{display: none;}
+    #couroSlider,#couroSlider1,#couroSlider2{
+        display: flex;
+        width: 90%;
+        margin: auto;
+        overflow-x: scroll;
+        gap: 2rem;
+        /* scrollbar-width: thin */
+    }
+    .s_child{
+        width: 15rem;
+        display: inline-block;
+        margin: auto 0.5rem;
+        border: 1px solid rgb(221, 221, 221);
+        border-radius: 10px;
+        padding: 0 10px;
+    }
+    .s_child >img{
+        width: 150px;
+    }
+}
+@media (min-width:401px) and (max-width:699px){
+    .imgdiv{display: none;}
+    #topProd{
+        display: grid;
+        grid-template-columns: repeat(3,1fr);
+        gap: 1rem;
+        width: 90%;
+        margin: auto;
+    }
+    .br10px{
+        border-radius: 10px;
+    }
+    .w-20_per{
+        width: 15%;
+        display: inline-block;
+        margin: auto 0.5rem;
+        border: 1px solid rgb(221, 221, 221);;
+        border-radius: 10px;
+        padding: 5px;
+    }
+    .w-20_per:hover{
+        border: 0.5px solid green;
+    }
+    #couroSlider,#couroSlider1,#couroSlider2{
+        display: flex;
+        width: 90%;
+        margin: auto;
+        overflow-x: scroll;
+        gap: 2rem;
+        scrollbar-width: thin
+    }
+    .s_child{
+        width: 15rem;
+        display: inline-block;
+        margin: auto 0.5rem;
+        border: 1px solid rgb(221, 221, 221);
+        border-radius: 10px;
+        padding: 0 10px;
+    }
+    .s_child >img{
+        width: 150px;
+    }
+    #carouselExampleControls,#dairyCarousal1,#dairyCarousal{
+        display: none
+    }
     .pay_part{
         width: 90%;
         margin: auto;
         display: grid;
-        grid-template-columns: repeat(9,1fr);
-        gap: 50px;
-    }  
-
+        grid-template-columns: repeat(3,1fr);
+        gap: 30px;
+    }
+}
+@media (max-width:400px){
+    .pay_part{
+        width: 90%;
+        margin: auto;
+        display: grid;
+        grid-template-columns: repeat(2,1fr);
+        gap: 30px;
+    }
+    .imgdiv{display: none;}
+    #topProd{
+        display: grid;
+        grid-template-columns: repeat(3,1fr);
+        gap: 1rem;
+        width: 90%;
+        margin: auto;
+    }
+    .br10px{
+        border-radius: 10px;
+    }
+    .w-20_per{
+        width: 15%;
+        display: inline-block;
+        margin: auto 0.5rem;
+        border: 1px solid rgb(221, 221, 221);;
+        border-radius: 10px;
+        padding: 5px;
+    }
+    .w-20_per:hover{
+        border: 0.5px solid green;
+    }
+    #couroSlider,#couroSlider1,#couroSlider2{
+        display: flex;
+        width: 90%;
+        margin: auto;
+        overflow-x: scroll;
+        gap: 2rem;
+        scrollbar-width: thin
+    }
+    .s_child{
+        width: 15rem;
+        display: inline-block;
+        margin: auto 0.5rem;
+        border: 1px solid rgb(221, 221, 221);
+        border-radius: 10px;
+        padding: 0 10px;
+    }
+    .s_child >img{
+        width: 150px;
+    }
+    #carouselExampleControls,#dairyCarousal1,#dairyCarousal{
+        display: none
+    }
 }
 .w-20_per>img{
 height: 130px;
@@ -347,6 +466,10 @@ justify-content: center;
     width: 88%;
     margin: 40px auto;
 }
+.child_footer>div{
+    display: flex !important;
+   justify-content: center !important;
+}
 .child_footer>div>div{
     border: 1px solid rgb(221, 221, 221);
     padding: 15px;
@@ -354,6 +477,7 @@ justify-content: center;
     height: 275px;
     border-radius: 13px;
     padding-top: 35px;
+    margin: 10px;
 }
 .child_footer h5{
 font-size: 14px;
@@ -389,19 +513,15 @@ section{
     margin: 24px auto;
 }
 
-@media (max-width:699px){
-    .pay_part{
-        width: 90%;
-        margin: auto;
-        display: grid;
-        grid-template-columns: repeat(3,1fr);
-        gap: 50px;
-    }
-}
+
 .h-360 {
     animation: animation ease-in-out 3s infinite;
   }
 @keyframes animation{
     from{margin-right: 100px;}
     to{margin-left: 100px;}
+}
+.row:before {
+    display: table;
+    content: none;
 }
