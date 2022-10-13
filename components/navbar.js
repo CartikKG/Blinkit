@@ -8,7 +8,7 @@ const navbar = (src) => {
     </div>
 
     <div id="navbar-search">
-      <div class="input-group">
+      <div class="input-grouppp">
         <div type="submit">
           <i class="glyphicon glyphicon-search"></i>
         </div>

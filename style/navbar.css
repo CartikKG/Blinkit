@@ -62,7 +62,7 @@
     /* width: 100px; */
 }
 
-.input-group {
+.input-grouppp {
     position: relative;
     width: 600px;
     height: 60px;
@@ -72,7 +72,7 @@
 }
 
 
-.input-group>div {
+.input-grouppp>div {
     position: relative;
     left: 8%;
     top: 37%;
@@ -88,7 +88,7 @@
     cursor: pointer;
 }
 
-.input-group>input {
+.input-grouppp>input {
 
     width: 100%;
     border: none;
@@ -288,7 +288,7 @@
         font-size: 16px;
     }
 
-    .input-group {
+    .input-grouppp {
 
         width: 100%;
     }
