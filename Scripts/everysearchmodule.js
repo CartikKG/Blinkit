@@ -26,6 +26,8 @@ import {
   mylocation,
   getReverseGeocodingData,
 } from "../components/signup_login.js";
+
+// window.sorting = sorting;
 window.clickonaddbtn = clickonaddbtn;
 window.subtractqty = subtractqty;
 window.increaseqty = increaseqty;
@@ -48,3 +50,8 @@ cartdiv.addEventListener("click", () => {
 document.getElementById("closeit").addEventListener("click", () => {
   document.getElementById("cartinhtml").id = "cartinhtm";
 });
+
+// document.getElementById("sortbyprinter").addEventListener("change",sorting(veg))
+  
+ 
+  
