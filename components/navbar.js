@@ -12,7 +12,9 @@ const navbar = (src) => {
         <div type="submit">
           <i class="glyphicon glyphicon-search"></i>
         </div>
-        <input id="searchnav" type="search" placeholder="Search for products" />
+       
+        <input id="searchnav" type="search" placeholder="Search for products"    autocomplete="off"
+        autofocus />
       
         <i id="micsearch" style="    position: relative;
         margin-right: 10px;
@@ -20,8 +22,8 @@ const navbar = (src) => {
         top: 23px;
         height: 19px;
         color="grey"
-        " class="fas fa-microphone-slash"></i>
-    
+        " class="fas fa-microphone"></i>
+       
       </div>
     </div>
 

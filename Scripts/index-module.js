@@ -26,6 +26,17 @@ import {
   mylocation,
   getReverseGeocodingData,
 } from "../components/signup_login.js";
+// import {
+//   micflag,
+//   SpeechRecognition,
+//   searchForm,
+//   searchFormInput,
+//   recognition,
+//   micBtnClick,
+//   startSpeechRecognition,
+//   endSpeechRecognition,
+//   resultOfSpeechRecognition,
+// } from "../components/speak.js";
 window.clickonaddbtn = clickonaddbtn;
 window.subtractqty = subtractqty;
 window.increaseqty = increaseqty;
@@ -64,18 +75,58 @@ document.getElementById("searchnav").addEventListener("keypress", (event) => {
     location.href = "./pages/everysearch.html";
   }
 });
+const SpeechRecognition =
+  window.SpeechRecognition || window.webkitSpeechRecognition;
+
+const recognition = new SpeechRecognition();
+recognition.continuous = true;
 let micflag = true;
-document.getElementById("micsearch").addEventListener("click", () => {
+
+let searchFormInput = document.querySelector("#searchnav");
+function micBtnClick() {
   if (micflag) {
-    micflag = false;
-    console.log("GELL");
-    document.getElementById("micsearch").classList.remove = "fa-microphone";
-    document.getElementById("micsearch").classList.add = "fa-microphone-slash";
-    // document.getElementById("micsearch")..add("c");
+    console.log("hello");
+    recognition.start();
   } else {
-    document.getElementById("micsearch").classList.remove =
-      "fa-microphone-slash";
-    document.getElementById("micsearch").classList.add = "fa-microphone";
-    micflag = true;
+    console.log("n0-hello");
+    recognition.stop();
   }
-});
+}
+function startSpeechRecognition() {
+  console.log("start");
+  document.getElementById("micsearch").className = "fas fa-microphone-slash";
+  micflag = false;
+  searchFormInput.focus();
+  console.log("Voice activated, SPEAK");
+  recognition.addEventListener("result", resultOfSpeechRecognition);
+}
+
+function endSpeechRecognition() {
+  micflag = true;
+
+  document.getElementById("micsearch").className =
+    "fas fa-microphone-slashfa fa-microphone";
+  searchFormInput.focus();
+  console.log("Speech recognition service disconnected");
+}
+function resultOfSpeechRecognition(event) {
+  const current = event.resultIndex;
+  const transcript = event.results[current][0].transcript;
+
+  if (transcript.toLowerCase().trim() === "stop recording") {
+    recognition.stop();
+  } else if (!searchFormInput.value) {
+    searchFormInput.value = transcript;
+  } else {
+    if (transcript.toLowerCase().trim() === "go") {
+      searchForm.submit();
+    } else if (transcript.toLowerCase().trim() === "reset input") {
+      searchFormInput.value = "";
+    } else {
+      searchFormInput.value = transcript;
+    }
+  }
+}
+document.getElementById("micsearch").addEventListener("click", micBtnClick);
+recognition.addEventListener("start", startSpeechRecognition);
+recognition.addEventListener("end", endSpeechRecognition);
