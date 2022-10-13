@@ -207,7 +207,7 @@ function mylocation() {
   }
 
   function error(err) {
-    alert("ALLOW PERMISSION");
+    // alert("ALLOW PERMISSION");
     // console.warn(`ERROR(${err.code}): ${err.message}`);
   }
 

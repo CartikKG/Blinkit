@@ -55,3 +55,12 @@ document.getElementById("pngnavanimation").addEventListener("click", () => {
     flaarg = true;
   }
 });
+
+document.getElementById("searchnav").addEventListener("keypress", (event) => {
+  if (event.key == "Enter") {
+    let searchkey = document.getElementById("searchnav").value;
+    localStorage.setItem("searchkey", searchkey);
+    console.log(searchkey);
+    location.href = "./pages/everysearch.html";
+  }
+});
