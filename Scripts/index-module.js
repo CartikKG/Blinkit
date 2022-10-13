@@ -94,7 +94,7 @@ function micBtnClick() {
 }
 function startSpeechRecognition() {
   console.log("start");
-  document.getElementById("micsearch").className = "fas fa-microphone-slash";
+  document.getElementById("micsearch").className = "fas fa-microphone";
   micflag = false;
   searchFormInput.focus();
   console.log("Voice activated, SPEAK");
@@ -104,8 +104,7 @@ function startSpeechRecognition() {
 function endSpeechRecognition() {
   micflag = true;
 
-  document.getElementById("micsearch").className =
-    "fas fa-microphone-slashfa fa-microphone";
+  document.getElementById("micsearch").className = "fas fa-microphone-slash ";
   searchFormInput.focus();
   console.log("Speech recognition service disconnected");
 }

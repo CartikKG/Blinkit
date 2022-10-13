@@ -22,7 +22,7 @@ const navbar = (src) => {
         top: 23px;
         height: 19px;
         color="grey"
-        " class="fas fa-microphone"></i>
+        " class="fas fa-microphone-slash"></i>
        
       </div>
     </div>
