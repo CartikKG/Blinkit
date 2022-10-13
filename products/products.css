@@ -9,9 +9,12 @@
     width: 90%;
     margin: auto;
 }
-img{
+#topProd img{
     width: 100%;
 }
+/* img{
+    width: 100%;
+} */
 #offer{
     width: 90%;
     margin: auto;
@@ -46,6 +49,7 @@ button>span{
 
 
 @media (max-width:699px){
+    .imgdiv{display: none;}
     #topProd{
         display: grid;
         grid-template-columns: repeat(3,1fr);
@@ -85,7 +89,8 @@ button>span{
         display: none
     }
 }
-@media (min-width: 700px) and (max-width:900px){
+
+@media (min-width:700px) and (max-width:900px){
     #topProd{
         display: grid;
         grid-template-columns: repeat(6,1fr);
@@ -93,8 +98,43 @@ button>span{
         width: 90%;
         margin: auto;
     }
+    .pay_part{
+        width: 90%;
+        margin: auto;
+        display: grid;
+        grid-template-columns: repeat(5,1fr);
+        gap: 50px;
+    }
+    #carouselExampleControls,#dairyCarousal1,#dairyCarousal{
+        display: none
+    }
+    .w-20_per{
+        width: 15%;
+        display: inline-block;
+        margin: auto 0.5rem;
+        border: 1px solid rgb(221, 221, 221);
+        border-radius: 10px;
+        padding: 0 10px;
+    }
+    .w-20_per:hover{
+        border: 0.5px solid green;
+    }
+    #couroSlider,#couroSlider1,#couroSlider2{
+        display: flex;
+        width: 90%;
+        margin: auto;
+        overflow-x: scroll;
+        gap: 2rem;
+        scrollbar-width: thin
+    }
+    .s_child{
+        width: 15rem;
+    }
+    .s_child >img{
+        width: 150px;
+    }
 }
-@media (min-width:700px){
+@media (min-width:900px){
     #carouselExampleControls,#dairyCarousal1,#dairyCarousal{
         display: block
     }
@@ -110,6 +150,14 @@ button>span{
         border: 0.5px solid green;
     }
     #couroSlider,#couroSlider1,#couroSlider2{display: none;}
+    .pay_part{
+        width: 90%;
+        margin: auto;
+        display: grid;
+        grid-template-columns: repeat(9,1fr);
+        gap: 50px;
+    }  
+
 }
 .w-20_per>img{
 height: 130px;
@@ -199,7 +247,7 @@ color: white !important;
     cursor: pointer;
 
 }
-span>h5 {
+.addonchangeclick>h5 {
     margin-top: 2%;
     font-weight: bold;
     font-size: 14px;
@@ -267,13 +315,7 @@ span>h5 {
 .w-40{
     width: 35%;
 }
-.pay_part{
-    width: 90%;
-    margin: auto;
-    display: grid;
-    grid-template-columns: repeat(9,1fr);
-    gap: 50px;
-}
+
 .pay_part div{
 width: 90px;
 border: 1px solid rgb(221, 221, 221);
