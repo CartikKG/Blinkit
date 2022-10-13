@@ -13,6 +13,15 @@ const navbar = (src) => {
           <i class="glyphicon glyphicon-search"></i>
         </div>
         <input id="searchnav" type="search" placeholder="Search for products" />
+      
+        <i id="micsearch" style="    position: relative;
+        margin-right: 10px;
+        right: 30px;
+        top: 23px;
+        height: 19px;
+        color="grey"
+        " class="fas fa-microphone-slash"></i>
+    
       </div>
     </div>
 

@@ -55,12 +55,27 @@ document.getElementById("pngnavanimation").addEventListener("click", () => {
     flaarg = true;
   }
 });
-
+document.getElementById("searchnav").value = "";
 document.getElementById("searchnav").addEventListener("keypress", (event) => {
   if (event.key == "Enter") {
     let searchkey = document.getElementById("searchnav").value;
     localStorage.setItem("searchkey", searchkey);
     console.log(searchkey);
     location.href = "./pages/everysearch.html";
+  }
+});
+let micflag = true;
+document.getElementById("micsearch").addEventListener("click", () => {
+  if (micflag) {
+    micflag = false;
+    console.log("GELL");
+    document.getElementById("micsearch").classList.remove = "fa-microphone";
+    document.getElementById("micsearch").classList.add = "fa-microphone-slash";
+    // document.getElementById("micsearch")..add("c");
+  } else {
+    document.getElementById("micsearch").classList.remove =
+      "fa-microphone-slash";
+    document.getElementById("micsearch").classList.add = "fa-microphone";
+    micflag = true;
   }
 });
