@@ -26,28 +26,21 @@ import {
   mylocation,
   getReverseGeocodingData,
 } from "../components/signup_login.js";
-// import {
-//   micflag,
-//   SpeechRecognition,
-//   searchForm,
-//   searchFormInput,
-//   recognition,
-//   micBtnClick,
-//   startSpeechRecognition,
-//   endSpeechRecognition,
-//   resultOfSpeechRecognition,
-// } from "../components/speak.js";
+
 window.clickonaddbtn = clickonaddbtn;
 window.subtractqty = subtractqty;
 window.increaseqty = increaseqty;
 document.getElementById("cartinhtm").innerHTML = cart();
 document.getElementById("navbar").innerHTML = navbar(".");
 currentupdate();
-mylocation();
+setTimeout(() => {
+  mylocation();
+}, 5000);
+
 document.getElementById("logoutcurrent").addEventListener("click", logoutcur);
 
 const addpluschangehtml = () => {
-  console.log(event.target);
+  // console.log(event.target);
 };
 cartdiv.addEventListener("click", () => {
   cartinhtm.id = "cartinhtml";
@@ -71,7 +64,7 @@ document.getElementById("searchnav").addEventListener("keypress", (event) => {
   if (event.key == "Enter") {
     let searchkey = document.getElementById("searchnav").value;
     localStorage.setItem("searchkey", searchkey);
-    console.log(searchkey);
+    // console.log(searchkey);
     location.href = "./pages/everysearch.html";
   }
 });
@@ -85,18 +78,18 @@ let micflag = true;
 let searchFormInput = document.querySelector("#searchnav");
 function micBtnClick() {
   if (micflag) {
-    console.log("hello");
+    // console.log("hello");
     recognition.start();
   } else {
-    console.log("n0-hello");
+    // console.log("n0-hello");
     recognition.stop();
   }
 }
 function startSpeechRecognition() {
-  console.log("start");
+  // console.log("start");
   document.getElementById("micsearch").className = "fas fa-microphone";
   micflag = false;
-  searchFormInput.focus();
+  // searchFormInput.focus();
   console.log("Voice activated, SPEAK");
   recognition.addEventListener("result", resultOfSpeechRecognition);
 }
