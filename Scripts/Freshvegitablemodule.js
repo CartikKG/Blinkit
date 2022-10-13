@@ -31,8 +31,8 @@ window.subtractqty = subtractqty;
 window.increaseqty = increaseqty;
 document.getElementById("cartinhtm").innerHTML = cart();
 document.getElementById("navbar").innerHTML = navbar(
-  "../img/Untitled-1.jpg",
-  "../index.html"
+  "..",
+ 
 );
 currentupdate();
 mylocation();
@@ -47,4 +47,23 @@ cartdiv.addEventListener("click", () => {
 });
 document.getElementById("closeit").addEventListener("click", () => {
   document.getElementById("cartinhtml").id = "cartinhtm";
+});
+let flaarg = true;
+document.getElementById("pngnavanimation").addEventListener("click", () => {
+  if (flaarg) {
+    document.getElementById("animationmen").id = "animationmenu";
+    flaarg = false;
+  } else {
+    document.getElementById("animationmenu").id = "animationmen";
+    flaarg = true;
+  }
+});
+document.getElementById("searchnav").value = "";
+document.getElementById("searchnav").addEventListener("keypress", (event) => {
+  if (event.key == "Enter") {
+    let searchkey = document.getElementById("searchnav").value;
+    localStorage.setItem("searchkey", searchkey);
+    console.log(searchkey);
+    location.href = "../pages/everysearch.html";
+  }
 });
