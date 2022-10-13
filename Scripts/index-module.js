@@ -30,95 +30,95 @@ import {
 window.clickonaddbtn = clickonaddbtn;
 window.subtractqty = subtractqty;
 window.increaseqty = increaseqty;
-document.getElementById("cartinhtm").innerHTML = cart();
-document.getElementById("navbar").innerHTML = navbar(".");
-currentupdate();
-setTimeout(() => {
-  mylocation();
-}, 5000);
+// document.getElementById("cartinhtm").innerHTML = cart();
+// document.getElementById("navbar").innerHTML = navbar(".");
+// currentupdate();
+// setTimeout(() => {
+//   mylocation();
+// }, 5000);
 
-document.getElementById("logoutcurrent").addEventListener("click", logoutcur);
+// document.getElementById("logoutcurrent").addEventListener("click", logoutcur);
 
-const addpluschangehtml = () => {
-  // console.log(event.target);
-};
-cartdiv.addEventListener("click", () => {
-  cartinhtm.id = "cartinhtml";
-  always();
-});
-document.getElementById("closeit").addEventListener("click", () => {
-  document.getElementById("cartinhtml").id = "cartinhtm";
-});
-let flaarg = true;
-document.getElementById("pngnavanimation").addEventListener("click", () => {
-  if (flaarg) {
-    document.getElementById("animationmen").id = "animationmenu";
-    flaarg = false;
-  } else {
-    document.getElementById("animationmenu").id = "animationmen";
-    flaarg = true;
-  }
-});
-document.getElementById("searchnav").value = "";
-document.getElementById("searchnav").addEventListener("keypress", (event) => {
-  if (event.key == "Enter") {
-    let searchkey = document.getElementById("searchnav").value;
-    localStorage.setItem("searchkey", searchkey);
-    // console.log(searchkey);
-    location.href = "./pages/everysearch.html";
-  }
-});
-const SpeechRecognition =
-  window.SpeechRecognition || window.webkitSpeechRecognition;
+// const addpluschangehtml = () => {
+//   // console.log(event.target);
+// };
+// cartdiv.addEventListener("click", () => {
+//   cartinhtm.id = "cartinhtml";
+//   always();
+// });
+// document.getElementById("closeit").addEventListener("click", () => {
+//   document.getElementById("cartinhtml").id = "cartinhtm";
+// });
+// let flaarg = true;
+// document.getElementById("pngnavanimation").addEventListener("click", () => {
+//   if (flaarg) {
+//     document.getElementById("animationmen").id = "animationmenu";
+//     flaarg = false;
+//   } else {
+//     document.getElementById("animationmenu").id = "animationmen";
+//     flaarg = true;
+//   }
+// });
+// document.getElementById("searchnav").value = "";
+// document.getElementById("searchnav").addEventListener("keypress", (event) => {
+//   if (event.key == "Enter") {
+//     let searchkey = document.getElementById("searchnav").value;
+//     localStorage.setItem("searchkey", searchkey);
+//     // console.log(searchkey);
+//     location.href = "./pages/everysearch.html";
+//   }
+// });
+// const SpeechRecognition =
+//   window.SpeechRecognition || window.webkitSpeechRecognition;
 
-const recognition = new SpeechRecognition();
-recognition.continuous = true;
-let micflag = true;
+// const recognition = new SpeechRecognition();
+// recognition.continuous = true;
+// let micflag = true;
 
-let searchFormInput = document.querySelector("#searchnav");
-function micBtnClick() {
-  if (micflag) {
-    // console.log("hello");
-    recognition.start();
-  } else {
-    // console.log("n0-hello");
-    recognition.stop();
-  }
-}
-function startSpeechRecognition() {
-  // console.log("start");
-  document.getElementById("micsearch").className = "fas fa-microphone";
-  micflag = false;
-  // searchFormInput.focus();
-  console.log("Voice activated, SPEAK");
-  recognition.addEventListener("result", resultOfSpeechRecognition);
-}
+// let searchFormInput = document.querySelector("#searchnav");
+// function micBtnClick() {
+//   if (micflag) {
+//     // console.log("hello");
+//     recognition.start();
+//   } else {
+//     // console.log("n0-hello");
+//     recognition.stop();
+//   }
+// }
+// function startSpeechRecognition() {
+//   // console.log("start");
+//   document.getElementById("micsearch").className = "fas fa-microphone";
+//   micflag = false;
+//   // searchFormInput.focus();
+//   console.log("Voice activated, SPEAK");
+//   recognition.addEventListener("result", resultOfSpeechRecognition);
+// }
 
-function endSpeechRecognition() {
-  micflag = true;
+// function endSpeechRecognition() {
+//   micflag = true;
 
-  document.getElementById("micsearch").className = "fas fa-microphone-slash ";
-  searchFormInput.focus();
-  console.log("Speech recognition service disconnected");
-}
-function resultOfSpeechRecognition(event) {
-  const current = event.resultIndex;
-  const transcript = event.results[current][0].transcript;
+//   document.getElementById("micsearch").className = "fas fa-microphone-slash ";
+//   searchFormInput.focus();
+//   console.log("Speech recognition service disconnected");
+// }
+// function resultOfSpeechRecognition(event) {
+//   const current = event.resultIndex;
+//   const transcript = event.results[current][0].transcript;
 
-  if (transcript.toLowerCase().trim() === "stop recording") {
-    recognition.stop();
-  } else if (!searchFormInput.value) {
-    searchFormInput.value = transcript;
-  } else {
-    if (transcript.toLowerCase().trim() === "go") {
-      searchForm.submit();
-    } else if (transcript.toLowerCase().trim() === "reset input") {
-      searchFormInput.value = "";
-    } else {
-      searchFormInput.value = transcript;
-    }
-  }
-}
-document.getElementById("micsearch").addEventListener("click", micBtnClick);
-recognition.addEventListener("start", startSpeechRecognition);
-recognition.addEventListener("end", endSpeechRecognition);
+//   if (transcript.toLowerCase().trim() === "stop recording") {
+//     recognition.stop();
+//   } else if (!searchFormInput.value) {
+//     searchFormInput.value = transcript;
+//   } else {
+//     if (transcript.toLowerCase().trim() === "go") {
+//       searchForm.submit();
+//     } else if (transcript.toLowerCase().trim() === "reset input") {
+//       searchFormInput.value = "";
+//     } else {
+//       searchFormInput.value = transcript;
+//     }
+//   }
+// }
+// document.getElementById("micsearch").addEventListener("click", micBtnClick);
+// recognition.addEventListener("start", startSpeechRecognition);
+// recognition.addEventListener("end", endSpeechRecognition);

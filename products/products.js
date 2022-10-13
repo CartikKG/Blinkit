@@ -1,9 +1,6 @@
 import data from "./products.json"assert {
   type: 'json'
 };
-import chemistData from "./layout.json"assert {
-  type: 'json'
-};
 import navbar from "../components/navbar.js";
 let url = "https://blinkit-clone.surge.sh/categories/"
 // document.getElementById("navbar").innerHTML = navbar(
@@ -69,7 +66,7 @@ function showChemist() {
                         <p> ${ele.price}</p><p> <s> ${ele.markprice}</s></p>
                         </div>
                         <span class="addonchangeclick">
-                          <h5 onclick="clickonaddbtn(${ele})">ADD</h5>
+                          <h5 onclick="clickonaddbtn('${ele.title}')">ADD</h5>
                         </span>
                     </div>
                   </div>`
@@ -98,7 +95,7 @@ function showChemist() {
                       <small>${ele.weight}</small>
                       <div class="d-flex justify-content-between align-items-center">
                       <div><p> ${ele.price}</p><small> <s> ${ele.markprice}</s></small></div>
-                       <span class="addonchangeclick"><h5 onclick="clickonaddbtn(${ele})">ADD</h5> </span>
+                       <span class="addonchangeclick"><h5 onclick="clickonaddbtn('${ele.title}')">ADD</h5> </span>
                     </div>
                 </div> `
     cor1.innerHTML += img;
@@ -125,7 +122,7 @@ function showChemist() {
                       <small>${ele.weight}</small>
                       <div class="d-flex justify-content-between align-items-center">
                       <div><p> ${ele.price}</p><small> <s> ${ele.markprice}</s></small></div>
-                       <span class="addonchangeclick"><h5 onclick="clickonaddbtn(${ele})">ADD</h5> </span>
+                       <span class="addonchangeclick"><h5 onclick="clickonaddbtn('${ele.title}')">ADD</h5> </span>
                     </div>
                 </div> `
     cor2.innerHTML += img
@@ -152,7 +149,7 @@ function showChemist() {
                       <small>${ele.weight}</small>
                       <div class="d-flex justify-content-between align-items-center">
                       <div><p> ${ele.price}</p><small> <s> ${ele.markprice}</s></small></div>
-                       <span class="addonchangeclick"><h5 onclick="clickonaddbtn(${ele})">ADD</h5> </span>
+                       <span class="addonchangeclick"><h5 onclick="clickonaddbtn('${ele.title}')">ADD</h5> </span>
                     </div>
                 </div> `
     cor3.innerHTML += img
@@ -195,7 +192,7 @@ function dairy_products() {
                             <p> ${ele.price}</p><p> <s> ${ele.markprice}</s></p>
                             </div>
                             <span class="addonchangeclick">
-                              <h5 onclick="clickonaddbtn(${JSON.stringify(ele)})">ADD</h5>
+                              <h5 onclick="clickonaddbtn('${ele.title}')">ADD</h5>
                             </span>
                         </div>
                       </div>`
@@ -250,7 +247,7 @@ function dairy_products() {
                       <small>${ele.weight}</small>
                       <div class="d-flex justify-content-between align-items-center">
                       <div><p> ${ele.price}</p><small> <s> ${ele.markprice}</s></small></div>
-                       <span class="addonchangeclick"><h5 onclick="clickonaddbtn(${ele})">ADD</h5> </span>
+                       <span class="addonchangeclick"><h5 onclick="clickonaddbtn('${ele.title}')">ADD</h5> </span>
                     </div>
                 </div> `
     cor2.innerHTML += img
@@ -277,7 +274,7 @@ function dairy_products() {
                       <small>${ele.weight}</small>
                       <div class="d-flex justify-content-between align-items-center">
                       <div><p> ${ele.price}</p><small> <s> ${ele.markprice}</s></small></div>
-                       <span class="addonchangeclick"><h5 onclick="clickonaddbtn(${ele})">ADD</h5> </span>
+                       <span class="addonchangeclick"><h5 onclick="clickonaddbtn('${ele.title}')">ADD</h5> </span>
                     </div>
                 </div> `
     cor3.innerHTML += img
@@ -322,7 +319,7 @@ function biscuits() {
                             <p> ${ele.price}</p><p> <s> ${ele.markprice}</s></p>
                             </div>
                             <span class="addonchangeclick">
-                              <h5 onclick="clickonaddbtn(${ele})">ADD</h5>
+                              <h5 onclick="clickonaddbtn('${ele.title}')">ADD</h5>
                             </span>
                         </div>
                       </div>`
@@ -350,7 +347,7 @@ function biscuits() {
                         <small>${ele.weight}</small>
                         <div class="d-flex justify-content-between align-items-center">
                         <div><p> ${ele.price}</p><small> <s> ${ele.markprice}</s></small></div>
-                         <span class="addonchangeclick"><h5 onclick="clickonaddbtn(${ele})">ADD</h5> </span>
+                         <span class="addonchangeclick"><h5 onclick="clickonaddbtn('${ele.title}')">ADD</h5> </span>
                       </div>
                   </div> `
     cor1.innerHTML += img;
@@ -377,7 +374,7 @@ function biscuits() {
                       <small>${ele.weight}</small>
                       <div class="d-flex justify-content-between align-items-center">
                       <div><p> ${ele.price}</p><small> <s> ${ele.markprice}</s></small></div>
-                       <span class="addonchangeclick"><h5 onclick="clickonaddbtn(${ele})">ADD</h5> </span>
+                       <span class="addonchangeclick"><h5 onclick="clickonaddbtn('${ele.title}')">ADD</h5> </span>
                     </div>
                 </div> `
     cor2.innerHTML += img
@@ -404,7 +401,7 @@ function biscuits() {
                       <small>${ele.weight}</small>
                       <div class="d-flex justify-content-between align-items-center">
                       <div><p> ${ele.price}</p><small> <s> ${ele.markprice}</s></small></div>
-                       <span class="addonchangeclick"><h5 onclick="clickonaddbtn(${ele})">ADD</h5> </span>
+                       <span class="addonchangeclick"><h5 onclick="clickonaddbtn('${ele.title}')">ADD</h5> </span>
                     </div>
                 </div> `
     cor3.innerHTML += img
