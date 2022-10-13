@@ -1,8 +1,7 @@
-function clickonaddbtn() {
-    console.log('sdadd');
+function clickonaddbtn(data) {
+    console.log(JSON.stringify(data));
     let parent = event.target.parentNode;
     console.log("1" + parent);
-  
     parent.style.background = "green";
     parent.style.color = "white";
     parent.className = "addqtybuttons";
