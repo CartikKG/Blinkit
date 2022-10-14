@@ -8,7 +8,7 @@ const openonclick = () => {
             <div><button  id="cancelmodal">&#215;</button></div>
             </div>
             <h2>LOGIN</h2>
-            <div id="input_container">
+            <div id="input_coonntainer">
                 <p>Email</p>
                 <input type="text" placeholder="Enter email" id="email" class="input">
                 <p>Password</p>
@@ -62,7 +62,7 @@ function loginPage() {
         <div><button  id="cancelmodal">&#215;</button></div>
         </div>
         <h2>LOGIN</h2>
-        <div id="input_container">
+        <div id="input_coonntainer">
             <p>Email</p>
             <input type="text" placeholder="Enter email" id="email" class="input">
             <p>Password</p>
@@ -84,7 +84,7 @@ function signupPage() {
         <div><button id="cancelmodal">&#215;</button></div>
         </div>
         <h2>SIGN UP</h2>
-        <div id="input_container">
+        <div id="input_coonntainer">
             <p>Name</p>
             <input type="text" placeholder="Enter your full name" id="name" class="input">
             <p>Email</p>
@@ -134,7 +134,7 @@ function signUp() {
                 <div><button id="cancelmodal">&#215;</button></div>
                 </div>
                 <h2>LOGIN</h2>
-                <div id="input_container">
+                <div id="input_coonntainer">
                     <p>Email</p>
                     <input type="text" placeholder="Enter email" id="email" class="input">
                     <p>Password</p>

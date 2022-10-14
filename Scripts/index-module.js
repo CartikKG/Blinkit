@@ -34,7 +34,7 @@ window.subtractqty = subtractqty;
 window.increaseqty = increaseqty;
 document.getElementById("cartinhtm").innerHTML = cart();
 document.getElementById("navbar").innerHTML = navbar(".");
-document.getElementById("footerindex").innerHTML = footerhtml();
+document.getElementById("footerindex").innerHTML = footerhtml(".");
 currentupdate();
 setTimeout(() => {
   mylocation();

@@ -60,7 +60,7 @@
 
 }
 
-#input_container {
+#input_coonntainer {
     width: 60%;
     margin: auto;
     display: flex;
@@ -76,12 +76,14 @@
     border-color: rgb(243, 237, 237);
 }
 
-input[type="text"] {
+#input_coonntainer>input[type="text"] {
+    margin-top: 10px;
     border: 0%;
     border: 3px solid green;
 }
 
-input[type="password"] {
+#input_coonntainer>input[type="password"] {
+    margin-top: 10px;
     border: 0%;
     border: 3px solid green;
 }
