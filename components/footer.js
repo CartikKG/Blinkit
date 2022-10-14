@@ -1,4 +1,4 @@
-const footerhtml = () => {
+const footerhtml = (src) => {
   return ` <section class=" footer mt-5 p-5">
   <div class="d-flex row ">
           <div class="imgdiv col-xl-7 col-lg-7 col-md-7 col-12">
@@ -11,11 +11,11 @@ const footerhtml = () => {
                       Get the brinkit app
                   </h2>
                       <div class="">
-                          <img class="w-10" src="./products/tick-circle.png" alt="" srcset="" >
+                          <img class="w-10" src="${src}/products/tick-circle.png" alt="" srcset="" >
                           <span>Miss live order tracking</span>
                       </div>
                       <div class="">
-                          <img class="w-10" src="./products/tick-circle.png" alt="" srcset="">
+                          <img class="w-10" src="${src}/products/tick-circle.png" alt="" srcset="">
                           <span>Miss latest feature updates</span>
                       </div>
                       <div class="d-flex my-3 align-items-center codediv">

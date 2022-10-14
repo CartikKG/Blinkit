@@ -57,7 +57,7 @@
 
 .pricediv>div p {
   font-size: 14px;
-
+   padding-bottom: 10px;
   line-height: 5px;
 }
 
@@ -156,3 +156,68 @@
     width: 50%;
   }
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  #popBox{
+            border: 2px solid brown;
+            width: 55%;
+        
+            margin: auto;
+   
+           
+        }
+        #popBox>div>div{
+            border: 2px solid seagreen;
+            
+        }
+        #popBox>div>div:first-child{
+            width: 150%;
+            
+        }
+        #popBox>div{
+            display: flex;
+             
+          
+          
+        }
+        #popBox>div div>img{
+            width: 100%;
+            height: 500px;
+        }
+        .secondDIv{
+        padding: 3%;
+        width: 90%;
+        }
+        .headingforcenter{
+            /* text-align: center; */
+            margin-bottom: 30px;
+            color: rgb(228, 61, 0);
+            font-size: 20px;
+        }
+        .secondDIv>p{
+            margin-bottom: 10px;
+            font-size: 14px
+        }
+        .details-a{
+            margin-bottom: 10px;
+            line-height: 20px;
+            color: #666666;
+            font-size: 14px;
+        }
+        .spanDesign{
+            color: orangered;
+            font-weight: bold;
+        } 
