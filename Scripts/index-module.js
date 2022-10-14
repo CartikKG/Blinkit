@@ -27,11 +27,13 @@ import {
   getReverseGeocodingData,
 } from "../components/signup_login.js";
 
+import { footerhtml } from "../components/footer.js";
 window.clickonaddbtn = clickonaddbtn;
 window.subtractqty = subtractqty;
 window.increaseqty = increaseqty;
 document.getElementById("cartinhtm").innerHTML = cart();
 document.getElementById("navbar").innerHTML = navbar(".");
+document.getElementById("footerindex").innerHTML = footerhtml();
 currentupdate();
 setTimeout(() => {
   mylocation();
@@ -68,6 +70,7 @@ document.getElementById("searchnav").addEventListener("keypress", (event) => {
     location.href = "./pages/everysearch.html";
   }
 });
+
 const SpeechRecognition =
   window.SpeechRecognition || window.webkitSpeechRecognition;
 

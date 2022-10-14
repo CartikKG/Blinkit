@@ -1,142 +1,158 @@
 #result {
-    display: grid;
-    box-shadow: 0 2px 2px 0 rgb(0 0 0 / 22%);
+  display: grid;
+  box-shadow: 0 2px 2px 0 rgb(0 0 0 / 22%);
   z-index: -10;
-  
-    grid-template-columns: repeat(auto-fill, minmax(180px,1fr));
-  }
-  .a-box {
-    display: flex;
+
+  grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+}
+
+.a-box {
+  display: flex;
   /* z-index: -10; */
-    border-bottom: 1px solid rgb(233, 232, 232);
-    border-left: 1px solid rgb(232, 232, 232);
-    width: 100%;
+  border-bottom: 1px solid rgb(233, 232, 232);
+  border-left: 1px solid rgb(232, 232, 232);
+  width: 100%;
+  transition: all 0.3s ease-in-out;
+}
+
+.a-box:hover {
+  background-color: white;
+  border: 1px solid green;
+  transform: scale(1.1);
+}
+
+.inDiv {
+  margin: auto;
+  width: 100%;
+}
+
+.adjustpara {
+  width: 90%;
+  margin: auto;
+}
+
+.inDiv>img {
+  margin-top: -11px;
+  position: relative;
+  left: 15%;
+  width: 70%;
+  height: 120px;
+  z-index: -2;
+}
+
+.name-a {
+  color: rgb(78, 78, 78);
+  line-height: 18px;
+  height: 36px;
+  font-size: 14px;
+  margin-bottom: 8px;
+}
+
+.pricediv {
+  display: flex;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  justify-content: space-between;
+}
+
+.pricediv>div p {
+  font-size: 14px;
+
+  line-height: 5px;
+}
+
+.pricediv>div p:last-child {
+  text-decoration: line-through;
+  color: #666666;
+  font-size: 12px;
+}
+
+
+.adjustpara>span {
+  color: #666666;
+  font-size: 12px;
+}
+
+.a-tag {
+  background-color: #256fef;
+  border-top-right-radius: 8px;
+  border-bottom-right-radius: 8px;
+  color: #fff;
+  display: inline-block;
+  font-size: 12px;
+  font-weight: 500;
+
+  margin-top: 7%;
+
+  padding: 4px 8px;
+}
+
+
+.addonchangeclick {
+  background-color: rgb(236, 255, 236);
+  /* padding: 8px 30px; */
+  padding-top: 5px;
+  width: 80px;
+  height: 30px;
+  text-align: center;
+  align-content: center;
+  border: 1px solid green;
+  margin-top: -5px;
+  border-radius: 10px;
+  color: green;
+  cursor: pointer;
+}
+
+.addonchangeclick>h5 {
+  margin-top: 4%;
+  margin-left: 1px;
+  text-align: center;
+  font-weight: bold;
+  font-size: 14px;
+}
+
+.addqtybuttons {
+
+  padding-top: 5px;
+  width: 80px;
+  height: 30px;
+
+  /* margin-top: -5px; */
+  border-radius: 10px;
+  /* padding: 3px 4px; */
+
+  cursor: pointer;
+  color: white;
+  margin-top: 0%;
+
+  border-radius: 10px;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  font-size: 16px;
+  background-color: green;
+}
+
+.addqtybuttons>span {
+  margin-left: 5px;
+  margin-right: 5px;
+}
+
+.a-time {
+  font-size: 9px;
+  font-weight: bolder;
+  padding: 8px;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
+  background-color: rgb(50, 188, 50);
+  color: aliceblue;
+  width: 22%;
+  border-top-right-radius: 8px;
+  border-bottom-right-radius: 8px;
+}
+
+@media (max-width:470px) {
+  .inDiv img {
+    width: 50%;
   }
-  .inDiv {
-    margin: auto;
-    width: 100%;
-  }
-  .adjustpara {
-    width: 90%;
-    margin: auto;
-  }
-  
-  .inDiv > img {
-    margin-top: -11px;
-    position: relative;
-    left: 15%;
-    width: 70%;
-    height: 120px;
-    z-index: -2;
-  }
-  .name-a {
-    color: rgb(78, 78, 78);
-    line-height: 18px;
-    height: 36px;
-    font-size: 14px;
-    margin-bottom: 8px;
-  }
-  
-  .pricediv {
-    display: flex;
-    margin-top: 10px;
-    margin-bottom: 10px;
-    justify-content: space-between;
-  }
-  
-  .pricediv > div p {
-    font-size: 14px;
-  
-    line-height: 5px;
-  }
-  .pricediv > div p:last-child {
-    text-decoration: line-through;
-    color: #666666;
-    font-size: 12px;
-  }
-  
-  
-  .adjustpara > span {
-    color: #666666;
-    font-size: 12px;
-  }
-  
-  .a-tag {
-    background-color: #256fef;
-    border-top-right-radius: 8px;
-    border-bottom-right-radius: 8px;
-    color: #fff;
-    display: inline-block;
-    font-size: 12px;
-    font-weight: 500;
-  
-    margin-top: 7%;
-  
-    padding: 4px 8px;
-  }
-  
-  
-  .addonchangeclick {
-    background-color: rgb(236, 255, 236);
-    /* padding: 8px 30px; */
-    padding-top: 5px;
-    width: 80px;
-    height: 30px;
-    text-align: center;
-    align-content: center;
-    border: 1px solid green;
-    margin-top: -5px;
-    border-radius: 10px;
-    color: green;
-    cursor: pointer;
-  }
-  .addonchangeclick>h5 {
-    margin-top: 4%;
-    margin-left: 1px;
-    text-align: center;
-    font-weight: bold;
-    font-size: 14px;
-  }
-  .addqtybuttons {
-    
-    padding-top: 5px;
-    width: 80px;
-    height: 30px;
-  
-    /* margin-top: -5px; */
-    border-radius: 10px;
-    /* padding: 3px 4px; */
-   
-    cursor: pointer;
-    color: white;
-    margin-top: 0%;
-  
-    border-radius: 10px;
-  
-    display: flex;
-    align-items: center;
-    justify-content: space-around;
-    font-size: 16px;
-    background-color: green;
-  }
-    .addqtybuttons>span {
-      margin-left: 5px;
-      margin-right: 5px;
-    }
-    .a-time{
-      font-size: 9px;
-      font-weight: bolder;
-      padding: 8px;
-      box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
-      background-color: rgb(50, 188, 50);
-    color: aliceblue;
-    width: 22%;
-    border-top-right-radius: 8px ;
-    border-bottom-right-radius: 8px ;
-    }
-  
-    @media (max-width:470px){
-      .inDiv img{
-        width: 50%;
-      }
-    }
+}

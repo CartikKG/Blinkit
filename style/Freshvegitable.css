@@ -1,27 +1,37 @@
 #result {
   display: grid;
   box-shadow: 0 2px 2px 0 rgb(0 0 0 / 22%);
-z-index: -10;
+  z-index: -10;
 
-  grid-template-columns: repeat(auto-fill, minmax(180px,1fr));
+  grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
 }
+
 .a-box {
   display: flex;
-/* z-index: -10; */
+  /* z-index: -10; */
   border-bottom: 1px solid rgb(233, 232, 232);
   border-left: 1px solid rgb(232, 232, 232);
   width: 100%;
+  transition: all 0.3s ease-in-out;
 }
+
+.a-box:hover {
+  background-color: white;
+  border: 1px solid green;
+  transform: scale(1.1);
+}
+
 .inDiv {
   margin: auto;
   width: 100%;
 }
+
 .adjustpara {
   width: 90%;
   margin: auto;
 }
 
-.inDiv > img {
+.inDiv>img {
   margin-top: -11px;
   position: relative;
   left: 15%;
@@ -29,6 +39,7 @@ z-index: -10;
   height: 120px;
   z-index: -2;
 }
+
 .name-a {
   color: rgb(78, 78, 78);
   line-height: 18px;
@@ -44,19 +55,20 @@ z-index: -10;
   justify-content: space-between;
 }
 
-.pricediv > div p {
+.pricediv>div p {
   font-size: 14px;
 
   line-height: 5px;
 }
-.pricediv > div p:last-child {
+
+.pricediv>div p:last-child {
   text-decoration: line-through;
   color: #666666;
   font-size: 12px;
 }
 
 
-.adjustpara > span {
+.adjustpara>span {
   color: #666666;
   font-size: 12px;
 }
@@ -90,6 +102,7 @@ z-index: -10;
   color: green;
   cursor: pointer;
 }
+
 .addonchangeclick>h5 {
   margin-top: 4%;
   margin-left: 1px;
@@ -97,8 +110,9 @@ z-index: -10;
   font-weight: bold;
   font-size: 14px;
 }
+
 .addqtybuttons {
-  
+
   padding-top: 5px;
   width: 80px;
   height: 30px;
@@ -106,7 +120,7 @@ z-index: -10;
   /* margin-top: -5px; */
   border-radius: 10px;
   /* padding: 3px 4px; */
- 
+
   cursor: pointer;
   color: white;
   margin-top: 0%;
@@ -119,25 +133,27 @@ z-index: -10;
   font-size: 16px;
   background-color: green;
 }
-  .addqtybuttons>span {
-    margin-left: 5px;
-    margin-right: 5px;
-  }
+
+.addqtybuttons>span {
+  margin-left: 5px;
+  margin-right: 5px;
+}
 
 
-  @media (max-width:470px){
-    .inDiv img{
-      width: 50%;
-    }
+@media (max-width:470px) {
+  .inDiv img {
+    width: 50%;
   }
-  .a-time{
-    font-size: 9px;
-    font-weight: bolder;
-    padding: 8px;
-    box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
-    background-color: rgb(50, 188, 50);
+}
+
+.a-time {
+  font-size: 9px;
+  font-weight: bolder;
+  padding: 8px;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
+  background-color: rgb(50, 188, 50);
   color: aliceblue;
   width: 22%;
-  border-top-right-radius: 8px ;
-  border-bottom-right-radius: 8px ;
-  }
+  border-top-right-radius: 8px;
+  border-bottom-right-radius: 8px;
+}

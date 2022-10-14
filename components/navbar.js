@@ -3,7 +3,7 @@ const navbar = (src) => {
     <div id="foraddressdiv">
       <h3>Delivery in your city -</h3>
       <h5 id="currentcity">
-       City  <i class="fa-solid fa-caret-down"></i>
+       Allow Location & Reload  <i class="fa-solid fa-caret-down"></i>
       </h5>
     </div>
 
