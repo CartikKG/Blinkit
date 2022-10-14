@@ -84,7 +84,7 @@ button>span {
     }
 
     .pay_part {
-        width: 100%;
+        width: 90%;
         margin: auto;
         display: grid;
         grid-template-columns: repeat(9, 1fr);
@@ -103,7 +103,7 @@ button>span {
     }
 
     .pay_part {
-        width: 100%;
+        width: 90%;
         margin: auto;
         display: grid;
         grid-template-columns: repeat(5, 1fr);
@@ -164,7 +164,7 @@ button>span {
     }
 
     .pay_part {
-        width: 100%;
+        width: 90%;
         margin: auto;
         display: grid;
         grid-template-columns: repeat(5, 1fr);
@@ -277,7 +277,7 @@ button>span {
     }
 
     .pay_part {
-        width: 100%;
+        width: 90%;
         margin: auto;
         display: grid;
         grid-template-columns: repeat(2, 1fr);
@@ -540,6 +540,8 @@ p {
 
 .codediv {
     background-color: rgb(226 249 226);
+    display: flex !important;
+    align-items: center !important;
 }
 
 .w-40 {
@@ -662,4 +664,18 @@ section {
     .child_footer>div {
         display: block;
     }
+}
+
+#carouselExampleInterval img{
+    height: 70vh;
+}
+#carouselExampleInterval .carousel-inner{
+   width: auto !important;
+}
+#carouselExampleInterval button{
+   width: 10px;
+}
+#carouselExampleInterval{
+    width: 89%;
+    margin: 2rem auto;
 }
