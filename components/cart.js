@@ -118,20 +118,24 @@ function clickonaddbtn(unq) {
     }
   });
   // localStorage.setItem("mrp", JSON.stringify(mrp));
-  if (newn != null) {
+  console.log(newn);
+  if (newn.length != 0 && newn !== undefined) {
+    console.log("sdgdsg");
     localStoragebuylist.push(newn[0]);
+
+    localStorage.setItem(
+      "localStoragebuylist",
+      JSON.stringify(localStoragebuylist)
+    );
+
+    parent.style.background = "green";
+    parent.style.color = "white";
+    parent.className = "addqtybuttons";
+    // console.log("2" + parent);
+    parent.innerHTML = `<i class="fa-solid fa-minus" onclick="subtractqty('${unq}')"></i> <span id="showpresentqty">1  </span><i class="fa-solid fa-plus"  onclick="increaseqty('${unq}')"></i>`;
+    // always();
+    DispalyAlliteminCart(localStoragebuylist);
   }
-  localStorage.setItem(
-    "localStoragebuylist",
-    JSON.stringify(localStoragebuylist)
-  );
-  parent.style.background = "green";
-  parent.style.color = "white";
-  parent.className = "addqtybuttons";
-  // console.log("2" + parent);
-  parent.innerHTML = `<i class="fa-solid fa-minus" onclick="subtractqty('${unq}')"></i> <span id="showpresentqty">1  </span><i class="fa-solid fa-plus"  onclick="increaseqty('${unq}')"></i>`;
-  // always();
-  DispalyAlliteminCart(localStoragebuylist);
 }
 const subtractqty = (unq) => {
   // console.log("MIN");
