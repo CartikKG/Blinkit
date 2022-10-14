@@ -255,7 +255,7 @@ function display(data) {
   </div>
   
   
-  <span class="addonchangeclick"><h5 onclick="clickonaddbtn('${ele.title}')">
+  <span class="addonchangeclick"><h5 onclick="clickonaddbtn('Custard Apple (Sitaphal)')">
   ADD</h5></span>
   
   
