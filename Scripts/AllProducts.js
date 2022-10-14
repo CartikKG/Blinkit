@@ -28,7 +28,7 @@ const filterBySearch = (data) => {
   } else {
     document.getElementById(
       "result"
-    ).innerHTML = `Sorry Not Found = ${substring}`;
+    ).innerHTML = `Sorry Not Found = ${substring} </br> <img id="inneriffail" src="https://cdn.dribbble.com/users/1665077/screenshots/10738715/media/90712c2d7fd869e9d7586a108024d62c.gif">`;
   }
 };
 
