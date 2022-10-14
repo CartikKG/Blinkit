@@ -207,7 +207,7 @@ function mylocation() {
   }
 
   function error(err) {
-    alert("Please Allow Location and Reload Page");
+    // alert("Please Allow Location and Reload Page");
     // console.warn(`ERROR(${err.code}): ${err.message}`);
   }
 
