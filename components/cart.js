@@ -118,7 +118,9 @@ function clickonaddbtn(unq) {
     }
   });
   // localStorage.setItem("mrp", JSON.stringify(mrp));
-  localStoragebuylist.push(newn[0]);
+  if (newn != null) {
+    localStoragebuylist.push(newn[0]);
+  }
   localStorage.setItem(
     "localStoragebuylist",
     JSON.stringify(localStoragebuylist)
