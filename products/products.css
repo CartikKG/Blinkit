@@ -665,10 +665,15 @@ section {
         display: block;
     }
 }
-
-#carouselExampleInterval img{
-    height: 70vh;
+@media (min-width:900px) {
+    #carouselExampleInterval img{
+        height: 80vh;
+    }
 }
+
+/* #carouselExampleInterval img{
+    height: 75vh;
+} */
 #carouselExampleInterval .carousel-inner{
    width: auto !important;
 }
