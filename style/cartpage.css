@@ -427,8 +427,7 @@
     height: 100vh;
     position: fixed;
     /* right: 4%; */
-    background-color: #393939;
-    ;
+    background-color: rgba(0, 0, 0, 0.6);
     /* color:  */
     font-size: 17px;
     top: 0%;
