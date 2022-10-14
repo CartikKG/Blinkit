@@ -1,42 +1,49 @@
-*{
+* {
     margin: 0;
     padding: 0;
 }
-#topProd{
+
+#topProd {
     display: grid;
-    grid-template-columns: repeat(10,1fr);
+    grid-template-columns: repeat(10, 1fr);
     gap: 1rem;
     width: 90%;
     margin: auto;
 }
-#topProd img{
+
+#topProd img {
     width: 100%;
 }
+
 /* img{
     width: 100%;
 } */
-#offer{
+#offer {
     width: 90%;
     margin: auto;
     overflow-x: scroll;
     gap: 2rem;
     scrollbar-width: thin;
 }
-.offerchildImg{
+
+.offerchildImg {
     width: 300px;
 }
-.offerchild{
+
+.offerchild {
     width: 30rem;
 }
+
 /* ::-webkit-scrollbar{
     height: 4px;
     width: 4px;
     appearance: none;
 } */
-.w-20_per{
+.w-20_per {
     position: relative;
 }
-button>span{
+
+button>span {
     width: 30px;
     height: 30px;
     display: flex;
@@ -49,11 +56,15 @@ button>span{
 
 
 
-@media (min-width:1200px){
-    #carouselExampleControls,#dairyCarousal1,#dairyCarousal{
+@media (min-width:1200px) {
+
+    #carouselExampleControls,
+    #dairyCarousal1,
+    #dairyCarousal {
         display: block
     }
-    .w-20_per{
+
+    .w-20_per {
         width: 15%;
         display: inline-block;
         margin: auto 0.5rem;
@@ -61,38 +72,51 @@ button>span{
         border-radius: 10px;
         padding: 0 10px;
     }
-    .w-20_per:hover{
+
+    .w-20_per:hover {
         border: 0.5px solid green;
     }
-    #couroSlider,#couroSlider1,#couroSlider2{display: none;}
-    .pay_part{
-        width: 90%;
+
+    #couroSlider,
+    #couroSlider1,
+    #couroSlider2 {
+        display: none;
+    }
+
+    .pay_part {
+        width: 100%;
         margin: auto;
         display: grid;
-        grid-template-columns: repeat(9,1fr);
-        gap: 50px;
-    }  
+        grid-template-columns: repeat(9, 1fr);
+        gap: 10px;
+    }
 
 }
-@media (min-width:900px) and (max-width:1200px){
-    #topProd{
+
+@media (min-width:900px) and (max-width:1200px) {
+    #topProd {
         display: grid;
-        grid-template-columns: repeat(6,1fr);
+        grid-template-columns: repeat(6, 1fr);
         gap: 1rem;
         width: 90%;
         margin: auto;
     }
-    .pay_part{
-        width: 90%;
+
+    .pay_part {
+        width: 100%;
         margin: auto;
         display: grid;
-        grid-template-columns: repeat(5,1fr);
-        gap: 50px;
+        grid-template-columns: repeat(5, 1fr);
+        gap: 10px;
     }
-    #carouselExampleControls,#dairyCarousal1,#dairyCarousal{
+
+    #carouselExampleControls,
+    #dairyCarousal1,
+    #dairyCarousal {
         display: none
     }
-    .w-20_per{
+
+    .w-20_per {
         width: 15%;
         display: inline-block;
         margin: auto 0.5rem;
@@ -100,10 +124,14 @@ button>span{
         border-radius: 10px;
         padding: 0 10px;
     }
-    .w-20_per:hover{
+
+    .w-20_per:hover {
         border: 0.5px solid green;
     }
-    #couroSlider,#couroSlider1,#couroSlider2{
+
+    #couroSlider,
+    #couroSlider1,
+    #couroSlider2 {
         display: flex;
         width: 90%;
         margin: auto;
@@ -111,7 +139,8 @@ button>span{
         gap: 2rem;
         scrollbar-width: thin
     }
-    .s_child{
+
+    .s_child {
         width: 15rem;
         display: inline-block;
         margin: auto 0.5rem;
@@ -119,29 +148,36 @@ button>span{
         border-radius: 10px;
         padding: 0 10px;
     }
-    .s_child >img{
+
+    .s_child>img {
         width: 150px;
     }
 }
-@media (min-width:700px) and (max-width:900px){
-    #topProd{
+
+@media (min-width:700px) and (max-width:900px) {
+    #topProd {
         display: grid;
-        grid-template-columns: repeat(6,1fr);
+        grid-template-columns: repeat(6, 1fr);
         gap: 1rem;
         width: 90%;
         margin: auto;
     }
-    .pay_part{
-        width: 90%;
+
+    .pay_part {
+        width: 100%;
         margin: auto;
         display: grid;
-        grid-template-columns: repeat(5,1fr);
-        gap: 50px;
+        grid-template-columns: repeat(5, 1fr);
+        gap: 10px;
     }
-    #carouselExampleControls,#dairyCarousal1,#dairyCarousal{
+
+    #carouselExampleControls,
+    #dairyCarousal1,
+    #dairyCarousal {
         display: none
     }
-    .w-20_per{
+
+    .w-20_per {
         width: 15%;
         display: inline-block;
         margin: auto 0.5rem;
@@ -149,10 +185,14 @@ button>span{
         border-radius: 10px;
         padding: 0 10px;
     }
-    .w-20_per:hover{
+
+    .w-20_per:hover {
         border: 0.5px solid green;
     }
-    #couroSlider,#couroSlider1,#couroSlider2{
+
+    #couroSlider,
+    #couroSlider1,
+    #couroSlider2 {
         display: flex;
         width: 90%;
         margin: auto;
@@ -160,7 +200,8 @@ button>span{
         gap: 2rem;
         /* scrollbar-width: thin */
     }
-    .s_child{
+
+    .s_child {
         width: 15rem;
         display: inline-block;
         margin: auto 0.5rem;
@@ -168,34 +209,46 @@ button>span{
         border-radius: 10px;
         padding: 0 10px;
     }
-    .s_child >img{
+
+    .s_child>img {
         width: 150px;
     }
 }
-@media (min-width:401px) and (max-width:699px){
-    .imgdiv{display: none;}
-    #topProd{
+
+@media (min-width:401px) and (max-width:699px) {
+    .imgdiv {
+        display: none;
+    }
+
+    #topProd {
         display: grid;
-        grid-template-columns: repeat(3,1fr);
+        grid-template-columns: repeat(3, 1fr);
         gap: 1rem;
         width: 90%;
         margin: auto;
     }
-    .br10px{
+
+    .br10px {
         border-radius: 10px;
     }
-    .w-20_per{
+
+    .w-20_per {
         width: 15%;
         display: inline-block;
         margin: auto 0.5rem;
-        border: 1px solid rgb(221, 221, 221);;
+        border: 1px solid rgb(221, 221, 221);
+        ;
         border-radius: 10px;
         padding: 5px;
     }
-    .w-20_per:hover{
+
+    .w-20_per:hover {
         border: 0.5px solid green;
     }
-    #couroSlider,#couroSlider1,#couroSlider2{
+
+    #couroSlider,
+    #couroSlider1,
+    #couroSlider2 {
         display: flex;
         width: 90%;
         margin: auto;
@@ -203,7 +256,8 @@ button>span{
         gap: 2rem;
         scrollbar-width: thin
     }
-    .s_child{
+
+    .s_child {
         width: 15rem;
         display: inline-block;
         margin: auto 0.5rem;
@@ -211,51 +265,68 @@ button>span{
         border-radius: 10px;
         padding: 0 10px;
     }
-    .s_child >img{
+
+    .s_child>img {
         width: 150px;
     }
-    #carouselExampleControls,#dairyCarousal1,#dairyCarousal{
+
+    #carouselExampleControls,
+    #dairyCarousal1,
+    #dairyCarousal {
         display: none
     }
-    .pay_part{
-        width: 90%;
+
+    .pay_part {
+        width: 100%;
         margin: auto;
         display: grid;
-        grid-template-columns: repeat(3,1fr);
-        gap: 30px;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 8px;
     }
 }
-@media (max-width:400px){
-    .pay_part{
+
+@media (max-width:400px) {
+    .pay_part {
         width: 90%;
         margin: auto;
         display: grid;
-        grid-template-columns: repeat(2,1fr);
+        grid-template-columns: repeat(2, 1fr);
         gap: 30px;
     }
-    .imgdiv{display: none;}
-    #topProd{
+
+    .imgdiv {
+        display: none;
+    }
+
+    #topProd {
         display: grid;
-        grid-template-columns: repeat(3,1fr);
+        grid-template-columns: repeat(3, 1fr);
         gap: 1rem;
         width: 90%;
         margin: auto;
     }
-    .br10px{
+
+    .br10px {
         border-radius: 10px;
     }
-    .w-20_per{
+
+    .w-20_per {
         width: 15%;
         display: inline-block;
         margin: auto 0.5rem;
-        border: 1px solid rgb(221, 221, 221);;
+        border: 1px solid rgb(221, 221, 221);
+        ;
         border-radius: 10px;
         padding: 5px;
     }
-    .w-20_per:hover{
+
+    .w-20_per:hover {
         border: 0.5px solid green;
     }
-    #couroSlider,#couroSlider1,#couroSlider2{
+
+    #couroSlider,
+    #couroSlider1,
+    #couroSlider2 {
         display: flex;
         width: 90%;
         margin: auto;
@@ -263,7 +334,8 @@ button>span{
         gap: 2rem;
         scrollbar-width: thin
     }
-    .s_child{
+
+    .s_child {
         width: 15rem;
         display: inline-block;
         margin: auto 0.5rem;
@@ -271,26 +343,39 @@ button>span{
         border-radius: 10px;
         padding: 0 10px;
     }
-    .s_child >img{
+
+    .s_child>img {
         width: 150px;
     }
-    #carouselExampleControls,#dairyCarousal1,#dairyCarousal{
+
+    #carouselExampleControls,
+    #dairyCarousal1,
+    #dairyCarousal {
         display: none
     }
+
+
+
 }
-.w-20_per>img{
-height: 130px;
-width: 130px;
-margin: auto 18px;
+
+
+
+.w-20_per>img {
+    height: 130px;
+    width: 130px;
+    margin: auto 18px;
 }
-.w-20_per>p{
-font-size: 14px;
-color: black;
-text-align: justify;
+
+.w-20_per>p {
+    font-size: 14px;
+    color: black;
+    text-align: justify;
 }
-small{
+
+small {
     font-size: 12px;
 }
+
 .bVEkMr {
     position: absolute;
     top: 16px;
@@ -303,54 +388,69 @@ small{
     border-bottom-right-radius: 8px;
     font-size: 12px;
 }
-.carousel-inner{
+
+.carousel-inner {
     width: 90%;
     margin: auto;
 }
-#carouselExampleControls>button{
+
+#carouselExampleControls>button {
     width: auto !important;
 }
 
-.carousel-control-next-icon,.carousel-control-prev-icon{
+.carousel-control-next-icon,
+.carousel-control-prev-icon {
     background-color: rgb(48, 54, 54);
     border-radius: 50%;
-   padding: 1rem;
+    padding: 1rem;
 }
-p{
+
+p {
     margin-bottom: 0;
 }
-.btn-outline-success:hover{
-color: white !important;
+
+.btn-outline-success:hover {
+    color: white !important;
 }
-.btn-outline-success{
+
+.btn-outline-success {
     width: 7rem !important;
     height: 2.5rem;
     border-radius: 8px;
     font-size: 11px;
     font-weight: 600;
 }
-#dairyCarousal{
+
+#dairyCarousal {
     width: 100%;
 }
-#dairyCarousal>button{
+
+#dairyCarousal>button {
     width: auto !important;
 }
-#dairyCarousal>span{
-    background-color: rgb(146, 146, 146);;
+
+#dairyCarousal>span {
+    background-color: rgb(146, 146, 146);
+    ;
     border-radius: 50%;
-   padding: 1rem;
+    padding: 1rem;
 }
-#dairyCarousal1{
+
+#dairyCarousal1 {
     width: 100%;
 }
-#dairyCarousal1>button{
+
+#dairyCarousal1>button {
     width: auto !important;
 }
-#dairyCarousal1>span{
-    background-color: rgb(146, 146, 146);;
+
+#dairyCarousal1>span {
+    background-color: rgb(146, 146, 146);
+    ;
     border-radius: 50%;
-   padding: 1rem;
+    padding: 1rem;
 }
+
 .addonchangeclick {
     background-color: rgb(236, 255, 236);
     /* padding: 8px 30px; */
@@ -366,11 +466,13 @@ color: white !important;
     cursor: pointer;
 
 }
+
 .addonchangeclick>h5 {
     margin-top: 2%;
     font-weight: bold;
     font-size: 14px;
 }
+
 .addqtybuttons {
     /* width: 100%; */
     padding-top: 5px;
@@ -396,64 +498,76 @@ color: white !important;
     margin-left: 5px;
     margin-right: 5px;
 }
-#pan{
+
+#pan {
     width: 90%;
     margin: auto;
 }
 
 /* code footer  */
-.footer{
+.footer {
     width: 90%;
     margin: auto;
 }
-.h-500{
+
+.h-500 {
     height: 500px;
     width: 50%;
 }
-.h-500{
+
+.h-500 {
     height: 500px;
 }
-.h-360{
+
+.h-360 {
     height: 360px;
     width: 40%;
     position: absolute;
     left: 187px;
 }
-.imgdiv{
+
+.imgdiv {
     position: relative;
 }
-.w-10{
+
+.w-10 {
     width: 10%;
 }
-.scanner{
+
+.scanner {
     width: 80%;
 }
-.codediv{
-    background-color:rgb(226 249 226);
+
+.codediv {
+    background-color: rgb(226 249 226);
 }
-.w-40{
+
+.w-40 {
     width: 35%;
 }
 
-.pay_part div{
-width: 90px;
-border: 1px solid rgb(221, 221, 221);
-border-radius: 6px;
+.pay_part div {
+    width: 100%;
+    border: 1px solid rgb(221, 221, 221);
+    border-radius: 6px;
 }
 
-.down_app>img{
-width: 25%;
-height: 35px;
+.down_app>img {
+    width: 25%;
+    height: 35px;
 }
-.down_app{
+
+.down_app {
     display: flex;
-align-items: center;
-justify-content: center;
+    align-items: center;
+    justify-content: center;
 }
-.social i{
+
+.social i {
     font-size: 32px;
 }
-.s_span{
+
+.s_span {
     color: white;
     height: 44px;
     width: 44px;
@@ -462,15 +576,18 @@ justify-content: center;
     padding: 5px 8px;
     background-color: black;
 }
-.child_footer{
+
+.child_footer {
     width: 88%;
     margin: 40px auto;
 }
-.child_footer>div{
-    display: flex !important;
-   justify-content: center !important;
+
+.child_footer>div {
+    display: flex;
+    justify-content: center !important;
 }
-.child_footer>div>div{
+
+.child_footer>div>div {
     border: 1px solid rgb(221, 221, 221);
     padding: 15px;
     width: 275px;
@@ -479,32 +596,40 @@ justify-content: center;
     padding-top: 35px;
     margin: 10px;
 }
-.child_footer h5{
-font-size: 14px;
+
+.child_footer h5 {
+    font-size: 14px;
 }
-.child_footer>div>div>div{
-font-size: 13px;
-color:  rgb(102, 102, 102);;
+
+.child_footer>div>div>div {
+    font-size: 13px;
+    color: rgb(102, 102, 102);
+    ;
 }
-section{
+
+section {
     border-radius: 15px;
     background-color: rgb(236, 255, 236);
 }
-.last-foot{
+
+.last-foot {
     width: 90%;
     margin: auto;
-    
+
 }
-.bg{
+
+.bg {
     background-color: rgb(252, 252, 252);
     max-width: 100%;
 }
-.da{
+
+.da {
     font-family: sans-serif;
     font-weight: 600;
     font-size: 14px;
     vertical-align: middle;
 }
+
 .iaioDw {
     width: 90%;
     font-weight: 600;
@@ -516,12 +641,25 @@ section{
 
 .h-360 {
     animation: animation ease-in-out 3s infinite;
-  }
-@keyframes animation{
-    from{margin-right: 100px;}
-    to{margin-left: 100px;}
 }
+
+@keyframes animation {
+    from {
+        margin-right: 100px;
+    }
+
+    to {
+        margin-left: 100px;
+    }
+}
+
 .row:before {
     display: table;
     content: none;
+}
+
+@media (max-width:480px) {
+    .child_footer>div {
+        display: block;
+    }
 }
