@@ -322,7 +322,65 @@ const always = () => {
       });
   }
 };
+function show(unq) {
+  // console.log(event.target);
+  // document.getElementById("PopParentBox").style.display = "intial";
+  document.getElementById("PopParentBox").style.display = "block";
+  let newn = productsAllwithDetails.filter((el, ind) => {
+    if (el.title == unq) {
+      el.currentQty = 1;
+      // let repw = el.price.replace("₹", "");
+      // // mrp += Number(repw);
+      return el;
+    }
+  });
+  let obj = newn[0];
+  let box = document.getElementById("popBox");
 
+  box.innerHTML = ` <div class="headingforcenter">
+    <h1> ${obj.title}</h1>
+  </div>
+ <i class="fa-sharp fa-solid fa-xmark" id="closeitfromdiscription"></i>
+  <div class="a--boxer" >
+  <div>
+<img src=${obj.image} alt="">
+</div>
+
+
+<div class="secondDIv">
+<p> <span class="spanDesign"> Weight</span> ${obj.weight}</p>
+<p><span class="spanDesign">Offer</span> - 10% off</p>
+<p><span class="spanDesign">Arrive Time</span>${obj.time} min</p>
+<div class="details-a"> <span class="spanDesign">Product details</span>  - Grocery Items means Ffood and foodstuffs, green groceries, beverages and household goods usually prepackaged or measured into quantities for household use from containers made for retail grocery or baking sales and not generally suitable for immediate consumption by the purchaser.</div>
+<p> <span class="spanDesign">Rating</span>  - ⭐⭐⭐⭐</p>
+
+
+
+</div>
+
+</div>
+<div class="button-end-a">
+<div class="pricediv">
+ 
+<span class="addonchangeclick"><h5 onclick="clickonaddbtn('${obj.title}')">
+ADD</h5></span>
+
+</div>
+</div>
+  
+ 
+ 
+  </div>
+  </div>
+  
+
+</div>`;
+  document
+    .getElementById("closeitfromdiscription")
+    .addEventListener("click", () => {
+      document.getElementById("PopParentBox").style.display = "none";
+    });
+}
 export {
   cart,
   caraosual,
@@ -336,4 +394,5 @@ export {
   subtractqty,
   increaseqty,
   always,
+  show,
 };

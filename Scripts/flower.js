@@ -104,7 +104,7 @@ function display(data) {
   data.map(function (ele) {
     let temp = `<div class="inDiv">
   <p class="a-tag">${ele.tag}</p>
-  <img src="${ele.image}">
+  <img onclick="show('${ele.title}')" src="${ele.image}">
   <p class="a-time">${ele.time + " min"}</p>
   <div class="adjustpara">
   <div class="name-a">${ele.title}</div>

@@ -242,7 +242,7 @@ function display(data) {
   data.map(function (ele) {
     let temp = `<div class="inDiv">
   <p class="a-tag">${ele.tag}</p>
-  <img src="${ele.image}">
+  <img onclick="show('${ele.title}')" src="${ele.image}">
   <p class="a-time">${ele.time + " min"}</p>
   <div class="adjustpara">
   <div class="name-a">${ele.title}</div>
@@ -328,54 +328,48 @@ function sorting() {
   }
 }
 
+// function show() {
+//   let box = document.getElementById("popBox");
 
-function show(){
-  let box = document.getElementById("popBox");
+//   box.innerHTML = ` <div class="headingforcenter">
+//     <h1>Onion hai ye</h1>
+//   </div>
 
-  box.innerHTML =` <div class="headingforcenter">
-    <h1>Onion hai ye</h1>
-  </div>
+//   <div class="a--boxer" >
+//   <div>
+// <img src="https://cdn.grofers.com/cdn-cgi/image/f=auto,fit=scale-down,q=85,metadata=none,w=250,h=250/app/images/products/sliding_image/440229a.jpg" alt="">
+// </div>
 
-  <div class="a--boxer" >
-  <div>
-<img src="https://cdn.grofers.com/cdn-cgi/image/f=auto,fit=scale-down,q=85,metadata=none,w=250,h=250/app/images/products/sliding_image/440229a.jpg" alt="">
-</div>
+// <div class="secondDIv">
+// <p> <span class="spanDesign"> Weight</span> - 1000g</p>
+// <p><span class="spanDesign">Offer</span> - 10% off</p>
+// <p><span class="spanDesign">Arrive Time</span> - 10 min</p>
+// <div class="details-a"> <span class="spanDesign">Product details</span>  - Lorem ipsum dolor sit amet consectetur adipisicing elit. Nisi, nobis earum atque delectus deserunt ex maiores in numquam aperiam quas quaerat sunt quos reiciendis culpa dicta nulla ea harum reprehenderit.
+//      Veniam esse enim praesentium ab facere, ex magnam. Delectus, quo!</div>
+// <p> <span class="spanDesign">Rating</span>  - ⭐⭐⭐⭐</p>
 
+// </div>
 
-<div class="secondDIv">
-<p> <span class="spanDesign"> Weight</span> - 1000g</p>
-<p><span class="spanDesign">Offer</span> - 10% off</p>
-<p><span class="spanDesign">Arrive Time</span> - 10 min</p>
-<div class="details-a"> <span class="spanDesign">Product details</span>  - Lorem ipsum dolor sit amet consectetur adipisicing elit. Nisi, nobis earum atque delectus deserunt ex maiores in numquam aperiam quas quaerat sunt quos reiciendis culpa dicta nulla ea harum reprehenderit.
-     Veniam esse enim praesentium ab facere, ex magnam. Delectus, quo!</div>
-<p> <span class="spanDesign">Rating</span>  - ⭐⭐⭐⭐</p>
+// </div>
+// <div class="button-end-a">
+// <div class="pricediv">
 
+// <span class="addonchangeclick"><h5 onclick="clickonaddbtn('Custard Apple (Sitaphal)')">
+// ADD</h5></span>
 
+// </div>
+// </div>
 
-</div>
+//   </div>
+//   </div>
 
-</div>
-<div class="button-end-a">
-<div class="pricediv">
- 
-<span class="addonchangeclick"><h5 onclick="clickonaddbtn('Custard Apple (Sitaphal)')">
-ADD</h5></span>
+// </div>`;
+// }
 
-</div>
-</div>
-  
- 
- 
-  </div>
-  </div>
-  
+// show();
 
-</div>`
-}
-
-show();
-
-{/* 
+{
+  /* 
 
 
 <p> <span class="spanDesign"> Weight</span> - 1000g</p>
@@ -387,10 +381,9 @@ show();
 
 
 <span class="addon"><h5 onclick="clickonaddbtn('Onion - Pack of 2')">
-  ADD</h5></span> */}
+  ADD</h5></span> */
+}
 
-
-
-  // <div class="img-gif-a">
+// <div class="img-gif-a">
 //   <img src="https://media.tenor.com/55FCZyd1ev0AAAAi/tasty-food-chhota-bheem.gif"/>
 // </div>

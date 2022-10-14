@@ -12,6 +12,7 @@ import {
   subtractqty,
   increaseqty,
   always,
+  show,
 } from "../components/cart.js";
 import {
   users,

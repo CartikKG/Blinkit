@@ -12,6 +12,7 @@ import {
   subtractqty,
   increaseqty,
   always,
+  show,
 } from "../components/cart.js";
 import {
   users,
@@ -30,6 +31,7 @@ import { footerhtml } from "../components/footer.js";
 window.clickonaddbtn = clickonaddbtn;
 window.subtractqty = subtractqty;
 window.increaseqty = increaseqty;
+window.show = show;
 document.getElementById("cartinhtm").innerHTML = cart();
 document.getElementById("navbar").innerHTML = navbar("..");
 document.getElementById("footerindex").innerHTML = footerhtml("..");
@@ -119,5 +121,6 @@ function resultOfSpeechRecognition(event) {
   }
 }
 document.getElementById("micsearch").addEventListener("click", micBtnClick);
+
 recognition.addEventListener("start", startSpeechRecognition);
 recognition.addEventListener("end", endSpeechRecognition);

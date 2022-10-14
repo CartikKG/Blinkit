@@ -261,9 +261,9 @@ products();
 function display(data) {
   document.getElementById("result").innerHTML = "";
   data.map(function (ele) {
-    let temp = `<div class="inDiv">
+    let temp = `<div class="inDiv" >
   <p class="a-tag">${ele.tag}</p>
-  <img src="${ele.image}">
+  <img onclick="show('${ele.title}')" src="${ele.image}">
   <p class="a-time">${ele.time + " min"}</p>
   <div class="adjustpara">
   <div class="name-a">${ele.title}</div>
@@ -348,40 +348,40 @@ function sorting() {
   }
 }
 
-function startSpeechRecognition() {
-  // console.log("start");
-  document.getElementById("micsearch").className = "fas fa-microphone";
-  micflag = false;
-  // searchFormInput.focus();
-  console.log("Voice activated, SPEAK");
-  recognition.addEventListener("result", resultOfSpeechRecognition);
-}
+// function startSpeechRecognition() {
+//   // console.log("start");
+//   document.getElementById("micsearch").className = "fas fa-microphone";
+//   micflag = false;
+//   // searchFormInput.focus();
+//   console.log("Voice activated, SPEAK");
+//   recognition.addEventListener("result", resultOfSpeechRecognition);
+// }
 
-function endSpeechRecognition() {
-  micflag = true;
+// function endSpeechRecognition() {
+//   micflag = true;
 
-  document.getElementById("micsearch").className = "fas fa-microphone-slash ";
-  searchFormInput.focus();
-  console.log("Speech recognition service disconnected");
-}
-function resultOfSpeechRecognition(event) {
-  const current = event.resultIndex;
-  const transcript = event.results[current][0].transcript;
+//   document.getElementById("micsearch").className = "fas fa-microphone-slash ";
+//   searchFormInput.focus();
+//   console.log("Speech recognition service disconnected");
+// }
+// function resultOfSpeechRecognition(event) {
+//   const current = event.resultIndex;
+//   const transcript = event.results[current][0].transcript;
 
-  if (transcript.toLowerCase().trim() === "stop recording") {
-    recognition.stop();
-  } else if (!searchFormInput.value) {
-    searchFormInput.value = transcript;
-  } else {
-    if (transcript.toLowerCase().trim() === "go") {
-      searchForm.submit();
-    } else if (transcript.toLowerCase().trim() === "reset input") {
-      searchFormInput.value = "";
-    } else {
-      searchFormInput.value = transcript;
-    }
-  }
-}
-document.getElementById("micsearch").addEventListener("click", micBtnClick);
-recognition.addEventListener("start", startSpeechRecognition);
-recognition.addEventListener("end", endSpeechRecognition);
+//   if (transcript.toLowerCase().trim() === "stop recording") {
+//     recognition.stop();
+//   } else if (!searchFormInput.value) {
+//     searchFormInput.value = transcript;
+//   } else {
+//     if (transcript.toLowerCase().trim() === "go") {
+//       searchForm.submit();
+//     } else if (transcript.toLowerCase().trim() === "reset input") {
+//       searchFormInput.value = "";
+//     } else {
+//       searchFormInput.value = transcript;
+//     }
+//   }
+// }
+// document.getElementById("micsearch").addEventListener("click", micBtnClick);
+// recognition.addEventListener("start", startSpeechRecognition);
+// recognition.addEventListener("end", endSpeechRecognition);
