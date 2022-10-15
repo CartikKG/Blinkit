@@ -34,6 +34,7 @@
 }
 
 .input{
+    /* outline: none; */
     margin-top: -5px;
     padding: 3% 6%;
     border-radius: 10px;
