@@ -121,6 +121,8 @@
     /* width: 10px; */
 }
 
+
+
 #cartinhtml>div>div>h4 {
     font-size: 24px;
     font-weight: 1000;
@@ -141,6 +143,11 @@
 #mycartheading>i {
     font-size: 24px;
     /* background-color: red; */
+}
+
+#showitemdetial>h5>a {
+    text-decoration: none;
+    color: white;
 }
 
 #showitemdetial {

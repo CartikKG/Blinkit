@@ -5,9 +5,28 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Blinkit | Payment</title>
+    <link
+      rel="shortcut icon"
+      href="./img/Blinkit-yellow-rounded.svg.png"
+      type="image/x-icon"
+    />
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="../style/cartpage.css" />
+    <script
+      src="https://kit.fontawesome.com/60b736368c.js"
+      crossorigin="anonymous"
+    ></script>
     <link rel="stylesheet" href="./paymentPage.css" />
     <link rel="stylesheet" href="../style/navbar.css" />
     <link rel="stylesheet" href="../products/products.css" />
+    <link rel="stylesheet" href="../style/signup(login).css" />
     <style>
       /* google map style */
 
@@ -75,6 +94,8 @@
   </head>
   <body>
     <div id="navbar"></div>
+    <div id="cartinhtm"></div>
+    <div id="modal_container" class="modal-container"></div>
     <div id="container">
       <div id="paymentBox">
         <span class="checkout-step-name" id="payment-title">Payment</span>
@@ -142,6 +163,7 @@
                         alt="mobikwik-logo"
                       />
                     </div>
+                    <!-- <a href=""></a> -->
                   </div>
                 </div>
                 <button id="cash-place-order-btn" onclick="orderPlaced()">

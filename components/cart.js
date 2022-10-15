@@ -258,7 +258,7 @@ const always = () => {
     }</span> items</h5>
     -
     <h5><span id="absoluteinshowamoint"> ₹${Number(mrp) - 37}</span></h5>
-    <h5>Proceed <i class="fa-solid fa-right-to-bracket"></i></h5>`;
+    <h5> <a href="../paymentPage/paymentPage.html"> Proceed <i class="fa-solid fa-right-to-bracket"></i></a> </h5>`;
     document
       .getElementById("coupunencer")
       .addEventListener("keypress", (event) => {
