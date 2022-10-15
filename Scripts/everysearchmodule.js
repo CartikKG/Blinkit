@@ -138,11 +138,12 @@ let forsearch = () => {
           if (count < 9) {
             count++;
 
-            let li = document.createElement("li");
-            li.innerHTML = `<a style href="../pages/everysearch.html"><li>   <img style="width:30% ;" 
+            let li = document.createElement("a");
+            li.href = "./pages/everysearch.html";
+            li.innerHTML = `<li>   <img 
             src=${el.image}
             alt="fresh vegitables"
-          /> ${el.title}</li></a>`;
+          /> ${el.title}</li>`;
             document.getElementById("onsearchclickul").append(li);
           }
         }

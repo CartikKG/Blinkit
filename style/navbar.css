@@ -262,6 +262,7 @@
 
 #onsearchclick a {
     text-decoration: none;
+    color: green;
 }
 
 #onsearchclick ul {
@@ -269,6 +270,7 @@
     padding-left: 0%;
     padding-bottom: 0%;
     margin-bottom: 0%;
+    color: green;
 }
 
 #onsearchclick li {
@@ -292,7 +294,7 @@
 }
 
 #onsearchclick li:hover {
-    background-color: rgb(227, 227, 227);
+    background-color: rgb(247, 247, 247);
 }
 
 @media (max-width:1090px) {

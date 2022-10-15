@@ -60,6 +60,7 @@
     height: 120px;
     width: 100%;
     margin: auto;
+
     padding-left: 6px;
     padding-right: 6px;
     border-bottom: 1.4px solid rgb(220, 220, 220);
@@ -70,11 +71,26 @@
     flex-direction: column;
     justify-content: space-around;
     /* margin: auto; */
+    font-size: 18px;
     width: 300px;
     margin-right: 13px;
 
 }
 
+#allitemincart>div>span>h5 {
+    font-size: 20px;
+    font-weight: 600;
+}
+
+#allitemincart>div>span>p {
+    font-size: 16px;
+    /* font-weight: 500; */
+}
+
+#cartinUpCara #process>div>div>span {
+    display: flex;
+    margin-top: 17px;
+}
 
 #allitemincart>div>span>span>span>h5 {
     margin-top: 2%;
