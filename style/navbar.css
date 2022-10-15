@@ -248,6 +248,53 @@
     color: white
 }
 
+
+#onsearchclick {
+    display: none;
+    position: absolute;
+    border: 2px solid rgb(241, 241, 241);
+    width: 35%;
+    margin: auto;
+    right: 29%;
+    top: 88%;
+    background-color: white;
+}
+
+#onsearchclick a {
+    text-decoration: none;
+}
+
+#onsearchclick ul {
+    width: 100%;
+    padding-left: 0%;
+    padding-bottom: 0%;
+    margin-bottom: 0%;
+}
+
+#onsearchclick li {
+    padding-left: 0%;
+    padding-bottom: 0%;
+    text-decoration: none;
+    margin-left: 0%;
+    width: 100%;
+    list-style: none;
+    display: flex;
+    background: rgb(255 253 249);
+    align-items: center;
+    font-weight: 600;
+    border-bottom: 1.4px solid rgb(204, 204, 204);
+
+}
+
+#onsearchclick img {
+    width: 11%;
+    height: 61px;
+}
+
+#onsearchclick li:hover {
+    background-color: rgb(227, 227, 227);
+}
+
 @media (max-width:1090px) {
     #foraddressdiv {
         position: absolute;

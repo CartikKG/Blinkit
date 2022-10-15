@@ -69,6 +69,31 @@ document.getElementById("searchnav").addEventListener("keypress", (event) => {
     location.href = "../pages/everysearch.html";
   }
 });
+let searcgbar = true;
+document.getElementById("searchnav").addEventListener("click", () => {
+  if (searcgbar) {
+    const substring = document.getElementById("searchnav").value || "";
+    document.getElementById("onsearchclick").style.display = "block";
+    // if (substring == "") {
+    //   console.log("dasg");
+    // } else {
+    //   let count = 0;
+    //   let veg = productsAllwithDetails.map((el, indx) => {
+    //     if (el.title.includes(substring)) {
+    //       count++;
+    //     }
+    //   });
+    // }
+
+    searcgbar = false;
+  } else {
+    document.getElementById("onsearchclick").style.display = "none";
+    searcgbar = true;
+  }
+
+  // console.log("GERlo");
+});
+
 const SpeechRecognition =
   window.SpeechRecognition || window.webkitSpeechRecognition;
 
