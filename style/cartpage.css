@@ -155,6 +155,7 @@
     justify-content: space-around;
     align-items: center;
     width: 23%;
+    height: 34px;
     margin: auto;
     background-color: green;
     border-radius: 4px;
@@ -229,6 +230,7 @@
     border-radius: 10px;
     border: 0.5px solid rgb(218, 218, 218);
     padding: 5px 9px;
+    /* font-size: 19px; */
 }
 
 #startshopping {
