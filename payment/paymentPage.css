@@ -296,6 +296,7 @@
     width: 100vw;
     height: 100vh;
     transition: opacity 0.3s ease;
+    z-index: 10;
 }
 #map-modal_container.display{
     pointer-events: auto;
