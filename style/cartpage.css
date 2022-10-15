@@ -420,7 +420,7 @@
     font-weight: 700;
     display: none;
 }
-
+/* sdgdghsdfhdfshdfghdfghjdfjhdfgjdfgjdfgjdfjfgjdfgjdfgj */
 #PopParentBox {
     display: none;
     width: 100%;
@@ -440,6 +440,25 @@
     color: black;
     top: 5%;
     font-size: 40px;
+}
+
+
+@media (max-width:1090px) {
+    #cartinhtml>div {
+        width: 100%;
+    }
+
+    #showitemdetial {
+        width: 90%;
+        right: 5%;
+    }
+
+    #process {
+        /* display: flex; */
+        margin: auto;
+        width: 90%;
+
+    }
 }
 
 #popBox {
@@ -526,21 +545,221 @@
     justify-content: center;
 
 }
+/* w4wtyeryetryuertuerueruerieyery */
 
-@media (max-width:1090px) {
-    #cartinhtml>div {
-        width: 100%;
+
+@media (max-width:1260px){
+    .headingforcenter>h1 {
+        font-size: 34px;
+        font-weight: bold;
     }
-
-    #showitemdetial {
-        width: 90%;
-        right: 5%;
-    }
-
-    #process {
-        /* display: flex; */
+    #popBox {
+        position: relative;
+        top: 5%;
+        /* martop: 10%; */
+        border: 2px solid brown;
+        width: 70%;
+        box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 1px 3px 1px;
+    
+        border-radius: 32px;
         margin: auto;
-        width: 90%;
-
+        background-color: rgb(255, 191, 0)
+            /* padding: 65px; */
+    
     }
+    .a--boxer>div:first-child {
+        display: flex;
+        justify-content: center;
+        width: 50%;
+        border-left: 3px solid green;
+        border-bottom: 3px solid green;
+        border-top: 3px solid green;
+        margin-left: 30px;
+        border-bottom-left-radius: 5px;
+    
+    }
+}
+
+@media (max-width:1070px){
+    .headingforcenter>h1 {
+        font-size: 34px;
+        font-weight: bold;
+    }
+    #popBox {
+        position: relative;
+        top: 2%;
+        /* martop: 10%; */
+        border: 2px solid brown;
+        width: 90%;
+        box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 1px 3px 1px;
+    
+        border-radius: 32px;
+        margin: auto;
+        background-color: rgb(255, 191, 0)
+            /* padding: 65px; */
+    
+    }
+}
+@media (max-width:950px){
+    .headingforcenter {
+        background-color: green;
+        color: white;
+        margin-top: 40px;
+        border-radius: 10%;
+        text-align: center;
+        width: 60%;
+        margin: auto;
+    }
+    
+    .headingforcenter>h1 {
+        font-size: 24px;
+        font-weight: bold;
+    }
+}
+@media (max-width:1070px){
+    #popBox {
+        position: relative;
+        top: 7%;
+        /* martop: 10%; */
+        border: 2px solid brown;
+        width: 90%;
+        box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 1px 3px 1px;
+    
+        border-radius: 32px;
+        margin: auto;
+        background-color: rgb(255, 191, 0)
+            /* padding: 65px; */
+    
+    }
+}
+@media (max-width:830px){
+    #popBox {
+        position: relative;
+        top: 15%;
+        /* martop: 10%; */
+        border: 2px solid brown;
+        width: 90%;
+        box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 1px 3px 1px;
+    
+        border-radius: 32px;
+        margin: auto;
+        background-color: rgb(255, 191, 0)
+            /* padding: 65px; */
+    
+    }
+    .a--boxer {
+        display: flex;
+        justify-content: center;
+        
+        /* border: 3px solid red; */
+    
+    }
+    
+    .a--boxer>div:last-child {
+        width: 40%;
+        padding: 20px;
+        
+        padding-top: 70px;
+        border-right: 3px solid green;
+        border-bottom: 3px solid green;
+        border-top: 3px solid green;
+        margin-right: 30px;
+        border-bottom-right-radius: 5px;
+    }
+    
+    .a--boxer>div:first-child {
+        width: 40%;
+      
+        border-left: 3px solid green;
+        border-bottom: 3px solid green;
+        border-top: 3px solid green;
+        margin-left: 30px;
+        border-bottom-left-radius: 5px;
+    
+    }
+    
+    .a--boxer>div>img {
+        width: 90%;
+    
+    }
+    .secondDIv>p {
+        margin-bottom: 2px;
+        color: #666666;
+        font-size: 10px;
+    }
+    .details-a{
+        font-size: 10px;
+    }
+    .spanDesign {
+        color: brown;
+        font-size: 12px;
+        font-weight: bold;
+    }
+    
+}
+
+@media (max-width:530px){
+    #popBox {
+        position: relative;
+        top: 8%;
+        /* martop: 10%; */
+        border: 2px solid brown;
+        width: 90%;
+        box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 1px 3px 1px;
+    
+        border-radius: 32px;
+        margin: auto;
+        background-color: rgb(255, 191, 0)
+            /* padding: 65px; */
+    
+    }
+    .a--boxer>div>img {
+        
+        margin-top: 100px;
+        height: 200px;
+        width: 100%;
+    
+    }
+    .headingforcenter {
+        background-color: green;
+        color: white;
+        margin-top: 40px;
+        border-radius: 10%;
+        text-align: center;
+        width: 60%;
+        margin: auto;
+    }
+    
+    .headingforcenter>h1 {
+        font-size: 16px;
+        font-weight: bold;
+    }
+    .a--boxer>div:first-child {
+        width: 30%;
+    
+        border-left: 3px solid green;
+        border-bottom: 3px solid green;
+        border-top: 3px solid green;
+        margin-left: 30px;
+        border-bottom-left-radius: 5px;
+    
+    }
+    .a--boxer>div>img {
+        width: 100%;
+    
+    }
+    .secondDIv>p {
+        /* margin-bottom: 2px; */
+        color: #666666;
+        font-size: 8px;
+    }
+    .details-a{
+        font-size: 8px;
+    }
+    .spanDesign {
+        color: brown;
+        font-size: 10px;
+        font-weight: bold;
+    }
+    
 }
