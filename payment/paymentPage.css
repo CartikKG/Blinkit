@@ -12,7 +12,7 @@
     font-size: 14px;
 }
 #cartBox-pk{
-    width: 40%;
+    width: 25%;
     border: 1px solid rgb(228, 225, 225);
     height: fit-content;
 }
@@ -483,4 +483,23 @@
 #gif-div>img{
     width: 100%;
     border-radius: 10px;
+}
+/* chetan code  */
+.bg-muted{
+    background-color: #fbfbfb;
+    border: 1px solid rgb(167, 167, 167);
+}
+.ItemImage>img{
+    width: 100px;
+    height: 100px;
+}
+.align-y{
+    display: flex;
+    align-items: center;
+}
+.botmGrayRedius{
+    border-bottom: 1px solid rgb(167, 167, 167);;
+}
+.itemDetails{
+    font-size: 14px;
 }
