@@ -235,13 +235,13 @@ const always = () => {
  <div id="billdetailsamount">
     <h3>Bill details</h3>
     <span><p> MRP</p> <p>₹${mrp}</p> </span> 
-    <span><p> Product discount </p> <p> - ₹37</p> </span> 
+    <span><p> Product discount </p> <p> - ₹11</p> </span> 
     <span><p>  Delivery charge </p> <p> ₹15 FREE</p> </span> 
     <span><p > Hooray! You saved ₹15 on delivery charge</p> </span> 
     <span><p>Coupoun</p> <input type="text" id="coupunencer" placeholder="Enter Coupon.."> </span> 
     <span><p id="showtextmsgcpn"  > </p> </span> 
     <span id="finallbill"><h6> Bill total </h6> <h6 id="showherefinamount"> ₹${
-      Number(mrp) - 37
+      Number(mrp) - 11
     }</h6> </span> 
     </div>
     <div style="background-color: white; height: 50px;width:100%" ></div>
@@ -257,7 +257,7 @@ const always = () => {
       localStoragebuylist.length
     }</span> items</h5>
     -
-    <h5><span id="absoluteinshowamoint"> ₹${Number(mrp) - 37}</span></h5>
+    <h5><span id="absoluteinshowamoint"> ₹${Number(mrp) - 11}</span></h5>
     <h5> <a href="../payment/paymentPage.html"> Proceed <i class="fa-solid fa-right-to-bracket"></i></a> </h5>`;
     document
       .getElementById("coupunencer")

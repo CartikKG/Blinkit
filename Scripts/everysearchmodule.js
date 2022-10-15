@@ -139,7 +139,7 @@ let forsearch = () => {
             count++;
 
             let li = document.createElement("a");
-            li.href = "./pages/everysearch.html";
+            li.href = "../pages/everysearch.html";
             li.innerHTML = `<li>   <img 
             src=${el.image}
             alt="fresh vegitables"
