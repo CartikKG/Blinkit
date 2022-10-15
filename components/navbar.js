@@ -10,7 +10,7 @@ const navbar = (src) => {
     <div id="navbar-search">
       <div class="input-grouppp">
         <div type="submit">
-          <i class="glyphicon glyphicon-search"></i>
+        <i class="fa-solid fa-magnifying-glass"></i>
         </div>
        
         <input id="searchnav" type="search" placeholder="Search for products"    autocomplete="off"
