@@ -213,6 +213,8 @@ function resultOfSpeechRecognition(event) {
       searchFormInput.value = "";
     } else {
       searchFormInput.value = transcript;
+      searcgbar = true;
+      forsearch();
     }
   }
 }
