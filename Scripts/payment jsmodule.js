@@ -73,16 +73,16 @@ document.getElementById("searchnav").addEventListener("click", () => {
   if (searcgbar) {
     const substring = document.getElementById("searchnav").value || "";
     document.getElementById("onsearchclick").style.display = "block";
-  //   if (substring != "") {
-  //     // console.log("dasg");
-  //     document.getElementById("onsearchclick").style.display = "none";
-  //   }
+    if (substring != "") {
+      // console.log("dasg");
+      document.getElementById("onsearchclick").style.display = "none";
+    }
 
-  //   searcgbar = false;
-  // } else {
-  //   document.getElementById("onsearchclick").style.display = "none";
-  //   searcgbar = true;
-  // }
+    searcgbar = false;
+  } else {
+    document.getElementById("onsearchclick").style.display = "none";
+    searcgbar = true;
+  }
 
   // console.log("GERlo");
 });

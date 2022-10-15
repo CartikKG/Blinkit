@@ -43,7 +43,7 @@ const navbar = (src) => {
     alt=""
   />
   <div id="onsearchclick">
-  <ul>
+  <ul id="onsearchclickul">
     <a href="${src}/pages/Freshvegitable.html"><li>   <img
     src="https://cdn.grofers.com/app/images/category/cms_images/icon/1489_1643613620694.png"
     alt="fresh vegitables"
