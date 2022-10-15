@@ -367,7 +367,15 @@
     #pngnavanimation {
         width: 18%;
     }
+
+    #onsearchclick {
+        top: 95%;
+        margin: auto;
+        width: 90%;
+        right: 6%;
+    }
 }
+
 
 
 
@@ -421,6 +429,17 @@
 
         padding: 2px;
         /* font-size: 2%; */
+    }
+
+    #onsearchclick {
+        top: 95%;
+        width: 85%;
+        right: 10%;
+    }
+
+    #onsearchclick img {
+
+        height: 25px;
     }
 }
 

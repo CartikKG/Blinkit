@@ -71,8 +71,22 @@ document.getElementById("searchnav").addEventListener("keypress", (event) => {
     location.href = "./pages/everysearch.html";
   }
 });
+
 let searcgbar = true;
-document.getElementById("searchnav").addEventListener("click", () => {
+
+function debounced(fn, delay) {
+  let Timeout;
+  return function () {
+    if (Timeout) clearTimeout(Timeout);
+
+    Timeout = setTimeout(function () {
+      searcgbar = true;
+      fn();
+    }, delay);
+  };
+}
+
+let forsearch = () => {
   if (searcgbar) {
     const substring = document.getElementById("searchnav").value || "";
     document.getElementById("onsearchclick").style.display = "block";
@@ -120,7 +134,7 @@ document.getElementById("searchnav").addEventListener("click", () => {
     </ul>`;
     } else {
       let count = 0;
-
+      localStorage.setItem("searchkey", substring);
       document.getElementById("onsearchclickul").innerHTML = "";
       let veg = productsAllwithDetails.map((el, indx) => {
         if (el.title.includes(substring)) {
@@ -128,7 +142,7 @@ document.getElementById("searchnav").addEventListener("click", () => {
             count++;
 
             let li = document.createElement("li");
-            li.innerHTML = `<a style href="./pages/Freshvegitable.html"><li>   <img style="width:30% ;" 
+            li.innerHTML = `<a style href="./pages/everysearch.html"><li>   <img style="width:30% ;" 
             src=${el.image}
             alt="fresh vegitables"
           /> ${el.title}</li></a>`;
@@ -139,7 +153,8 @@ document.getElementById("searchnav").addEventListener("click", () => {
 
       if (count == 0) {
         let li = document.createElement("li");
-        li.innerHTML = `Not Fount ${substring}`;
+        li.innerHTML = ` Sorry Not Fount - ${substring}`;
+        document.getElementById("onsearchclickul").append(li);
       }
     }
 
@@ -148,10 +163,11 @@ document.getElementById("searchnav").addEventListener("click", () => {
     document.getElementById("onsearchclick").style.display = "none";
     searcgbar = true;
   }
-
-  // console.log("GERlo");
-});
-
+};
+document.getElementById("searchnav").addEventListener("click", forsearch);
+document
+  .getElementById("searchnav")
+  .addEventListener("input", debounced(forsearch, 500));
 const SpeechRecognition =
   window.SpeechRecognition || window.webkitSpeechRecognition;
 
@@ -200,6 +216,7 @@ function resultOfSpeechRecognition(event) {
       searchFormInput.value = "";
     } else {
       searchFormInput.value = transcript;
+      forsearch();
     }
   }
 }

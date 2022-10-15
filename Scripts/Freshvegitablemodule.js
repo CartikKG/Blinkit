@@ -68,31 +68,103 @@ document.getElementById("searchnav").addEventListener("keypress", (event) => {
     location.href = "../pages/everysearch.html";
   }
 });
+
 let searcgbar = true;
-document.getElementById("searchnav").addEventListener("click", () => {
+
+function debounced(fn, delay) {
+  let Timeout;
+  return function () {
+    if (Timeout) clearTimeout(Timeout);
+
+    Timeout = setTimeout(function () {
+      searcgbar = true;
+      fn();
+    }, delay);
+  };
+}
+
+let forsearch = () => {
   if (searcgbar) {
     const substring = document.getElementById("searchnav").value || "";
     document.getElementById("onsearchclick").style.display = "block";
-    // if (substring == "") {
-    //   console.log("dasg");
-    // } else {
-    //   let count = 0;
-    //   let veg = productsAllwithDetails.map((el, indx) => {
-    //     if (el.title.includes(substring)) {
-    //       count++;
-    //     }
-    //   });
-    // }
+    if (substring == "") {
+      // console.log("dasg");
+      document.getElementById(
+        "onsearchclick"
+      ).innerHTML = `<ul id="onsearchclickul">
+      <a href="./pages/Freshvegitable.html"><li>   <img
+      src="https://cdn.grofers.com/app/images/category/cms_images/icon/1489_1643613620694.png"
+      alt="fresh vegitables"
+    /> Vegetables</li></a>
+      <a href="./pages/combo.html"> <li> <img
+      src="https://cdn.grofers.com/app/images/category/cms_images/icon/1503_1647320875474.png"
+      alt="fresh vegitables"
+    /> Combo</li></a>
+      <a href="./pages/exotic.html"><li>  <img
+      src="https://cdn.grofers.com/618e1f88-f860-47c2-9ec3-30411903e2f8.png"
+      alt="fresh vegitables"
+    />Exotic</li></a>
+      <a href=./pages/flower.html"> <li>   <img
+      src="https://cdn.grofers.com/app/images/category/cms_images/icon/742_1643613650040.png"
+      alt="fresh vegitables"
+    />Flower</li></a>
+      <a href="./pages/fresh.html"><li>  <img
+      src="https://cdn.grofers.com/app/images/category/cms_images/icon/928_1658840270707.png"
+      alt="fresh vegitables"
+    />Fresh</li></a>
+      <a href="./pages/frozen.html"><li> <img
+      src="https://cdn.grofers.com/app/images/category/cms_images/icon/395_1643443998974.png"
+      alt="fresh vegitables"
+    />Frozen</li></a>
+      <a href="./pages/fruits.html"><li>  <img
+      src="https://cdn.grofers.com/66acfb51-c5fe-4718-a200-61efaf773556.png"
+      alt="fresh vegitables"
+    />Fruits</li></a>
+      <a href="./pages/leaf.html"><li>  <img
+      src="https://cdn.grofers.com/app/images/category/cms_images/icon/1452_1617891490134.png"
+      alt="fresh vegitables"
+    />Leaf</li></a>
+      <a href="./pages/organic.html"><li> <img
+      src="https://cdn.grofers.com/app/images/category/cms_images/icon/157_1643443974388.png"
+      alt="fresh vegitables"
+    /> Organic</li></a>
+    </ul>`;
+    } else {
+      let count = 0;
+      localStorage.setItem("searchkey", substring);
+      document.getElementById("onsearchclickul").innerHTML = "";
+      let veg = productsAllwithDetails.map((el, indx) => {
+        if (el.title.includes(substring)) {
+          if (count < 9) {
+            count++;
+
+            let li = document.createElement("li");
+            li.innerHTML = `<a style href="./pages/everysearch.html"><li>   <img style="width:30% ;" 
+            src=${el.image}
+            alt="fresh vegitables"
+          /> ${el.title}</li></a>`;
+            document.getElementById("onsearchclickul").append(li);
+          }
+        }
+      });
+
+      if (count == 0) {
+        let li = document.createElement("li");
+        li.innerHTML = ` Sorry Not Fount - ${substring}`;
+        document.getElementById("onsearchclickul").append(li);
+      }
+    }
 
     searcgbar = false;
   } else {
     document.getElementById("onsearchclick").style.display = "none";
     searcgbar = true;
   }
-
-  // console.log("GERlo");
-});
-
+};
+document.getElementById("searchnav").addEventListener("click", forsearch);
+document
+  .getElementById("searchnav")
+  .addEventListener("input", debounced(forsearch, 500));
 const SpeechRecognition =
   window.SpeechRecognition || window.webkitSpeechRecognition;
 
