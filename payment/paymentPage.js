@@ -6,35 +6,66 @@ function cancelMapModal(){
     document.getElementById("map-modal_container").classList.remove("display");
 }
 
-let totalAmount=JSON.parse(localStorage.getItem("total-amount")) || 0;
-document.getElementById("total-amount-value").innerText=`₹${totalAmount}`;
-document.getElementById("payable-amount-value").innerText=`₹${totalAmount}`;
 
-let cartArr=JSON.parse(localStorage.getItem("cartArr")) || [];
-document.getElementById("no-of-items").innerText=`${cartArr.length} items`;
+// let totalAmount=JSON.parse(localStorage.getItem("total-amount")) || 0;
+let cartArr=JSON.parse(localStorage.getItem("localStoragebuylist")) || [];
+let amount = 0
+total_amount()
+function total_amount(){
+    let a = cartArr.map((ele)=>{
+     let a =  ele.price
+     a = parseInt(a.replace(/\D/g,''))
+     return a
+     })
+     amount = a.reduce((a,b)=>{
+         return a+b
+     },0)
+     
+ }
 
+document.getElementById("total-amount-value").innerText=`₹${amount}`;
+document.getElementById("payable-amount-value").innerText=`₹${amount}`;
+// document.getElementById("no-of-items").innerText=`${cartArr.length} items`;
+let carListtHtml = document.getElementById('cartItemslist')
+carListtHtml.innerHTML = ''
 cartArr.map(function(ele,index){
-    let item_count=ele.quantity;
+    let item_count=ele.currentQty;
     let image=ele.image;
-    let name=ele.name;
-    let unit=ele.unit;
+    let name=ele.title;
+    let unit=ele.weight;
     let price=ele.price;
-    document.getElementById("cart-item-container-pk").innerHTML+=`
-    <div class="checkout-cart-item">
-        <div class="checkout-cart-item-count">${item_count}</div>
-        <div class="checkout-cart-item-image">
-            <img src="${image}" alt="">
-        </div>
-        <div class="checkout-cart-item-desc">
-            <div class="checkout-cart-item-name">${name}</div>
-            <div class="checkout-cart-item-unit">${unit}</div>
-            <div>
-                <span class="checkout-cart-item-price">${price}</span>
-            </div>
-        </div>
+    // document.getElementById("cart-item-container-pk").innerHTML+=`
+    // <div class="checkout-cart-item">
+    //     <div class="checkout-cart-item-count">${item_count}</div>
+    //     <div class="checkout-cart-item-image">
+    //         <img src="${image}" alt="">
+    //     </div>
+    //     <div class="checkout-cart-item-desc">
+    //         <div class="checkout-cart-item-name">${name}</div>
+    //         <div class="checkout-cart-item-unit">${unit}</div>
+    //         <div>
+    //             <span class="checkout-cart-item-price">${price}</span>
+    //         </div>
+    //     </div>
+    // </div>
+    // `;
+    let items = `<div class="row botmGrayRedius">
+    <div class="unit col-1 align-y">${item_count}</div>
+    <div class="ItemImage col-4 align-y">
+        <img src="${image}" alt="" srcset="">
     </div>
-    `;
+    <div class="itemDetails col-7 align-y">
+    <div>
+    <div>${name}</div>
+    <div>${unit}</div>
+    <div>${price}</div>
+    </div>
+    </div>
+    </div>`
+    carListtHtml.innerHTML+=items
 });
+
+
 
 document.getElementById("card-container").classList.add("hideanything");
 document.getElementById("cash-container").classList.add("hideanything");
