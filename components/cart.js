@@ -263,7 +263,7 @@ const always = () => {
       .getElementById("coupunencer")
       .addEventListener("keypress", (event) => {
         if (event.key == "Enter") {
-          let cpn = document.getElementById("coupunencer").value;
+          let cpn = document.getElementById("coupunencer").value || "";
 
           if (cpn == "Blink10") {
             let amount = Number(mrp) - 37;
@@ -299,6 +299,10 @@ const always = () => {
             ).innerHTML = `Hooray! You got 50% OFF ₹${Math.ceil(
               percent
             )} on total`;
+          } else {
+            document.getElementById(
+              "showtextmsgcpn"
+            ).innerHTML = `Sorry!${cpn} Not a Coupon `;
           }
         }
       });
