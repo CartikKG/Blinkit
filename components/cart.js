@@ -118,9 +118,9 @@ function clickonaddbtn(unq) {
     }
   });
   // localStorage.setItem("mrp", JSON.stringify(mrp));
-  console.log(newn);
+  // console.log(newn);
   if (newn.length != 0 && newn !== undefined) {
-    console.log("sdgdsg");
+    // console.log("sdgdsg");
     localStoragebuylist.push(newn[0]);
 
     localStorage.setItem(
@@ -273,7 +273,7 @@ const always = () => {
       .getElementById("coupunencer")
       .addEventListener("keypress", (event) => {
         if (event.key == "Enter") {
-          console.log("Ok");
+          // console.log("Ok");
           let cpn = document.getElementById("coupunencer").value || "";
 
           if (cpn == "Blink10") {
