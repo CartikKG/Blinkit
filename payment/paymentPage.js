@@ -154,11 +154,9 @@ function saveAddress(){
 }
 
 function orderPlaced(){
+    
     let address=document.getElementById("selected-address").innerText;
-    if(cartArr.length===0){
-        alert("Please add atlest one product to cart!")
-    }
-    else if(address==""){
+    if(address==""){
         alert("Please select address first");
     }
     else{
@@ -176,10 +174,7 @@ function payNow(){
     let cvv=document.getElementById("cvv").value;
 
     let address=document.getElementById("selected-address").innerText;
-    if(cartArr.length===0){
-        alert("Please add atlest one product to cart!")
-    }
-    else if(address==""){
+    if(address==""){
         alert("Please select address first");
     }
     else if(cardNumber==="" || month==="" || month<1 || month>12 || year==="" || year<22 || cvv===""){
@@ -194,10 +189,7 @@ function payNowUPI(){
     let upi=document.getElementById("upi-input").value;
 
     let address=document.getElementById("selected-address").innerText;
-    if(cartArr.length===0){
-        alert("Please add atlest one product to cart!")
-    }
-    else if(address==""){
+    if(address==""){
         alert("Please select address first");
     }
     else if(upi===""){
