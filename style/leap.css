@@ -32,13 +32,25 @@
 }
 
 .inDiv>img {
-
+  /* margin-top: -11px; */
   position: relative;
-
+  /* justify-content: center; */
+  left: 15%;
   width: 70%;
   height: 120px;
   cursor: pointer;
   /* z-index: -2; */
+}
+@media (max-width:920px) {
+  .inDiv>img{
+    left: 0%;
+  }
+@media (max-width:570px) {
+  .inDiv>img{
+    left: 15%;
+  }
+  
+}
 }
 
 .name-a {
