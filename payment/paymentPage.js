@@ -25,7 +25,7 @@ function total_amount(){
 
 document.getElementById("total-amount-value").innerText=`₹${amount}`;
 document.getElementById("payable-amount-value").innerText=`₹${amount}`;
-// document.getElementById("no-of-items").innerText=`${cartArr.length} items`;
+document.getElementById("total-items").innerText=`${cartArr.length} items`;
 let carListtHtml = document.getElementById('cartItemslist')
 carListtHtml.innerHTML = ''
 cartArr.map(function(ele,index){
@@ -66,7 +66,7 @@ cartArr.map(function(ele,index){
 });
 
 
-
+document.getElementById("upi-container").classList.add("hideanything");
 document.getElementById("card-container").classList.add("hideanything");
 document.getElementById("cash-container").classList.add("hideanything");
 
@@ -77,6 +77,7 @@ function payByWallet(){
     document.getElementById("cash").classList.remove("payment-method-selected");
     document.getElementById("netbanking").classList.remove("payment-method-selected");
 
+    document.getElementById("upi-container").classList.add("hideanything");
     document.getElementById("cash-container").classList.add("hideanything");
     document.getElementById("card-container").classList.add("hideanything");
 }
@@ -88,6 +89,7 @@ function payByUpi(){
     document.getElementById("cash").classList.remove("payment-method-selected");
     document.getElementById("netbanking").classList.remove("payment-method-selected");
 
+    document.getElementById("upi-container").classList.remove("hideanything");
     document.getElementById("cash-container").classList.add("hideanything");
     document.getElementById("card-container").classList.add("hideanything");
 }
@@ -99,6 +101,7 @@ function payByCard(){
     document.getElementById("cash").classList.remove("payment-method-selected");
     document.getElementById("netbanking").classList.remove("payment-method-selected");
 
+    document.getElementById("upi-container").classList.add("hideanything");
     document.getElementById("cash-container").classList.add("hideanything");
     document.getElementById("card-container").classList.remove("hideanything");
 }
@@ -110,6 +113,7 @@ function payByCash(){
     document.getElementById("cash").classList.add("payment-method-selected");
     document.getElementById("netbanking").classList.remove("payment-method-selected");
 
+    document.getElementById("upi-container").classList.add("hideanything");
     document.getElementById("cash-container").classList.remove("hideanything");
     document.getElementById("card-container").classList.add("hideanything");
 }
@@ -121,6 +125,7 @@ function payByNetbanking(){
     document.getElementById("cash").classList.remove("payment-method-selected");
     document.getElementById("netbanking").classList.add("payment-method-selected");
 
+    document.getElementById("upi-container").classList.add("hideanything");
     document.getElementById("cash-container").classList.add("hideanything");
     document.getElementById("card-container").classList.add("hideanything");
 }
@@ -150,8 +155,10 @@ function saveAddress(){
 
 function orderPlaced(){
     let address=document.getElementById("selected-address").innerText;
-    console.log(address);
-    if(address==""){
+    if(cartArr.length===0){
+        alert("Please add atlest one product to cart!")
+    }
+    else if(address==""){
         alert("Please select address first");
     }
     else{
@@ -169,11 +176,32 @@ function payNow(){
     let cvv=document.getElementById("cvv").value;
 
     let address=document.getElementById("selected-address").innerText;
-    if(address==""){
+    if(cartArr.length===0){
+        alert("Please add atlest one product to cart!")
+    }
+    else if(address==""){
         alert("Please select address first");
     }
     else if(cardNumber==="" || month==="" || month<1 || month>12 || year==="" || year<22 || cvv===""){
         alert("Please provide all proper details");
+    }
+    else{
+        document.getElementById("order_placed_modal_container").classList.add("display");
+    }
+}
+
+function payNowUPI(){
+    let upi=document.getElementById("upi-input").value;
+
+    let address=document.getElementById("selected-address").innerText;
+    if(cartArr.length===0){
+        alert("Please add atlest one product to cart!")
+    }
+    else if(address==""){
+        alert("Please select address first");
+    }
+    else if(upi===""){
+        alert("Please provide a proper UPI ID")
     }
     else{
         document.getElementById("order_placed_modal_container").classList.add("display");
