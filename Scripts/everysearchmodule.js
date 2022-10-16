@@ -32,6 +32,7 @@ import { footerhtml } from "../components/footer.js";
 window.clickonaddbtn = clickonaddbtn;
 window.subtractqty = subtractqty;
 window.increaseqty = increaseqty;
+window.show = show;
 document.getElementById("cartinhtm").innerHTML = cart();
 document.getElementById("navbar").innerHTML = navbar("..");
 document.getElementById("footerindex").innerHTML = footerhtml("..");

@@ -222,6 +222,7 @@ const always = () => {
     mrp += repw;
   });
   if (localStoragebuylist.length != 0) {
+    localStorage.setItem("FinalTotalByaLl", JSON.stringify(mrp - 11));
     document.getElementById("incarthtmldetial").innerHTML = `
    <div id="allitemincart" >  </div> <h2 id="Beforecheckout" >Before you checkout</h2>
     <div id="cartinUpCara" >
@@ -263,6 +264,7 @@ const always = () => {
       .getElementById("coupunencer")
       .addEventListener("keypress", (event) => {
         if (event.key == "Enter") {
+          console.log("Ok");
           let cpn = document.getElementById("coupunencer").value || "";
 
           if (cpn == "Blink10") {
@@ -282,6 +284,10 @@ const always = () => {
             ).innerHTML = `Hooray! You got 10% OFF ₹${Math.ceil(
               percent
             )} on total`;
+            localStorage.setItem(
+              "FinalTotalByaLl",
+              JSON.stringify(amount - percent)
+            );
           } else if (cpn == "Blink-Mega") {
             let amount = Number(mrp) - 37;
             let percent = (amount / 100) * 50;
@@ -299,7 +305,11 @@ const always = () => {
             ).innerHTML = `Hooray! You got 50% OFF ₹${Math.ceil(
               percent
             )} on total`;
-          } else {
+            localStorage.setItem(
+              "FinalTotalByaLl",
+              JSON.stringify(amount - percent)
+            );
+          } else if (cpn != "Blink10" && cpn != "Blink-Mega") {
             document.getElementById(
               "showtextmsgcpn"
             ).innerHTML = `Sorry!${cpn} Not a Coupon `;
