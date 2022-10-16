@@ -50,6 +50,7 @@
     margin-block-end: 1em;
     margin-inline-start: 0px;
     margin-inline-end: 0px;
+    margin-bottom: 0;
 }
 .payment-method-row{
     border: 1px solid #eee;
@@ -399,7 +400,7 @@
     padding: 12px 10px;
 }
 #card-number-div>input{
-    width: 95%;
+    width: 100%;
 }
 #card-expiry-cvv-div{
     margin: 7% auto 7% auto;
@@ -414,10 +415,10 @@
 }
 #cvv-div>input{
     float: right;
-    width: 80%;
+    width: 100%;
 }
 
-#card-pay-btn{
+.pay-now-btn{
     width: 100%;
     background: #0c831f;
     border-radius: 3px;
@@ -432,7 +433,7 @@
     text-align: center;
     margin-bottom: 10px;
 }
-#card-pay-btn:hover{
+.pay-now-btn:hover{
     background-color: #54b226;
 }
 
@@ -502,4 +503,43 @@
 }
 .itemDetails{
     font-size: 14px;
+}
+
+#upi-container{
+    padding: 7% 15%;
+    padding-bottom: 2%;
+    border: 1px solid rgb(228, 225, 225);
+    border-top: none;
+    border-bottom-right-radius: 3px;
+    border-bottom-left-radius: 3px;
+
+}
+#upi-id-box{
+    position: relative;
+}
+#upi-input{
+    width: 100%;
+    background: #fff;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+    color: #333;
+    cursor: text;
+    font-size: 14px;
+    outline: 0;
+    padding: 12px 10px;
+}
+#upi-verify-btn{
+    position: absolute;
+    right: 12px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #0c831f;
+    background-color: white;
+    padding: 5px;
+    border: 0;
+    font-weight: 500;
+    cursor: pointer;
+}
+#upi-pay-btn{
+    margin-top: 8%;
 }

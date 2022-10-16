@@ -50,7 +50,7 @@
                                 Amount Payable 
                                 <span class="font-size-small">(incl. of all taxes)</span>
                             </div>
-                            <div class="float-right text-dark-gray" id="payable-amount-value">₹58</div>
+                            <div class="float-right text-dark-gray" id="payable-amount-value"></div>
                             <div class="clear"></div>
                         </div>
                     </div>
@@ -69,7 +69,7 @@
                             <div>
                                 <div id="payment-desc">
                                     Please pay 
-                                    <span id="text-dark">₹84 </span>
+                                    <span id="text-dark"></span>
                                     to the delivery executive when your order is delivered
                                 </div>
                                 <div>
@@ -113,7 +113,15 @@
                                     </div>
                                 </div>
                             </div>
-                            <button id="card-pay-btn" onclick="payNow()">Pay Now</button>
+                            <button class="pay-now-btn" id="card-pay-btn" onclick="payNow()">Pay Now</button>
+                        </div>
+                        <div id="upi-container">
+                            <div>UPI ID</div>
+                            <div id="upi-id-box">
+                                <input type="text" id="upi-input" placeholder="Enter UPI ID">
+                                <button id="upi-verify-btn">verify</button>
+                            </div>
+                            <button class="pay-now-btn" id="upi-pay-btn" onclick="payNowUPI()">Pay Now</button>
                         </div>
                     </div>
                 </div>
@@ -144,7 +152,7 @@
             <div id="cartItems">
                 <div class="d-flex justify-content-between bg-muted p-3">
                     <h6 class="text-muted">My Cart</h6>
-                    <h6 class="text-muted">3 item</h6>
+                    <h6 id="total-items" class="text-muted"></h6>
                 </div>
                 <div id="cartItemslist" class="px-3">
                 </div>
