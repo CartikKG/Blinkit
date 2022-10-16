@@ -170,7 +170,6 @@ function orderPlaced(){
         alert("Please select address first");
     }
     else{
-        // document.getElementById("order_placed_modal_container").classList.add("display");
         orderSucceful()
     }
 }
@@ -178,6 +177,19 @@ function payNowByWallet(){
     let address=document.getElementById("selected-address").innerText;
     if(address==""){
         alert("Please select address first");
+    }
+    else{
+        orderSucceful()
+    }
+}
+function payNowByNetbank(){
+    let address=document.getElementById("selected-address").innerText;
+    let bank=document.getElementById("select-bank-tag").value;
+    if(address==""){
+        alert("Please select address first");
+    }
+    if(bank==""){
+        alert("Please select Bank");
     }
     else{
         orderSucceful()
@@ -235,6 +247,9 @@ var modalToggle = document.getElementById('exampleModal') // relatedTarget
 myModal.show(modalToggle)
 setTimeout(() => {
     myModal.hide()
+    let a =[]
+    localStorage.setItem('localStoragebuylist',JSON.stringify(a))
+    localStorage.setItem('FinalTotalByaLl',0)
     window.location.href = '../index.html'
 }, 3000);
 }
