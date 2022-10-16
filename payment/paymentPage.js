@@ -6,7 +6,6 @@ function cancelMapModal(){
     document.getElementById("map-modal_container").classList.remove("display");
 }
 
-
 // let totalAmount=JSON.parse(localStorage.getItem("total-amount")) || 0;
 let cartArr=JSON.parse(localStorage.getItem("localStoragebuylist")) || [];
 let amount = 0
@@ -69,7 +68,7 @@ cartArr.map(function(ele,index){
 document.getElementById("upi-container").classList.add("hideanything");
 document.getElementById("card-container").classList.add("hideanything");
 document.getElementById("cash-container").classList.add("hideanything");
-
+payByWallet()
 function payByWallet(){
     document.getElementById("wallet").classList.add("payment-method-selected");
     document.getElementById("upi").classList.remove("payment-method-selected");
@@ -77,6 +76,7 @@ function payByWallet(){
     document.getElementById("cash").classList.remove("payment-method-selected");
     document.getElementById("netbanking").classList.remove("payment-method-selected");
 
+    document.getElementById("wallet-container").classList.remove("hideanything");
     document.getElementById("upi-container").classList.add("hideanything");
     document.getElementById("cash-container").classList.add("hideanything");
     document.getElementById("card-container").classList.add("hideanything");
@@ -90,6 +90,7 @@ function payByUpi(){
     document.getElementById("netbanking").classList.remove("payment-method-selected");
 
     document.getElementById("upi-container").classList.remove("hideanything");
+    document.getElementById("wallet-container").classList.add("hideanything");
     document.getElementById("cash-container").classList.add("hideanything");
     document.getElementById("card-container").classList.add("hideanything");
 }
@@ -102,6 +103,7 @@ function payByCard(){
     document.getElementById("netbanking").classList.remove("payment-method-selected");
 
     document.getElementById("upi-container").classList.add("hideanything");
+    document.getElementById("wallet-container").classList.add("hideanything");
     document.getElementById("cash-container").classList.add("hideanything");
     document.getElementById("card-container").classList.remove("hideanything");
 }
@@ -113,6 +115,7 @@ function payByCash(){
     document.getElementById("cash").classList.add("payment-method-selected");
     document.getElementById("netbanking").classList.remove("payment-method-selected");
 
+    document.getElementById("wallet-container").classList.add("hideanything");
     document.getElementById("upi-container").classList.add("hideanything");
     document.getElementById("cash-container").classList.remove("hideanything");
     document.getElementById("card-container").classList.add("hideanything");
@@ -125,6 +128,7 @@ function payByNetbanking(){
     document.getElementById("cash").classList.remove("payment-method-selected");
     document.getElementById("netbanking").classList.add("payment-method-selected");
 
+    document.getElementById("wallet-container").classList.add("hideanything");
     document.getElementById("upi-container").classList.add("hideanything");
     document.getElementById("cash-container").classList.add("hideanything");
     document.getElementById("card-container").classList.add("hideanything");
@@ -154,13 +158,22 @@ function saveAddress(){
 }
 
 function orderPlaced(){
-    
     let address=document.getElementById("selected-address").innerText;
     if(address==""){
         alert("Please select address first");
     }
     else{
-        document.getElementById("order_placed_modal_container").classList.add("display");
+        // document.getElementById("order_placed_modal_container").classList.add("display");
+        orderSucceful()
+    }
+}
+function payNowByWallet(){
+    let address=document.getElementById("selected-address").innerText;
+    if(address==""){
+        alert("Please select address first");
+    }
+    else{
+        orderSucceful()
     }
 }
 function cancelGifModal(){
@@ -181,13 +194,13 @@ function payNow(){
         alert("Please provide all proper details");
     }
     else{
-        document.getElementById("order_placed_modal_container").classList.add("display");
+        // document.getElementById("order_placed_modal_container").classList.add("display");
+        orderSucceful()
     }
 }
 
 function payNowUPI(){
     let upi=document.getElementById("upi-input").value;
-
     let address=document.getElementById("selected-address").innerText;
     if(address==""){
         alert("Please select address first");
@@ -196,6 +209,25 @@ function payNowUPI(){
         alert("Please provide a proper UPI ID")
     }
     else{
-        document.getElementById("order_placed_modal_container").classList.add("display");
+        orderSucceful()
+        // document.getElementById("order_placed_modal_container").classList.add("display");
+
     }
+}
+
+function back(){
+document.querySelector('.modal-backdrop').classList.remove("show");
+document.querySelector('.show').classList.remove("show");
+}
+
+var myModal = new bootstrap.Modal(document.getElementById('exampleModal'), {
+    keyboard: false
+  })
+  function orderSucceful(){
+var modalToggle = document.getElementById('exampleModal') // relatedTarget
+myModal.show(modalToggle)
+setTimeout(() => {
+    myModal.hide()
+    window.location.href = '../index.html'
+}, 3000);
 }

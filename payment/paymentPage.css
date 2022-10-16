@@ -6,14 +6,13 @@
     gap: 4%;
 }
 #paymentBox{
-    width: 55%;
-    /* border: 1px solid orange; */
+    /* width: 55%; */
     color: #999;
     font-size: 14px;
 }
 #cartBox-pk{
-    width: 25%;
-    border: 1px solid rgb(228, 225, 225);
+    /* width: 25%; */
+    /* border: 1px solid rgb(228, 225, 225); */
     height: fit-content;
 }
 
@@ -24,14 +23,14 @@
     color: #666;
 }
 #checkoutBox{
-    height: 800px;
-    margin-left: 5%;
+    height: fit-content;
+    /* margin-left: 5%; */
     margin-right: 0;
     /* border: 1px solid green; */
 }
 #payment-invoice-box{
     margin-top: 24px;
-    margin-right: 3%;
+    /* margin-right: 3%; */
 }
 #payment-invoice{
     border-radius: 3px;
@@ -488,7 +487,7 @@
 /* chetan code  */
 .bg-muted{
     background-color: #fbfbfb;
-    border: 1px solid rgb(167, 167, 167);
+    border: 1px solid rgb(228, 225, 225);
 }
 .ItemImage>img{
     width: 100px;
@@ -499,8 +498,16 @@
     align-items: center;
 }
 .botmGrayRedius{
-    border-bottom: 1px solid rgb(167, 167, 167);;
+    border-bottom: 1px solid rgb(228, 225, 225);
+    border-left: 1px solid rgb(228, 225, 225);
+    border-right: 1px solid rgb(228, 225, 225);
 }
+.topmGrayRedius{
+    border-top: 1px solid rgb(228, 225, 225);
+    border-left: 1px solid rgb(228, 225, 225);
+    border-right: 1px solid rgb(228, 225, 225);
+}
+
 .itemDetails{
     font-size: 14px;
 }
@@ -542,4 +549,36 @@
 }
 #upi-pay-btn{
     margin-top: 8%;
+}
+#wallet-container img{
+width: 80px;
+height: 70px;
+}
+#wallet-container .ms-2{
+    font-size: 17px;
+    font-weight: 600;
+}
+#wallet-container >div>label{
+    cursor: pointer;
+}
+#wallet-container{
+    padding: 7% 15%;
+    padding-bottom: 2%;
+    border: 1px solid rgb(228, 225, 225);
+    border-top: none;
+    border-bottom-right-radius: 3px;
+    border-bottom-left-radius: 3px;
+}
+.modal-body{
+    padding: 10px;
+    text-align: center;
+}
+.modal-body>img{
+    width: 250px;
+    height: 250px;
+    margin: auto;
+}
+.px3{
+    padding-right: 0.75rem!important;
+    padding-left: 0.75rem!important;
 }
