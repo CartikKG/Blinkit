@@ -44,13 +44,19 @@
   .inDiv>img{
     left: 0%;
   }
+}
 @media (max-width:570px) {
   .inDiv>img{
     left: 15%;
   }
   
 }
+@media (max-width:1200px) {
+  .inDiv>img{
+    left: 0%;
+  }
 }
+
 .name-a {
   color: rgb(78, 78, 78);
   line-height: 18px;
