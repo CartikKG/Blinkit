@@ -47,9 +47,11 @@ const addpluschangehtml = () => {
 };
 cartdiv.addEventListener("click", () => {
   cartinhtm.id = "cartinhtml";
+  localStorage.setItem("mycartview", "true");
   always();
 });
 document.getElementById("closeit").addEventListener("click", () => {
+  localStorage.setItem("mycartview", "false");
   document.getElementById("cartinhtml").id = "cartinhtm";
 });
 let flaarg = true;
@@ -221,6 +223,24 @@ function resultOfSpeechRecognition(event) {
       forsearch();
     }
   }
+}
+
+let mrpp = 0;
+let localStoragebuylisst =
+  JSON.parse(localStorage.getItem("localStoragebuylist")) || [];
+if (localStoragebuylisst.length != 0) {
+  localStoragebuylisst.map((el, inds) => {
+    let repww = Number(el.price.replace("₹", ""));
+    repww *= el.currentQty;
+    mrpp += repww;
+  });
+  document.getElementById("cartdiv").style.display = "flex";
+  document.getElementById("cartdiv").style.padding = "4px 17px";
+  document.getElementById(
+    "cartdiv"
+  ).innerHTML = ` <i class="fa-solid fa-cart-shopping" id="cartanimanttion"></i><span style="display:flex; flex-direction: column;" > ${
+    localStoragebuylisst.length
+  } items <p> ₹${Number(mrpp) - 11} </p> </span>`;
 }
 document.getElementById("micsearch").addEventListener("click", micBtnClick);
 recognition.addEventListener("start", startSpeechRecognition);

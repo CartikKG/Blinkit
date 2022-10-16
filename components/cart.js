@@ -133,8 +133,8 @@ function clickonaddbtn(unq) {
     parent.className = "addqtybuttons";
     // console.log("2" + parent);
     parent.innerHTML = `<i class="fa-solid fa-minus" onclick="subtractqty('${unq}')"></i> <span id="showpresentqty">1  </span><i class="fa-solid fa-plus"  onclick="increaseqty('${unq}')"></i>`;
-    // always();
-    DispalyAlliteminCart(localStoragebuylist);
+    always();
+    // DispalyAlliteminCart(localStoragebuylist);
   }
 }
 const subtractqty = (unq) => {
@@ -213,6 +213,8 @@ const increaseqty = (unq) => {
 };
 const always = () => {
   // let flag = "true";
+  //  let carflag= localStorage.getItem("mycartview")||"false";
+  // if(carflag=="true"){
   let mrp = 0;
   let localStoragebuylist =
     JSON.parse(localStorage.getItem("localStoragebuylist")) || [];
@@ -222,6 +224,13 @@ const always = () => {
     mrp += repw;
   });
   if (localStoragebuylist.length != 0) {
+    document.getElementById("cartdiv").style.display = "flex";
+    document.getElementById("cartdiv").style.padding = "4px 17px";
+    document.getElementById(
+      "cartdiv"
+    ).innerHTML = ` <i class="fa-solid fa-cart-shopping" id="cartanimanttion"></i><span style="display:flex; flex-direction: column;" > ${
+      localStoragebuylist.length
+    } items <p> ₹${Number(mrp) - 11} </p> </span>`;
     localStorage.setItem("FinalTotalByaLl", JSON.stringify(mrp - 11));
     document.getElementById("incarthtmldetial").innerHTML = `
    <div id="allitemincart" >  </div> <h2 id="Beforecheckout" >Before you checkout</h2>
@@ -319,6 +328,12 @@ const always = () => {
     dataforinnercartcara(caraosual);
     DispalyAlliteminCart(localStoragebuylist);
   } else {
+    document.getElementById("cartdiv").style.display = "block";
+    document.getElementById("cartdiv").style.padding = "   15px 25px";
+    document.getElementById(
+      "cartdiv"
+    ).innerHTML = `<span> <i class="fa-solid fa-cart-shopping" id="cartanimanttion"></i>My Cart</span>`;
+
     document.getElementById("showitemdetial").style.display = "none";
     document.getElementById(
       "incarthtmldetial"

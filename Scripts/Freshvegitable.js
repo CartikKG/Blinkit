@@ -4,7 +4,7 @@
 //         "para" : "🍃Sourced at 5 AM",
 //         "image" : "https://cdn.grofers.com/cdn-cgi/image/f=auto,fit=scale-down,q=85,metadata=none,w=250,h=250/app/images/products/sliding_image/391306a.jpg",
 //         "title" : "Onion",
- //           "time" :  5,
+//           "time" :  5,
 //         "weight" : "1kg",
 //         "price" : "₹30",
 //         "markprice" : "₹39",
@@ -323,8 +323,8 @@ function display(data) {
 function sorting() {
   var selected = document.getElementById("sort").value;
 
-  console.log("sorting" + selected);
-  console.log("sorting" + veg);
+  // console.log("sorting" + selected);
+  // console.log("sorting" + veg);
   if (selected === "Relevance") {
     display(veg);
   }

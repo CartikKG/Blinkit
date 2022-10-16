@@ -303,8 +303,8 @@ function display(data) {
 function sorting() {
   var selected = document.getElementById("sort").value;
 
-  console.log("sorting" + selected);
-  console.log("sorting" + veg);
+  // console.log("sorting" + selected);
+  // console.log("sorting" + veg);
   if (selected === "Relevance") {
     display(veg);
   }

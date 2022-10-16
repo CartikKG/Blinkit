@@ -30,7 +30,7 @@ const navbar = (src) => {
     <div id="logindiv"   >Login</div>
     <div id="cartdiv">
      <span> <i class="fa-solid fa-cart-shopping" id="cartanimanttion"></i>My Cart</span>
-      <i class="fa-solid fa-right-to-bracket" id="gotocartpage"></i>
+ 
     </div>
     <div id="logoutdiv">
       <span>My Account</span>

@@ -24,7 +24,7 @@ document.getElementById("openlogin").addEventListener("click", () => {
 
 function cancel() {
   document.getElementById("modal_container").classList.remove("show");
-  console.log("cancel!");
+  // console.log("cancel!");
 }
 
 function login() {
@@ -86,7 +86,7 @@ function signupPage() {
         <p>Already have an account? <button onclick="loginPage()" id="loginPage">Login</button></p>
     </div>
     `;
-  console.log("SignUp Clicked!");
+  // console.log("SignUp Clicked!");
 }
 
 function signUp() {
