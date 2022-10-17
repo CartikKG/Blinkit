@@ -60,7 +60,7 @@ BlinkIt(formerly Grofers) is an online supermarket application to buy Fruits, Ve
 ### Built With
 
 * [![Html][HTML]][Html-url]
-* [![Css][CSS.css]][Css-url]
+* [![Css][CSS]][Css-url]
 * [![made-with-javascript](https://img.shields.io/badge/Made%20with-JavaScript-1f425f.svg)](https://www.javascript.com)
 * [![js][js.js]][js-url]
 
