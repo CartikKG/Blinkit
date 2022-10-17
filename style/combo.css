@@ -4,6 +4,7 @@
   z-index: -10;
 
   grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+  /* gap: 10px; */
 }
 
 .a-box {
@@ -41,19 +42,22 @@
   cursor: pointer;
   /* z-index: -2; */
 }
+
 @media (max-width:920px) {
-  .inDiv>img{
+  .inDiv>img {
     left: 0%;
   }
 }
+
 @media (max-width:570px) {
-  .inDiv>img{
+  .inDiv>img {
     left: 15%;
   }
-  
+
 }
+
 @media (max-width:1200px) {
-  .inDiv>img{
+  .inDiv>img {
     left: 0%;
   }
 }
