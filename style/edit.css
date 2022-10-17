@@ -1,0 +1,22 @@
+* {
+    margin: 0%;
+    padding: 0%;
+}
+
+#editemaol form {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    margin: auto;
+    width: 70%;
+}
+
+#editemaol input {
+    font-size: 20px;
+    width: 90%;
+    margin: auto;
+    padding: 10px 20px;
+    margin-top: 10px;
+    border-radius: 10px;
+
+}

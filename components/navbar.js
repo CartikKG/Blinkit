@@ -73,7 +73,7 @@ const navbar = (src) => {
  
     </div>
     <div id="logoutdiv">
-      <span>My Account</span>
+     <a  href="${src}/pages/edit.html" ><span> My Account</span></a>
       <span>Location</span>
       <span id="logoutcurrent">Logout</span>
     </div>

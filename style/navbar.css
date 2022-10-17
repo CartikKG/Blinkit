@@ -84,6 +84,13 @@
 
 }
 
+#logoutdiv>a {
+    text-decoration: none;
+    color: black;
+    border-bottom: 1px solid rgb(128, 128, 128);
+    padding-left: 4%;
+}
+
 #logindiv {
     cursor: pointer;
 }
