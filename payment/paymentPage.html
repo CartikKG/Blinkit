@@ -88,7 +88,7 @@
                                     <span class="ms-2">Mobikwik</span>
                                 </label>
                             </div>
-                            <button class="pay-now-btn" id="card-pay-btn" onclick="payNowByWallet()">Pay Now</button>
+                            <button class="pay-now-btn" id="wallet-pay-btn" onclick="payNowByWallet()">Pay Now</button>
                         </div>
                         <div id="cash-container">
                             <div id="cashBox">
@@ -150,6 +150,54 @@
                                 <button id="upi-verify-btn">verify</button>
                             </div>
                             <button class="pay-now-btn" id="upi-pay-btn" onclick="payNowUPI()">Pay Now</button>
+                        </div>
+                        <div id="netBanking-container">
+                            <div>
+                                <div id="all-bank-text">All Banks</div>
+                                <div>
+                                    <select name="" id="select-bank-tag">
+                                        <option value="">Select Bank</option>
+                                        <option value="airtelBank">Airte Payments Bank</option>
+                                        <option value="axisBank">Axis Bank</option>
+                                        <option value="BOI">Bank Of India</option>
+                                        <option value="caneraBAnk">Canera Bank</option>
+                                        <option value="HDFC">HDFC</option>
+                                        <option value="ICICI">ICICI Bank</option>
+                                        <option value="kotakBank">Kotak Mahindra Bank</option>
+                                        <option value="PNB">Punjab National Bank</option>
+                                        <option value="SBI">State Bank Of India</option>
+                                        <option value="UBI">Union Bank Of India</option>
+                                        <option value="yesBank">Yes Bank</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div id="direct-bank-select-box">
+                                <div class="bank-select-div">
+                                    <input type="radio" name="bank">
+                                    <img src="https://cdn.grofers.com/app/uploads/banks/icons/hdfc_thumbnail.png" alt="hdfc-logo">
+                                </div>
+                                <div class="bank-select-div">
+                                    <input type="radio" name="bank">
+                                    <img src="https://cdn.grofers.com/app/uploads/banks/icons/icici_thumbnail.png" alt="icici-logo">
+                                </div>
+                                <div class="bank-select-div">
+                                    <input type="radio" name="bank">
+                                    <img src="https://cdn.grofers.com/app/uploads/banks/icons/sbi_thumbnail.png" alt="sbi-logo">
+                                </div>
+                                <div class="bank-select-div">
+                                    <input type="radio" name="bank">
+                                    <img src="https://cdn.grofers.com/app/uploads/banks/icons/ic_pnb.png" alt="pnb-logo">
+                                </div>
+                                <div class="bank-select-div">
+                                    <input type="radio" name="bank">
+                                    <img src="https://cdn.grofers.com/app/uploads/banks/icons/axis_thumbnail.png" alt="axis-logo">
+                                </div>
+                                <div class="bank-select-div">
+                                    <input type="radio" name="bank">
+                                    <img src="https://cdn.grofers.com/app/uploads/banks/icons/kotak_thumbnail.png" alt="kotak-logo">
+                                </div>
+                            </div>
+                            <button class="pay-now-btn" id="netBanking-pay-btn" onclick="payNowByNetbank()">Pay Now</button>
                         </div>
                     </div>
                 </div>
@@ -224,9 +272,9 @@
                 <div id="select-tag-div">
                     <select name="" id="address-as">
                         <option value="">Select</option>
-                        <option value="home">Home</option>
-                        <option value="work">Work</option>
-                        <option value="other">Other</option>
+                        <option value="Home">Home</option>
+                        <option value="Work">Work</option>
+                        <option value="Other">Other</option>
                     </select>
                 </div>
                 <div id="save-address-div">

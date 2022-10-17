@@ -68,6 +68,8 @@ cartArr.map(function(ele,index){
 document.getElementById("upi-container").classList.add("hideanything");
 document.getElementById("card-container").classList.add("hideanything");
 document.getElementById("cash-container").classList.add("hideanything");
+document.getElementById("netBanking-container").classList.add("hideanything");
+
 payByWallet()
 function payByWallet(){
     document.getElementById("wallet").classList.add("payment-method-selected");
@@ -80,6 +82,7 @@ function payByWallet(){
     document.getElementById("upi-container").classList.add("hideanything");
     document.getElementById("cash-container").classList.add("hideanything");
     document.getElementById("card-container").classList.add("hideanything");
+    document.getElementById("netBanking-container").classList.add("hideanything");
 }
 
 function payByUpi(){
@@ -93,6 +96,7 @@ function payByUpi(){
     document.getElementById("wallet-container").classList.add("hideanything");
     document.getElementById("cash-container").classList.add("hideanything");
     document.getElementById("card-container").classList.add("hideanything");
+    document.getElementById("netBanking-container").classList.add("hideanything");
 }
 
 function payByCard(){
@@ -106,6 +110,7 @@ function payByCard(){
     document.getElementById("wallet-container").classList.add("hideanything");
     document.getElementById("cash-container").classList.add("hideanything");
     document.getElementById("card-container").classList.remove("hideanything");
+    document.getElementById("netBanking-container").classList.add("hideanything");
 }
 
 function payByCash(){
@@ -119,6 +124,7 @@ function payByCash(){
     document.getElementById("upi-container").classList.add("hideanything");
     document.getElementById("cash-container").classList.remove("hideanything");
     document.getElementById("card-container").classList.add("hideanything");
+    document.getElementById("netBanking-container").classList.add("hideanything");
 }
 
 function payByNetbanking(){
@@ -132,6 +138,7 @@ function payByNetbanking(){
     document.getElementById("upi-container").classList.add("hideanything");
     document.getElementById("cash-container").classList.add("hideanything");
     document.getElementById("card-container").classList.add("hideanything");
+    document.getElementById("netBanking-container").classList.remove("hideanything");
 }
 
 function getMap(){
@@ -163,7 +170,6 @@ function orderPlaced(){
         alert("Please select address first");
     }
     else{
-        // document.getElementById("order_placed_modal_container").classList.add("display");
         orderSucceful()
     }
 }
@@ -171,6 +177,19 @@ function payNowByWallet(){
     let address=document.getElementById("selected-address").innerText;
     if(address==""){
         alert("Please select address first");
+    }
+    else{
+        orderSucceful()
+    }
+}
+function payNowByNetbank(){
+    let address=document.getElementById("selected-address").innerText;
+    let bank=document.getElementById("select-bank-tag").value;
+    if(address==""){
+        alert("Please select address first");
+    }
+    if(bank==""){
+        alert("Please select Bank");
     }
     else{
         orderSucceful()
@@ -228,6 +247,9 @@ var modalToggle = document.getElementById('exampleModal') // relatedTarget
 myModal.show(modalToggle)
 setTimeout(() => {
     myModal.hide()
+    let a =[]
+    localStorage.setItem('localStoragebuylist',JSON.stringify(a))
+    localStorage.setItem('FinalTotalByaLl',0)
     window.location.href = '../index.html'
 }, 3000);
 }
