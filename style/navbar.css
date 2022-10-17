@@ -253,10 +253,10 @@
     display: none;
     position: absolute;
     border: 2px solid rgb(241, 241, 241);
-    width: 35%;
+    width: 91%;
+    left: 3%;
     margin: auto;
-    right: 28.5%;
-    top: 90%;
+    top: 100%;
     background-color: white;
 }
 
@@ -371,7 +371,7 @@
     }
 
     #onsearchclick {
-        top: 95%;
+        top: 100%;
         margin: auto;
         width: 90%;
         right: 6%;
@@ -436,7 +436,7 @@
     #onsearchclick {
         top: 95%;
         width: 85%;
-        right: 10%;
+        /* right: 10%; */
     }
 
     #onsearchclick img {
