@@ -277,7 +277,7 @@ const always = () => {
           let cpn = document.getElementById("coupunencer").value || "";
 
           if (cpn == "Blink10") {
-            let amount = Number(mrp) - 37;
+            let amount = Number(mrp) - 11;
             let percent = (amount / 100) * 10;
             // console.log(percent);
             // console.log(amount - percent);
@@ -298,7 +298,7 @@ const always = () => {
               JSON.stringify(amount - percent)
             );
           } else if (cpn == "Blink-Mega") {
-            let amount = Number(mrp) - 37;
+            let amount = Number(mrp) - 11;
             let percent = (amount / 100) * 50;
             // console.log(percent);
             // console.log(amount - percent);

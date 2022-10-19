@@ -193,6 +193,12 @@
     /* visibility: hidden; */
 }
 
+#pngan2 {
+    position: absolute;
+    left: 0%;
+    top: 450px;
+    z-index: 1;
+}
 
 #pngnavanimation {
     position: absolute;
