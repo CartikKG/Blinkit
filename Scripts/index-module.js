@@ -156,7 +156,7 @@ let forsearch = () => {
 
       if (count == 0) {
         let li = document.createElement("li");
-        li.innerHTML = ` Sorry Not Fount - ${substring}`;
+        li.innerHTML = ` Sorry Not Found - ${substring}`;
         document.getElementById("onsearchclickul").append(li);
       }
     }
