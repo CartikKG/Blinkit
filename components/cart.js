@@ -17,10 +17,10 @@ let caraosual;
 async function promise() {
   try {
     let ans = await fetch(
-      "https://vocal-wisp-b2bd5b.netlify.app/productsAllwithDetails"
+      "https://vast-red-anemone-slip.cyclic.app/productsAllwithDetails"
     );
     let ans1 = await ans.json();
-    let ans2 = await fetch("https://vocal-wisp-b2bd5b.netlify.app/caraosual");
+    let ans2 = await fetch("https://vast-red-anemone-slip.cyclic.app/caraosual");
     let ans3 = await ans2.json();
     caraosual = ans3;
     // console.log(ans3);
