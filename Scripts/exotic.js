@@ -244,7 +244,7 @@ let veg;
 
 async function products() {
   try {
-    let url = `https://blinkit-clone.herokuapp.com/exotic`;
+    let url = `https://vast-red-anemone-slip.cyclic.app/exotic`;
 
     let res = await fetch(url);
 

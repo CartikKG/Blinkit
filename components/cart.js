@@ -17,10 +17,10 @@ let caraosual;
 async function promise() {
   try {
     let ans = await fetch(
-      "https://blinkit-clone.herokuapp.com/productsAllwithDetails"
+      "https://vast-red-anemone-slip.cyclic.app/"
     );
     let ans1 = await ans.json();
-    let ans2 = await fetch("https://blinkit-clone.herokuapp.com/caraosual");
+    let ans2 = await fetch("https://vast-red-anemone-slip.cyclic.app/caraosual");
     let ans3 = await ans2.json();
     caraosual = ans3;
     // console.log(ans3);
@@ -212,9 +212,7 @@ const increaseqty = (unq) => {
   always();
 };
 const always = () => {
-  // let flag = "true";
-  //  let carflag= localStorage.getItem("mycartview")||"false";
-  // if(carflag=="true"){
+
   let mrp = 0;
   let localStoragebuylist =
     JSON.parse(localStorage.getItem("localStoragebuylist")) || [];

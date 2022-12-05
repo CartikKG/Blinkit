@@ -85,7 +85,7 @@
 let veg;
 async function products() {
   try {
-    let url = `https://blinkit-clone.herokuapp.com/flower`;
+    let url = `https://vast-red-anemone-slip.cyclic.app/flower`;
 
     let res = await fetch(url);
 
